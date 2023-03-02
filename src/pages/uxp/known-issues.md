@@ -2,101 +2,101 @@
 index_desc: List of known issues in UXP
 -->
 
-# Known Issues
+# 已知问题
 
-The following issues are known. Please check this page with future updates, as known issues will be fixed over time, and new issues will likely be discovered.
+以下是已知的问题。请在今后的更新中检查这个页面，因为已知的问题会随着时间的推移而被修复，而且可能会发现新的问题。
 
-## General Issues
+## 一般问题
 
-* Plugin icons do support SVG files, but UXP doesn't support all SVG features, which means you'll want to test your SVG icon before shipping your plugin if you decide to use SVG icons in the Plugin Panel.
-* When using `require("uxp").entrypoints.setup()` in a delayed fashion (that is, not immediately at plugin start), you may encounter an uncatchable error. This appears to be related to how quickly the `setup` function is called in relation to drawing the first few frames on the display. If this delay is short (less than ~20ms), the call will likely succeed. If it is long, an error is likely to occur. A delay in calling this function should not cause any errors to be thrown, and will be fixed in a future release. (PS-57605)
-* When attempting to use the UXP clipboard APIs in panel-less plugins, errors will be thrown. This will be fixed in a future release. (UXP-15542)
+* 插件图标确实支持 SVG 文件，但 UXP 并不支持所有的 SVG 功能，这意味着如果您决定在插件面板中使用 SVG 图标，您需要在发货前测试您的 SVG 图标。
+* 当使用 `require("uxp").entrypoints.setup()` 以延迟的方式（也就是说，不是在插件开始时立即调用），你可能会遇到一个无法捕捉的错误。这似乎与调用`setup`函数的速度与在显示器上绘制前几帧的速度有关。如果这个延迟很短（小于~20ms），调用可能会成功。如果时间过长，就可能发生错误。调用该函数的延迟不应该导致任何错误的发生，并将在未来的版本中得到修正。(PS-57605)
+* 当试图在无面板的插件中使用 UXP 剪贴板 API 时，会出现错误。这将在未来的版本中得到修复。 (UXP-15542)
 
 ## User Interface
 
-* While `z-index` is supported, no element can overlay a widget that has text editing capabilities. Text fields and areas will always render the text editor _above_ everything else in the same panel or dialog. As such, you can use popovers to render content above them, _or_ hide the element if you need to render some content above it. 
-* `window.devicePixelRatio` (and corresponding `element.uxpContainer.devicePixelRatio`) always returns `1`. This is incorrect and will be fixed in the future. Note that `window.devicePixelRatio` may not always match an element's pixel ratio if the element is visible on a screen with a different pixel ratio from the primary screen.
-* Not all SVG files are supported by UXP. UXP's SVG renderer is targeted for simple icons and the like; complex SVGs may fail to render completely, or may render in unexpected ways. The SVG renderer will improve in the future.
-* Images formatted in a grayscale mode will fail to render. They will take up space in the DOM, but will not be visible to the user.
-* When the mouse cursor is changed, it may not revert back to its original state in UWP.
-* It is not possible to trigger the emoji selector in a text field on macOS.
-* Many SVGs are known to render in odd ways in the UI. These issues will be addressed in the future, but we would love to hear your reports of any SVGs that don't work, and how you fixed it.
-* When tabbing in a scroll view, the scroll view is not automatically scrolled to ensure the target control is in view (macOS Only).
-* Emojis are rendered in the font color on Windows 10, instead of using the emoji's colors.
-* When a control in a panel is disabled and enabled, it is no longer reachable via TAB. This may also impact controls added *after* a panel is shown for the first time.
-* Drag and Drop is not currently supported.
-* The `Save` dialog that appears when using `getFileForSaving` appears _behind_ the plugin panels. The `Open` and `Folder` dialogs may also do this on occasion on both macOS and Windows. This will be fixed in a future release. (PS-57708)
-* When using `<img>` tags inside a `<dialog>`, you should ensure that the images have an explicit `width` and `height` on either the image or the dialog. Otherwise, the dialog will attempt to resize to the smallest possible size, and images initially have a 0x0 dimension until at least one frame has been rendered to the display. This can cause the dialog to display at the wrong size.
-* `<img>` tags do not currently handle embedded rotation information.
+* 虽然 `z-index` 是支持的，任何元素都不能覆盖具有文本编辑功能的部件。文本字段和区域将总是在同一面板或对话框中呈现文本编辑器上面的其他内容。因此，你可以使用弹出式窗口来渲染它们上面的内容，如果你需要在上面渲染一些内容，也可以隐藏该元素。
+* `window.devicePixelRatio`（以及相应的`element.uxpContainer.devicePixelRatio`）总是返回`1`。这是不正确的，将来会被修正。注意`window.devicePixelRatio`可能并不总是与元素的像素比相匹配，如果该元素在与主屏幕的像素比不同的屏幕上可见。
+* 并非所有的 SVG 文件都被 UXP 支持。UXP 的 SVG 渲染器针对的是简单的图标和类似的东西；复杂的 SVG 可能无法完全渲染，或者可能以意外的方式渲染。SVG 渲染器将在未来得到改进。
+* 以灰度模式格式化的图像将无法渲染。它们会在DOM中占用空间，但对用户来说是不可见的。
+* 当鼠标光标被改变时，在UWP中它可能不会恢复到原来的状态。
+* 在macOS上不可能在一个文本字段中触发表情符号选择器。
+* 许多SVG在用户界面中以奇怪的方式呈现。这些问题将在未来得到解决，但我们希望听到你对任何不工作的SVG的报告，以及你如何解决它。
+* 当在滚动视图中使用标签时，滚动视图不会自动滚动以确保目标控件在视图中（仅限macOS）。
+* 表情符号在Windows 10上是以字体颜色呈现的，而不是使用表情符号的颜色。
+* 当面板中的一个控件被禁用和启用时，它不再能通过TAB键到达。这也可能影响到*在面板首次显示之后添加的控件。
+* 目前不支持拖放。
+* 使用 "getFileForSaving "时出现的 "Save "对话框出现在插件面板的后面。打开 "和 "文件夹 "对话框有时也会在macOS和Windows上这样做。这将在未来的版本中被修复。(PS-57708)
+* 当在`<dialog>`内使用`<img>`标签时，你应该确保图像或对话框有明确的`width`和`height`。否则，对话框将试图调整到尽可能小的尺寸，而图像最初的尺寸是0x0，直到至少有一帧被渲染到显示器上。这可能导致对话框以错误的尺寸显示。
+* `<img>` 标签目前不处理嵌入式旋转信息。
 
 
-## Spectrum UXP Components
+## Spectrum UXP组成部分
 
-* Buttons do not indicate when they are focused from the keyboard.
-* You should make sure `sp-dropdown` elements have a width set, otherwise they will size according to the currently selected item. This may cause items in the dropdown itself to appear truncated, wrapped, or oddly formatted.
-* Password field values cannot be read on macOS. A workaround for this is to set the `type` to `text` on `focus` and switch it back to `password` on `blur`.
-* Displaying a file picker or browser from a Spectrum UXP control (such as a button) may result in an infinite series of `click` events. Until this is fixed in UXP, you'll need to add some logic to prevent the infinite loop or use a native widget instead. (PS-57264)
-* Dropdowns don't currently respond to arrow keys; this will be fixed in a future update.
-* The `location` attribute for `sp-tooltip` seems like it would control the position of the tooltip relative to its attachment. This is not how the attribute actually works -- it instead controls the tooltip's "tip" direction. If `location` is set to `bottom`, the tip will be pointed upwards under the assumption that your code has already placed the tooltip below the control. (PS-56708) _Better tooltip handling is coming in a future release_.
-* The numeric `sp-textfield` can trigger numeric validation errors, even when the entered value would seem to be correct. This will be addressed in a future release. The limitation on valid ranges is an issue with numeric fields in Photoshop in general and is a separate issue. (PS-57698)
+* 按钮在被键盘聚焦时不显示。
+* 你应该确保`sp-dropdown`元素有一个宽度设置，否则它们会根据当前选择的项目来确定大小。这可能导致下拉菜单本身的项目出现截断、包裹或奇怪的格式。
+* 密码字段的值在macOS上不能被读取。解决这个问题的方法是在 "聚焦 "时将 "类型 "设置为 "文本"，在 "模糊 "时将其切换为 "密码"。
+* 从 Spectrum UXP 控件（如按钮）显示文件选取器或浏览器可能会导致一系列无限的 `点击'事件。在UXP中修复这个问题之前，你需要添加一些逻辑来防止无限循环，或者使用一个本地小部件来代替。(PS-57264)
+* 下拉菜单目前不响应方向键；这将在未来的更新中得到修复。
+* `sp-tooltip`的`location`属性似乎可以控制工具提示相对于其附件的位置。这并不是该属性的实际工作方式 -- 而是控制工具提示的 "提示 "方向。如果`location`被设置为`bottom`，在假设你的代码已经将工具提示放在控件下面的情况下，提示会被指向上方。(PS-56708) _更好的工具提示处理将在未来发布_。
+* 数字的`sp-textfield'可以触发数字验证错误，即使输入的值看起来是正确的。这个问题将在未来的版本中解决。对有效范围的限制是Photoshop中数字字段的一个普遍问题，是一个单独的问题。(PS-57698)
 
 ## Events
 
-* `uxpshowpanel` and the corresponding `show` callback occurs only once, when the panel is initially made visible. It will not recur. This will be fixed in the future. (PS-57284)
-* `uxphidepanel` and the corresponding `hide` callback never occurs, even when the panel is made invisible. This will be fixed in the future. (PS-57284)
-* Interactive elements swallow most events.
-* `keypress` is not currently supported.
+* `uxpshowpanel`和相应的`show`回调只发生一次，当面板最初可见时。它不会重复出现。这一点将在未来被修复。(PS-57284)
+* `uxphidepanel`和相应的`hide`回调从未发生，即使是在面板不可见时。这个问题将在未来被修复。(PS-57284)
+* 交互式元素吞噬了大多数事件。
+* `keypress`目前不支持。
 
 ## HTML Elements
 
-* `<option>` tags *must* have a `value` attribute, or referencing the `select`'s `value` property will return `undefined`.
-* `<select value="…"/>` does not show the value as selected. Instead, get a reference to the element and call `setAttribute("value", …)` or use the `selected` attribute on the `option` tags.
-* If you don’t specify a width for your `form`, block elements inside may not take up the entire width. Workaround: always set a width for your `form` elements.
-* `form`s only support `method="dialog"`. They do not submit to a URL automatically.
-* It is not currently possible to specify the tab order.
-* The size of a `<textarea>` cannot be set with `rows` or `cols`. Use CSS styles `height` and `width` respectively.
-* HTML5 input validation is not supported.
-* Images that fail to load will not render any “broken icon” image in place.
-* Input elements do not accept `defaultValue`.
-* `<option>` tags do not support `disabled` attributes.
-* `<label for="id"/>` is not supported. Wrap `<label>` around the control instead.
-* `<input type="file" />` is not supported.
-* `<input type="color" />` is not supported.
-* Using unitless values in `width` and `height` attributes are not supported in UXP v3.1. Use `px`, or CSS styles.
-* `<label>` uses `inline-flex` layout semantics in UXP v3.1 mode, with `flex-wrap: wrap` enabled. If you need to prevent wrapping, use `flex-wrap: nowrap` on these elements. Note that the default layout behavior is now _horizontal_ not _vertical_.
-* `<progress>` is not theme aware.
-* Password field values cannot be read on macOS. A workaround for this is to set the `type` to `text` on `focus` and switch it back to `password` on `blur`.
+* `<option>`标签*必须*有`value`属性，否则引用`select`的`value`属性将返回`undefined`。
+* `<select value="..."/>`不会显示选择的值。相反，获取该元素的引用并调用`setAttribute("value", ...)`或使用`option`标签上的`selected`属性。
+* 如果你没有为你的 "表单 "指定一个宽度，里面的块状元素可能不会占据整个宽度。解决办法：总是为你的 "表单 "元素设置一个宽度。
+* 表格只支持`method="dialog"`。它们不会自动提交到一个URL。
+* 目前还不能指定标签的顺序。
+* `<textarea>`的大小不能用`rows`或`cols`设置。请分别使用CSS样式`height`和`width`。
+* 不支持HTML5输入验证。
+* 加载失败的图片不会在原地呈现任何 "破损的图标 "图片。
+* 输入元素不接受`defaultValue`。
+* `<option>`标签不支持`disabled`属性。
+* `<label for="id"/>` 不支持。包裹 `<label>` 而不是在控制的周围。
+* `<input type="file" />` 不支持。
+* `<input type="color" />` 不支持。
+* UXP  v3.1不支持在 `width` 和 `height` 属性中使用无单位值。使用 `px`，或 CSS 样式。
+* `<label> `  在UXP v3.1模式下使用`inline-flex`布局语义，并启用`flex-wrap: wrap`。如果你需要防止包装，在这些元素上使用`flex-wrap: nowrap`。请注意，现在的默认布局行为是_水平_而不是_垂直_。
+* `<progress>`没有主题意识。
+* 密码字段的值在macOS上不能被读取。解决这个问题的方法是在`focus'时将`type'设置为`text'，在`blur'时将其切换回`password'。
 
 ## Layout
 
-* When rendering inline text that wraps, borders, outlines, and backgrounds only apply to the first line. You should place borders, outlines, and backgrounds on elements with block layout semantics.
-* Mixing inline text with UI controls is unlikely to result in a pleasant appearance. `vertical-align` is supported, but baseline layout does not always do what you might expect,  which makes it difficult to properly align widgets and labels. As such, you should use `flex` or `inline-flex` when using UI elements.
+* 当渲染包裹的内联文本时，边框、轮廓和背景只适用于第一行。你应该把边框、轮廓和背景放在具有块状布局语义的元素上。
+* 将内联文本与UI控件混合在一起，不太可能产生令人愉快的外观。支持`vertical-align`，但基线布局并不总是像你所期望的那样，这使得正确对齐小部件和标签变得很困难。因此，在使用UI元素时，你应该使用`flex`或`inline-flex`。
 
 ## CSS
 
-* `baseline` alignment is supported, but buggy; do not rely on its behavior for now.
-* The `font` shorthand CSS rule is not supported.
-* `text-transform` is not supported,
-* CSS transitions and animations are not supported.
-* Setting a `border-color` to `unset` may not reset the color to its initial value.
-* If you need to override an anchor link color, use `a[href]` as the selector to override it.
+* `baseline`对齐方式被支持，但有问题；暂时不要依赖它的行为。
+* 不支持`font`速记CSS规则
+* 不支持`text-transform`
+* 不支持CSS过渡和动画。
+* 将`border-color`设置为`unset`可能不会将颜色重置为初始值。
+* 如果你需要覆盖一个锚定链接的颜色，使用`a[href]`作为选择器来覆盖它。
 
 ## DOM
 
-* When a dialog is closed, it is not removed from the DOM. This is per spec. If you want the dialog to be removed from the DOM, you must call `HTMLDialogElement#remove` explicitly.
-* When applying HTML using `innerHTML`, event handlers and scripts are currently parsed in Photoshop, but not in XD. **DO NOT RELY ON THIS BEHAVIOR**, as it will likely go away in the future and match XD's behavior (which is by design).
+* 当一个对话框被关闭时，它不会从DOM中删除。这是按规范进行的。如果你想把对话框从DOM中删除，你必须明确调用`HTMLDialogElement#remove`。
+* 当使用`innerHTML`应用HTML时，事件处理程序和脚本目前在Photoshop中被解析，但在XD中没有。**不要依赖这种行为**，因为它可能会在未来消失，并与XD的行为相匹配（这是由设计的）。
 
 ## Network I/O
 
-* On macOS, it is not possible to use self-signed certificates with secure Websockets.
-* Websockets do not support extensions.
-* XHR can only send binary content using an ArrayBuffer -- Blob is not supported.
-* XHR does not support cookies.
+* 在macOS上，不可能在安全的Websockets中使用自签名的证书。
+* Websockets不支持扩展。
+* XHR只能使用ArrayBuffer发送二进制内容，不支持Blob。
+* XHR不支持cookies。
 
 ## File I/O
 
-* The list of images in `require("uxp").storage.fileTypes.images` is not intended to be a complete representation of all supported image types by the host. Instead, this array includes some of the more common images. You can pass your own array with the desired file types instead. (PS-57601)
+* 中的图像列表。`require("uxp").storage.fileTypes.images` 的目的不是要完整地表示主机所支持的所有图像类型。相反，这个数组包括一些更常见的图像。你可以通过你自己的数组来代替所需的文件类型。 (PS-57601)
 
 ## Debugging
 
-* If debugging exposes any private fields and methods, do not attempt to use them. Plugins referring to private APIs may be rejected or removed from the Plugin Marketplace, and will be prone to breaking unexpectedly.
+* 如果调试暴露了任何私有字段和方法，请不要试图使用它们。引用私有API的插件可能会被拒绝或从插件市场上删除，并且容易出现意外的故障。

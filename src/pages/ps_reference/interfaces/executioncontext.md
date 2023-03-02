@@ -18,7 +18,7 @@ keywords:
 
 # ExecutionContext
 
-This object is passed to the callback of `core.executeAsModal` for modality related APIs.
+这个对象被传递给 `core.executeAsModal` 为模式相关的API。
 
 ## Properties
 
@@ -26,14 +26,14 @@ This object is passed to the callback of `core.executeAsModal` for modality rela
 
 • **hostControl**: *object*
 
-Use the methods in here to control Photoshop state.
+使用这里的方法来控制Photoshop的状态。
 
-#### Type declaration
+#### 类型声明
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `resumeHistory` | (`suspensionID`: *number*) => *void* | Call to resume history on a target document. |
-| `suspendHistory` | (`info`: { `historyStateInfo`: [*HistoryStateInfo*](/ps_reference/interfaces/historystateinfo/)  }) => *Promise*<number\> | Call to suspend history on a target document, returns the suspension ID which can be used for resumeHistory. |
+| `resumeHistory` | (`suspensionID`: *number*) => *void* | 调用恢复目标文件的历史记录。 |
+| `suspendHistory` | (`info`: { `historyStateInfo`: [*HistoryStateInfo*](/ps_reference/interfaces/historystateinfo/)  }) => *Promise*<number\> | 调用目标文件暂停历史，返回暂停ID，可用于恢复历史。 |
 
 ___
 
@@ -41,9 +41,9 @@ ___
 
 • **isCancelled**: *boolean*
 
-True if user has cancelled the modal interaction.
+如果用户取消了模态交互，则为真。
 
-User can cancel by hitting the Escape key, or by pressing the "Cancel" button in the progress bar.
+用户可以通过点击Escape (esc) 键，或者按进度条上的 "取消 " 按钮来取消。
 
 ___
 
@@ -51,7 +51,7 @@ ___
 
 • **onCancel**: *void*
 
-If assigned a method, it will be called when user cancels the modal interaction.
+如果指定一个方法，当用户取消模态交互时，它将被调用。
 
 ___
 
@@ -59,4 +59,4 @@ ___
 
 • **reportProgress**: *void*
 
-Call this to customize the progress bar.
+调用它来定制进度条。

@@ -24,4 +24,4 @@ keywords:
 
 • **commandName**: *string*
 
-Name of the command. It will be shown in the progress bar if the operation takes a noticeable amount of time.
+命令的名称。如果操作需要相当长的时间，将显示在进度条上。

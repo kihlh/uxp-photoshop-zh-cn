@@ -1,12 +1,12 @@
 <!--
-index_desc: General information on UXP and its dependencies
+index_desc: 关于UXP及其依赖关系的信息
 -->
 
-###  UXP General Information
-- ECMAScript Version in UXP v6.4 : ECMA-262
-- React Version Supported in UXP v6.4: React 16 or lower
+###  UXP 信息
+- ECMAScript 版本在 UXP v6.4 : ECMA-262
+- 支持的React版本 UXP v6.4: React 16或更低
 
-### Applications Integrated with UXP
+### 与UXP集成的应用程序
 
 | Application | UXP v6.4| UXP v6.3| UXP v6.2 | UXP v6.1 | UXP v6.0 | UXP v5.6 | UXP v5.5 |
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | 

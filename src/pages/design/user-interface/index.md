@@ -10,56 +10,55 @@ keywords:
   - C++
   - Scripting
 title: Design - User interface
-description: This is the page for the introduction to User interface
+description: 这是介绍用户界面的页面。
 contributors:
   - https://github.com/dcaiced0
 ---
 
 # User Interface 
 
-The user interface section will provide guidance around the different UXP Spectrum components you can use to build a plugin UI. For guidance around the UX of a plugin and best practices refer to [UX patterns](../ux-patterns/).
+用户界面部分将围绕不同的UXP Spectrum组件提供指导，你可以用它来构建一个插件的用户界面。关于插件的用户体验和最佳实践的指导，请参考 [UX patterns](../ux-patterns/).
 
-Visit the [Adobe Spectrum website](https://spectrum.adobe.com) to reference 
- * Styling
- * Behaviors
- * Usage guidelines
- * Download UI files and more
+访问 [Adobe Spectrum website](https://spectrum.adobe.com) 进行参照 
+ * 风格设计
+ * 行为
+ * 使用指南
+ * 下载UI文件和更多
 
 ## UXP Spectrum Components
 
-Spectrum UXP allows UI to be the same for plugins across XD and Photoshop and support themes. Below is a list to all the components available in UXP and the Spectrum design gudelines. 
+频谱UXP允许XD和Photoshop中的插件有相同的用户界面，并支持主题。以下是 UXP 和 Spectrum 设计准则中的所有组件的列表。
 
 **[Action button](https://spectrum.adobe.com/page/action-button/)** - 
-Action buttons allow users to perform an action or mark a selection. They’re used for similar, task-based options within a workflow, and are ideal for interfaces where buttons aren’t meant to draw a lot of attention.
+动作按钮允许用户执行一个动作或标记一个选择。它们用于工作流程中类似的、基于任务的选项，是按钮不打算吸引大量注意力的界面的理想选择。
 
 **[Button](https://spectrum.adobe.com/page/button/)** - 
-Buttons allow users to perform an action or to navigate to another page. They have multiple styles for various needs, and are ideal for calling attention to where a user needs to do something in order to move forward in a flow.
+按钮允许用户执行一个动作或导航到另一个页面。它们有多种风格以满足不同的需求，并且是提醒用户注意需要做什么以在流程中前进的理想选择。
 
 **[Checkbox](https://spectrum.adobe.com/page/checkbox/)** - 
-Checkboxes allow users to select multiple items from a list of individual items, or to mark one individual item as selected.
+复选框允许用户从单个项目的列表中选择多个项目，或将一个单独的项目标记为选中。
 
 **[Divider](https://spectrum.adobe.com/page/divider/)** - 
-Dividers bring clarity to a layout by grouping and dividing content in close proximity. They can also be used to establish rhythm and hierarchy.
+分隔符通过对内容进行分组和划分，使版面更加清晰。它们还可以用来建立节奏和层次。
 
 **[Link](https://spectrum.adobe.com/page/link/)** - 
-Links allow users to navigate to a different location. They can be presented inline inside a paragraph or as standalone text.
+链接允许用户导航到一个不同的位置。它们可以在一个段落中内联，也可以作为独立的文本呈现。
 
 **[Picker](https://spectrum.adobe.com/page/picker/)** - 
-Pickers (sometimes known as "dropdowns" or "selects") allow users to choose from a list of options in a limited space. The list of options can change based on the context.
+挑选器（有时被称为 "下拉 "或 "选择"）允许用户在有限的空间内从一个选项列表中选择。选项列表可以根据上下文而改变。
 
 **[Radio Button](https://spectrum.adobe.com/page/radio-button/)** - 
-Radio buttons allow users to select a single option from a list of mutually exclusive options. All possible options are exposed up front for users to compare.
+单选按钮允许用户从一个相互排斥的选项列表中选择一个单一的选项。所有可能的选项都暴露在前面，供用户比较。
 
 **[Slider](https://spectrum.adobe.com/page/slider/)** - 
-Sliders allow users to quickly select a value within a range. They should be used when the upper and lower bounds to the range are invariable.
+滑块允许用户在一个范围内快速选择一个值。它们应该在范围的上下限是不变的情况下使用。
 
 **[Text Field](https://spectrum.adobe.com/page/text-field/)** - 
-Text fields are text boxes that allow users to input custom text entries with a keyboard. Various options can be shown with the field to communicate the input requirements.
+文本字段是文本框，允许用户用键盘输入自定义文本条目。各种选项可以与该字段一起显示，以传达输入要求。
 
 **[Tooltip](https://spectrum.adobe.com/page/tooltip/)** - 
-Tooltips allow users to get contextual help or information about specific components when hovering or focusing on them.
+工具提示允许用户在悬停或聚焦于特定组件时获得上下文帮助或信息。
 
 **[Typography](https://spectrum.adobe.com/page/heading/)** - 
-Typography components include Heading, Body, and Detail. 
-
+排版组件包括标题、正文和细节。
 

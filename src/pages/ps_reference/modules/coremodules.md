@@ -18,12 +18,12 @@ keywords:
 
 # CoreModules
 
-## Namespaces
+## 命名空间
 
 - [photoshopAction](/ps_reference/media/photoshopaction/)
 - [photoshopCore](/ps_reference/media/photoshopcore/)
 
-## Interfaces
+## 接口
 
 - [ActionDescriptor](/ps_reference/interfaces/actiondescriptor/)
 - [BatchPlayCommandOptions](/ps_reference/interfaces/batchplaycommandoptions/)
@@ -35,7 +35,7 @@ keywords:
 - [OpenCLDeviceInfo](/ps_reference/interfaces/opencldeviceinfo/)
 - [OpenGLDeviceInfo](/ps_reference/interfaces/opengldeviceinfo/)
 
-## Type aliases
+## 类型别名
 
 ### CPUVendorKind
 

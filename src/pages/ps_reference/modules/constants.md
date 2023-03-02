@@ -23,11 +23,11 @@ keywords:
 ### AnchorPosition
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
 
-The point around which to transform an object.
+围绕一个对象进行转换的点。
 
-This is the point that does not move when an object is rotated or resized
+当一个物体被旋转或调整大小时，这个点不会移动。
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
 | BOTTOMCENTER | - |
 | BOTTOMLEFT | - |
@@ -44,10 +44,10 @@ ___
 ### AntiAlias
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.1</span>
 
-Method to use to smooth edges by softening the color transition between edge pixels
-and the background. Used in a [CharacterStyle.antiAliasMethod](/ps_reference/classes/characterstyle/#antialiasmethod)
+通过软化边缘像素和背景之间的颜色过渡来平滑边缘的方法
+和背景之间的颜色过渡。在一个 [CharacterStyle.antiAliasMethod](/ps_reference/classes/characterstyle/#antialiasmethod)
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
 | CRISP | - |
 | NONE | - |
@@ -60,9 +60,9 @@ ___
 ### AutoKernType
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.1</span>
 
-The type of kerning to use for characters. Used in [CharacterStyle.autoKerning](/ps_reference/classes/characterstyle/#autokerning)
+对字符使用的字符间距类型。使用于 [CharacterStyle.autoKerning](/ps_reference/classes/characterstyle/#autokerning)
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
 | MANUAL | - |
 | METRICS | - |
@@ -73,11 +73,11 @@ ___
 ### BMPDepthType
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
 
-Number of bits per channel (also called pixel depth or color depth).
+每通道的比特数（也叫像素深度或颜色深度）。
 
-The number selected indicates the exponent of 2.
+选择的数字表示2的指数。
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
 | EIGHT | - |
 | FOUR | - |
@@ -91,9 +91,9 @@ ___
 ### Baseline
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.1</span>
 
-The baseline style to use in text. Used in [CharacterStyle.baseline](/ps_reference/classes/characterstyle/#baseline)
+文本中使用的基线样式。使用于 [CharacterStyle.baseline](/ps_reference/classes/characterstyle/#baseline)
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
 | NORMAL | - |
 | SUBSCRIPT | - |
@@ -104,9 +104,9 @@ ___
 ### BitmapConversionType
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
 
-Specifies the quality of an image you are converting to bitmap mode. Used in [BitmapConversionOptions](/ps_reference/objects/conversionoptions/bitmapconversionoptions/)
+指定你要转换为位图模式的图像的质量。使用于 [BitmapConversionOptions](/ps_reference/objects/conversionoptions/bitmapconversionoptions/)
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
 | CUSTOMPATTERN | - |
 | DIFFUSIONDITHER | - |
@@ -119,9 +119,9 @@ ___
 ### BitmapHalfToneType
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
 
-Specifies the shape of the dots (ink deposits) in the halftone screen. Used in [BitmapConversionOptions](/ps_reference/objects/conversionoptions/bitmapconversionoptions/)
+指定半色调屏幕中的点（墨水沉积）的形状。使用于 [BitmapConversionOptions](/ps_reference/objects/conversionoptions/bitmapconversionoptions/)
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
 | CROSS | - |
 | DIAMOND | - |
@@ -135,9 +135,9 @@ ___
 ### BitsPerChannelType
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
-The number of bits per color channel.
+每个颜色通道的比特数。
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
 | EIGHT | - |
 | ONE | - |
@@ -149,9 +149,9 @@ ___
 ### BlendMode
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
 
-Blending mode
+混合模式
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
 | COLOR | - |
 | COLORBURN | - |
@@ -187,11 +187,11 @@ ___
 ### ChangeMode
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
 
-The new color profile or mode for a document, specified in [Document.changeMode](/ps_reference/classes/document/#changemode)
+文件的新颜色配置文件或模式，在 "文件 "中指定。 [Document.changeMode](/ps_reference/classes/document/#changemode)
 
-NOTE: Color images must be changed to GRAYSCALE mode before you can change them to BITMAP mode.
+NOTE: 彩色图像必须先改成GRAYSCALE模式，才能改成BITMAP模式。
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
 | BITMAP | - |
 | CMYK | - |
@@ -206,24 +206,24 @@ ___
 ### ChannelType
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
 
-The type of a color channel.
+一个颜色通道的类型。
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
-| COMPONENT | Specific to document color mode |
-| MASKEDAREA | Alpha channel where color indicates masked area |
-| SELECTEDAREA | Alpha channel where color indicates selected area |
-| SPOTCOLOR | Alpha channel to store a spot color |
+| COMPONENT | 特定于文件颜色模式 |
+| MASKEDAREA | 阿尔法通道，其中的颜色表示被屏蔽的区域 |
+| SELECTEDAREA | 阿尔法通道，颜色表示选定的区域 |
+| SPOTCOLOR | 存储专色的Alpha通道 |
 
 ___
 
 ### CharacterAlignment
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.1</span>
 
-The character alignment to use in text.
-Used in [CharacterStyle.characterAlignment](/ps_reference/classes/characterstyle/#characteralignment)
+文本中使用的字符对齐方式。
+使用于 [CharacterStyle.characterAlignment](/ps_reference/classes/characterstyle/#characteralignment)
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
 | EMBOXBOTTOMLEFT | - |
 | EMBOXCENTER | - |
@@ -237,10 +237,10 @@ ___
 ### ColorBlendMode
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.3</span>
 
-The way color should be blended in a fill or stroke operation.
-Pass to [PathItem.fillPath](/ps_reference/classes/pathitem/#fillpath)()
+在填充或描边操作中，颜色应该混合的方式。
+传递给 [PathItem.fillPath](/ps_reference/classes/pathitem/#fillpath)()
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
 | BEHIND | - |
 | CLEAR | - |
@@ -275,10 +275,10 @@ ___
 ### ColorModel
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
 
-The color model representing the current color space
-of a [SolidColor](/ps_reference/classes/solidcolor/) object.
+代表当前色彩空间的色彩模型
+的色彩模型 [SolidColor](/ps_reference/classes/solidcolor/) 对象.
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
 | CMYK | - |
 | GRAYSCALE | - |
@@ -292,36 +292,36 @@ ___
 ### ColorPicker
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.0</span>
 
-The kind of color picker dialog to use.
-Pass to [PreferencesGeneral.colorPicker](/ps_reference/classes/preferences/preferencesgeneral/#colorpicker)
+要使用的颜色选择器对话框的种类。
+传递给 [PreferencesGeneral.colorPicker](/ps_reference/classes/preferences/preferencesgeneral/#colorpicker)
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
-| ADOBE | The Adobe Color Picker. |
-| OSNATIVE | The built-in Apple or Windows color picker. |
-| PLUGIN | The built-in Windows color picker. |
+| ADOBE | Adobe的选色器。 |
+| OSNATIVE | 内置的苹果或Windows颜色选择器。 |
+| PLUGIN | 内置的Windows颜色选择器。 |
 
 ___
 
 ### ColorProfileType
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
 
-Type of color profile used to manage a document, used in [Document.colorProfileType](/ps_reference/classes/document/#colorprofiletype)
+用于管理文件的颜色配置文件的类型，用于 [Document.colorProfileType](/ps_reference/classes/document/#colorprofiletype)
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
-| CUSTOM | Set for all custom profiles |
-| NONE | Set when document is not color managed |
-| WORKING | Set when document uses the working color profile |
+| CUSTOM | 为所有自定义配置文件设置 |
+| NONE | 当文档没有色彩管理时设置 |
+| WORKING | 当文档使用工作色彩配置文件时设置 |
 
 ___
 
 ### CreateFields
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.5</span>
 
-The method used for creating fields. Pass to [Layer.applyDeInterlace](/ps_reference/classes/layer/#applydeinterlace).
+用于创建字段的方法。传递给 [Layer.applyDeInterlace](/ps_reference/classes/layer/#applydeinterlace).
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
 | DUPLICATION | - |
 | INTERPOLATION | - |
@@ -331,10 +331,10 @@ ___
 ### DepthMapSource
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.5</span>
 
-The source to use for the depth map. Pass to
+用于深度图的源。传递给
 [Layer.applyLensBlur](/ps_reference/classes/layer/#applylensblur)().
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
 | IMAGEHIGHLIGHT | - |
 | LAYERMASK | - |
@@ -346,25 +346,25 @@ ___
 ### DialogModes
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
 
-Controls the type of dialogs Photoshop displays
-during API calls
+控制Photoshop在调用API时显示的对话框的类型
+在API调用时显示的对话框
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
-| ALL | All dialogs will be shown |
-| ERROR | Dialogs will be shown only if Photoshop raises an error |
-| NONE | All dialogs will be hidden, and bad calls will silently fail |
+| ALL | 所有的对话框将被显示出来 |
+| ERROR | 只有当Photoshop提出错误时，才会显示对话。 |
+| NONE | 所有的对话都将被隐藏，不好的调用将默默地失败。 |
 
 ___
 
 ### Direction
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
 
-Used in multiple places to represent orientation.
+在多处使用，表示方向。
 
-Orientation of a guide in [Guide.direction](/ps_reference/classes/guide/#direction)
+导游的方向在 [Guide.direction](/ps_reference/classes/guide/#direction)
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
 | HORIZONTAL | - |
 | VERTICAL | - |
@@ -374,11 +374,11 @@ ___
 ### DisplacementMapType
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.5</span>
 
-Describes how the displacement map fits the
-image if the image is not the same size as
-the map. Pass to [Layer.applyDisplace](/ps_reference/classes/layer/#applydisplace).
+描述了在图像大小不一致的情况下，位移图如何适合
+如果图像的尺寸与
+大小不一的情况下，位移图是如何与图像贴合的。传递给 [Layer.applyDisplace](/ps_reference/classes/layer/#applydisplace).
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
 | STRETCHTOFIT | - |
 | TILE | - |
@@ -388,9 +388,9 @@ ___
 ### Dither
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
 
-The type of dithering
+抖动的类型
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
 | DIFFUSION | - |
 | NOISE | - |
@@ -402,9 +402,9 @@ ___
 ### DocumentFill
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
 
-Fill methods available for the new document background
+可用于新文件背景的填充方法
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
 | BACKGROUNDCOLOR | - |
 | BLACK | - |
@@ -417,9 +417,9 @@ ___
 ### DocumentMode
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
 
-Color mode of an open document. See also [Document.mode](/ps_reference/classes/document/#mode) and [Document.changeMode](/ps_reference/classes/document/#changemode)
+打开的文档的颜色模式。另见 [Document.mode](/ps_reference/classes/document/#mode) 和 [Document.changeMode](/ps_reference/classes/document/#changemode)
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
 | BITMAP | - |
 | CMYK | - |
@@ -435,38 +435,38 @@ ___
 ### EditLogItemsType
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.0</span>
 
-The history log edit options.
-Pass to [PreferencesHistory.editLogItems](/ps_reference/classes/preferences/preferenceshistory/#editlogitems)
+历史日志编辑选项。
+传到 [PreferencesHistory.editLogItems](/ps_reference/classes/preferences/preferenceshistory/#editlogitems)
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
-| CONCISE | Includes the text that appears in the History panel in addition to the Sessions information. |
-| DETAILED | Includes the text that appears in the Actions panel in addition to the Concise information. If you need a complete history of all changes made to files, choose Detailed. |
-| SESSIONONLY | Keeps a record of each time you start or quit Photoshop and each time you open and close files (each image’s filename is included). Does not include any information about edits made to the file. |
+| CONCISE | 除了会话信息外，还包括出现在历史面板上的文本。 |
+| DETAILED | 包括除简明信息外，出现在行动面板上的文字。如果你需要一个对文件所做的所有修改的完整历史，选择详细。 |
+| SESSIONONLY | 记录你每次启动或退出Photoshop以及每次打开和关闭文件的情况（包括每个图像的文件名）。不包括对文件进行编辑的任何信息。 |
 
 ___
 
 ### ElementPlacement
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
 
-Placement modes for Layer.move method
+Layer.move方法的放置模式
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
-| PLACEAFTER | Place below a layer, below group if group layer |
-| PLACEATBEGINNING | Place at the top |
-| PLACEATEND | Place at the bottom, above background if background layer exists |
-| PLACEBEFORE | Place above a layer, above group if group layer |
-| PLACEINSIDE | Place inside a group layer, throws error if not group layer |
+| PLACEAFTER | 放在一个层下面，如果是组层，则放在组下面 |
+| PLACEATBEGINNING | 放在顶部 |
+| PLACEATEND | 放在底部，如果存在背景层，则放在背景之上 |
+| PLACEBEFORE | 放在一个层上面，如果是组层，则放在组上面 |
+| PLACEINSIDE | 放在组层内，如果不是组层就会产生错误。 |
 
 ___
 
 ### EliminateFields
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.5</span>
 
-The type of field to eliminate. Pass to [Layer.applyDeInterlace](/ps_reference/classes/layer/#applydeinterlace).
+要消除的字段类型。传递给 [Layer.applyDeInterlace](/ps_reference/classes/layer/#applydeinterlace).
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
 | EVENFIELDS | - |
 | ODDFIELDS | - |
@@ -476,40 +476,40 @@ ___
 ### FontSize
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.0</span>
 
-Font size in panels and dialogs.
-Pass to [PreferencesInterface.textFontSize](/ps_reference/classes/preferences/preferencesinterface/#textfontsize)
+面板和对话框中的字体大小。
+传递到 [PreferencesInterface.textFontSize](/ps_reference/classes/preferences/preferencesinterface/#textfontsize)
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
-| LARGE | Large size. |
-| MEDIUM | Medium size. |
-| SMALL | Small size. |
-| TINY | Tiny size. |
+| LARGE | 大尺寸。 |
+| MEDIUM | 中尺寸。 |
+| SMALL | 小尺寸。 |
+| TINY | 最小尺寸。 |
 
 ___
 
 ### ForcedColors
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
 
-The type of colors to be included the color
-table regardless of their usage
+纳入颜色表的颜色类型
+表，无论其用途如何
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
-| BLACKANDWHITE | Pure black and pure white |
-| NONE | None |
+| BLACKANDWHITE | 纯黑(black)和纯白(white) |
+| NONE | 无 |
 | PRIMARIES | Red, green, blue, cyan, magenta, yellow, black, and white. |
-| WEB | The 216 web-safe colors |
+| WEB | 216种网络安全的颜色 |
 
 ___
 
 ### Geometry
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.5</span>
 
-Geometric options for shapes, such as the iris shape in the
-Lens Blur filter. Pass to [Layer.applyLensBlur](/ps_reference/classes/layer/#applylensblur)().
+形状的几何选项，如镜头模糊滤镜中的虹膜形状。
+镜头模糊过滤器。传递到 [Layer.applyLensBlur](/ps_reference/classes/layer/#applylensblur)().
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
 | HEPTAGON | - |
 | HEXAGON | - |
@@ -523,10 +523,10 @@ ___
 ### GridLineStyle
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.0</span>
 
-The line style for nonprinting grids displayed over images.
-Pass to [PreferencesGuidesGridsAndSlices.gridStyle](/ps_reference/classes/preferences/preferencesguidesgridsandslices/#gridstyle)
+在图像上显示的非打印网格的线条样式。
+传递给 [PreferencesGuidesGridsAndSlices.gridStyle](/ps_reference/classes/preferences/preferencesguidesgridsandslices/#gridstyle)
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
 | DASHED | - |
 | DOTTED | - |
@@ -540,22 +540,22 @@ ___
 The size of grid squares.
 Pass to [PreferencesTransparencyAndGamut.gridSize](/ps_reference/classes/preferences/preferencestransparencyandgamut/#gridsize)
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
-| LARGE | Large grid squares. |
-| MEDIUM | Medium grid squares. |
-| NONE | No grid is displayed. |
-| SMALL | Small grid squares. |
+| LARGE | 大网格方块。 |
+| MEDIUM | 中网格方块。 |
+| NONE | 不显示网格。 |
+| SMALL | 小网格方块。 |
 
 ___
 
 ### GuideLineStyle
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.0</span>
 
-The line style for nonprinting guides displayed over images.
-Pass to [PreferencesGuidesGridsAndSlices.guideStyle](/ps_reference/classes/preferences/preferencesguidesgridsandslices/#guidestyle)
+在图像上显示的非印刷指南的线条样式。
+传递到 [PreferencesGuidesGridsAndSlices.guideStyle](/ps_reference/classes/preferences/preferencesguidesgridsandslices/#guidestyle)
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
 | DASHED | - |
 | SOLID | - |
@@ -565,10 +565,10 @@ ___
 ### Intent
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
 
-The rendering intent to use when converting from one color space to another with
+从一个色彩空间转换到另一个色彩空间时，要使用的渲染意图。
 [Document.convertProfile](/ps_reference/classes/document/#convertprofile)
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
 | ABSOLUTECOLORIMETRIC | - |
 | PERCEPTUAL | - |
@@ -580,12 +580,12 @@ ___
 ### InterpolationMethod
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.0</span>
 
-The method to use for bitmap interpolation.
+用于位图插值的方法。
 
-Pass to [PreferencesGeneral.imageInterpolation](/ps_reference/classes/preferences/preferencesgeneral/#imageinterpolation),
+传递给 [PreferencesGeneral.imageInterpolation](/ps_reference/classes/preferences/preferencesgeneral/#imageinterpolation),
 [Layer.scale](/ps_reference/classes/layer/#scale)(), [Layer.skew](/ps_reference/classes/layer/#skew)(), [Layer.rotate](/ps_reference/classes/layer/#rotate)()
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
 | AUTOMATIC | Choose best bicubic option automatically |
 | BICUBIC | Bicubic interpolation |
@@ -599,9 +599,9 @@ ___
 ### JPEGFormatOptions
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
 
-The option with which to save a JPEG file.
+用来保存JPEG文件的选项。
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
 | OPTIMIZEDBASELINE | Optimized color and a slightly reduced file size. |
 | PROGRESSIVE | Displays a series of increasing detailed scans as the image downloads. |
@@ -612,10 +612,10 @@ ___
 ### Justification
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.1</span>
 
-The placement of paragraph text within the bounding box.
-Used in [ParagraphStyle.justification](/ps_reference/classes/paragraphstyle/#justification)
+段落文本在边界框内的位置。
+使用于 [ParagraphStyle.justification](/ps_reference/classes/paragraphstyle/#justification)
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
 | CENTER | - |
 | CENTERJUSTIFIED | - |
@@ -630,10 +630,10 @@ ___
 ### KashidaWidthType
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.1</span>
 
-The width of kashida (tatweel) character
-Used in [ParagraphStyle.kashidaWidth](/ps_reference/classes/paragraphstyle/#kashidawidth)
+卡西达(TATWEEL)字符的宽度
+使用于 [ParagraphStyle.kashidaWidth](/ps_reference/classes/paragraphstyle/#kashidawidth)
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
 | LONG | - |
 | MEDIUM | - |
@@ -646,10 +646,10 @@ ___
 ### Kinsoku
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.1</span>
 
-Line breaking rules in Japanese text
-Used in [ParagraphStyle.kinsoku](/ps_reference/classes/paragraphstyle/#kinsoku)
+日文中的断行规则
+使用于 [ParagraphStyle.kinsoku](/ps_reference/classes/paragraphstyle/#kinsoku)
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
 | JISMAXIMUM | - |
 | JISWEAK | - |
@@ -660,9 +660,9 @@ ___
 ### LabelColors
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
 
-Options for layer list label colors
+图层列表标签颜色的选项
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
 | BLUE | - |
 | GRAY | - |
@@ -678,9 +678,9 @@ ___
 ### Language
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.1</span>
 
-The language to use for text. Used in [CharacterStyle.language](/ps_reference/classes/characterstyle/#language)
+用于文本的语言。使用于 [CharacterStyle.language](/ps_reference/classes/characterstyle/#language)
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
 | ARABIC | - |
 | BANGLAINDIA | - |
@@ -747,9 +747,9 @@ ___
 ### LayerKind
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
 
-Kinds of different layers in a document
+文件中不同图层的种类
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
 | BLACKANDWHITE | - |
 | BRIGHTNESSCONTRAST | - |
@@ -782,9 +782,9 @@ ___
 ### LensType
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.5</span>
 
-The type of Lens to use. Pass to [Layer.applyLensFlare](/ps_reference/classes/layer/#applylensflare)().
+要使用的镜头类型。传递给 [Layer.applyLensFlare](/ps_reference/classes/layer/#applylensflare)().
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
 | MOVIEPRIME | - |
 | PRIME105 | - |
@@ -796,12 +796,12 @@ ___
 ### MatteColor
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
 
-The color to use to fill anti-aliased edges
-adjacent to transparent areas of the image.
-When transparency is turned off for an image,
-the matte color is applied to transparent areas.
+用来填充抗锯齿边缘的颜色
+用于填充与图像透明区域相邻的反锯齿边缘。
+当一个图像的透明度被关闭时。
+哑光颜色会被应用到透明区域。
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
 | BACKGROUND | - |
 | BLACK | - |
@@ -815,24 +815,24 @@ ___
 ### MaximizeCompatibility
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.0</span>
 
-The permission state for queries.
-Pass to [PreferencesFileHandling.maximizeCompatibility](/ps_reference/classes/preferences/preferencesfilehandling/#maximizecompatibility)
+查询的权限状态。
+传递给 [PreferencesFileHandling.maximizeCompatibility](/ps_reference/classes/preferences/preferencesfilehandling/#maximizecompatibility)
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
-| ALWAYS | Always maximize compatibility. |
-| ASK | Always ask about maximize compatibility. |
-| NEVER | Never ask about maximize compatibility. |
+| ALWAYS | 始终最大限度地提高兼容性。 |
+| ASK | 询问是否最大限度的兼容性。 |
+| NEVER | 不询问最大限度的兼容性。 |
 
 ___
 
 ### MiddleEasternDigitsType
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.1</span>
 
-Digit type to use in text (Middle Eastern features).
-Used in [CharacterStyle.middleEasternDigitsType](/ps_reference/classes/characterstyle/#middleeasterndigitstype)
+文本中使用的数字类型（Middle Eastern features）。
+使用于 [CharacterStyle.middleEasternDigitsType](/ps_reference/classes/characterstyle/#middleeasterndigitstype)
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
 | FARSI | - |
 | HINDI | - |
@@ -844,10 +844,10 @@ ___
 ### MiddleEasternTextDirection
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.1</span>
 
-Text flow direction (Middle Eastern features).
-Used in [CharacterStyle.middleEasternTextDirection](/ps_reference/classes/characterstyle/#middleeasterntextdirection)
+文本流向（Middle Eastern features）。
+使用于 [CharacterStyle.middleEasternTextDirection](/ps_reference/classes/characterstyle/#middleeasterntextdirection)
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
 | DEFAULT | - |
 | LEFTTORIGHT | - |
@@ -858,11 +858,11 @@ ___
 ### Mojikumi
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.1</span>
 
-Spacing between punctuation, symbols, numbers,
-and other character classes in Japanese text
-Used in [ParagraphStyle.mojikumi](/ps_reference/classes/paragraphstyle/#mojikumi)
+标点、符号、数字之间的间距。
+和日语文本中的其他字符类别之间的间距
+使用于 [ParagraphStyle.mojikumi](/ps_reference/classes/paragraphstyle/#mojikumi)
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
 | NONE | - |
 | SET1 | - |
@@ -875,9 +875,9 @@ ___
 ### NewDocumentMode
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
 
-Color Modes available for new document
+可用于新文件的颜色模式
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
 | BITMAP | - |
 | CMYK | - |
@@ -890,9 +890,9 @@ ___
 ### NoiseDistribution
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.5</span>
 
-Distribution model to use when applying an Add Noise filter. Pass to [Layer.applyAddNoise](/ps_reference/classes/layer/#applyaddnoise).
+应用添加噪声滤波器时使用的分布模型。传递到 [Layer.applyAddNoise](/ps_reference/classes/layer/#applyaddnoise).
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
 | GAUSSIAN | - |
 | UNIFORM | - |
@@ -902,10 +902,10 @@ ___
 ### OffsetUndefinedAreas
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.5</span>
 
-Method to use to fill the empty space left by offsetting an image or selection.
-Pass to [Layer.applyOffset](/ps_reference/classes/layer/#applyoffset)()
+用来填补因偏移图像或选区而留下的空隙的方法。
+传递给 [Layer.applyOffset](/ps_reference/classes/layer/#applyoffset)()
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
 | REPEATEDGEPIXELS | - |
 | SETTOBACKGROUND | - |
@@ -916,9 +916,9 @@ ___
 ### OperatingSystem
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
 
-The target operating system in [BMPSaveOptions](/ps_reference/objects/saveoptions/bmpsaveoptions/).
+目标操作系统。 [BMPSaveOptions](/ps_reference/objects/saveoptions/bmpsaveoptions/).
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
 | OS2 | - |
 | WINDOWS | - |
@@ -928,10 +928,10 @@ ___
 ### Orientation
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.1</span>
 
-Used in multiple places to represent orientation
-e.g., [TextItem.orientation](/ps_reference/classes/textitem/#orientation)
+在多处使用，表示方向
+例如., [TextItem.orientation](/ps_reference/classes/textitem/#orientation)
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
 | HORIZONTAL | - |
 | VERTICAL | - |
@@ -941,24 +941,29 @@ ___
 ### OtherCursors
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.0</span>
 
-The style of the cursors for the following tools: Marquee, Lasso, Polygonal Lasso, Magic Wand, Crop, Slice,
-Patch Eyedropper, Pen, Gradient, Line, Paint Bucket, Magnetic Lasso, Magnetic Pen, Freeform Pen,
-Measure, and Color Sampler.
-Pass to [PreferencesCursors.otherCursors](/ps_reference/classes/preferences/preferencescursors/#othercursors)
+以下工具的光标的样式。游标、套索、多边形套索、魔棒、裁剪、切片。
+取色滴管, 钢笔，渐变色，线条，油漆桶，磁力套索，磁力笔，自由形态笔。
+测量，以及颜色采样器。
 
-| Name | Description |
+Marquee, Lasso, Polygonal Lasso, Magic Wand, Crop, Slice,
+Patch Eyedropper, Pen, Gradient, Line, Paint Bucket, Magnetic Lasso, Magnetic Pen, Freeform Pen,
+Measure, and Color Sampler
+
+传递到 [PreferencesCursors.otherCursors](/ps_reference/classes/preferences/preferencescursors/#othercursors)
+
+| 名称 | 描述|
 | :------ | :------ |
-| PRECISE | Use crosshair cursors for tools. |
-| STANDARD | Use small iconic cursors for tools. |
+| PRECISE | 使用十字光标的工具。 |
+| STANDARD | 使用小的图标光标作为工具。 |
 
 ___
 
 ### PNGMethod
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
 
-Compression method for saving a PNG file
+保存PNG文件的压缩方法
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
 | MODERATE | - |
 | QUICK | - |
@@ -969,25 +974,25 @@ ___
 ### PaintingCursors
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.0</span>
 
-The style of the cursors for the following tools: Eraser, Pencil, Paintbrush, Healing Brush,
-Rubber Stamp, Pattern Stamp, Smudge, Blur, Sharpen, Dodge, Burn, Sponge.
-Pass to [PreferencesCursors.paintingCursors](/ps_reference/classes/preferences/preferencescursors/#paintingcursors)
+以下工具的光标样式。橡皮擦，铅笔，画笔，愈合笔。
+橡皮图章、图案图章、涂抹、模糊、锐化、闪避、烧灼、海绵。
+传递到 [PreferencesCursors.paintingCursors](/ps_reference/classes/preferences/preferencescursors/#paintingcursors)
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
-| BRUSHSIZE | Displays cursors as brush shapes representing the size of the current brush where boundaries have 50% brush opacity |
-| FULLSIZE | Use the full size of the brush regardless of brush opacity |
-| PRECISE | Use crosshair cursors when painting. |
-| STANDARD | Use small iconic cursors when painting. |
+| BRUSHSIZE | 将光标显示为代表当前画笔大小的画笔形状，其中边界有50%的画笔不透明度。 |
+| FULLSIZE | 无论画笔的不透明度如何，都使用全尺寸的画笔 |
+| PRECISE | 绘画时使用十字光标。 |
+| STANDARD | 绘画时使用小的图标光标。 |
 
 ___
 
 ### Palette
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
 
-The palette type to use
+要使用的调色板类型
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
 | EXACT | - |
 | LOCALADAPTIVE | - |
@@ -1007,10 +1012,10 @@ ___
 ### ParagraphFeatures
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.1</span>
 
-The paragraph features to use in text.
-Used in [ParagraphStyle.features](/ps_reference/classes/paragraphstyle/#features)
+在文本中使用的段落特征。
+使用于 [ParagraphStyle.features](/ps_reference/classes/paragraphstyle/#features)
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
 | DEFAULT | - |
 | EASTASIAN | - |
@@ -1021,10 +1026,10 @@ ___
 ### ParagraphLayout
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.1</span>
 
-The paragraph layout to use in text.
-Used in [ParagraphStyle.layoutMode](/ps_reference/classes/paragraphstyle/#layoutmode)
+文本中使用的段落布局。
+使用于 [ParagraphStyle.layoutMode](/ps_reference/classes/paragraphstyle/#layoutmode)
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
 | LATINEASTASIAN | - |
 | WORLDREADY | - |
@@ -1034,9 +1039,9 @@ ___
 ### PathKind
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.5</span>
 
-The type of a [PathItem](/ps_reference/classes/pathitem/)
+的类型 [PathItem](/ps_reference/classes/pathitem/)
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
 | CLIPPINGPATH | - |
 | DUPLICATE | - |
@@ -1051,9 +1056,9 @@ ___
 ### PointKind
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.3</span>
 
-The role a [PathPoint](/ps_reference/classes/pathpoint/) plays in a [PathItem](/ps_reference/classes/pathitem/)
+角色a [PathPoint](/ps_reference/classes/pathpoint/) 在一个 [PathItem](/ps_reference/classes/pathitem/)
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
 | CORNERPOINT | - |
 | SMOOTHPOINT | - |
@@ -1063,36 +1068,36 @@ ___
 ### PointType
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.0</span>
 
-The point/pica size: either 72 or 72.27 points per inch.
-Pass to [PreferencesUnitsAndRulers.pointSize](/ps_reference/classes/preferences/preferencesunitsandrulers/#pointsize)
+点/比卡大小：每英寸72或72.27点。
+传到 [PreferencesUnitsAndRulers.pointSize](/ps_reference/classes/preferences/preferencesunitsandrulers/#pointsize)
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
-| POSTSCRIPT | 72 points per inch. |
-| TRADITIONAL | 72.27 points per inch. |
+| POSTSCRIPT | 72 每英寸点数。 |
+| TRADITIONAL | 72.27 每英寸点数。 |
 
 ___
 
 ### PolarConversionType
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.5</span>
 
-The kind of polar conversion.
-Pass to [Layer.applyPolarCoordinates](/ps_reference/classes/layer/#applypolarcoordinates)().
+的那种极地转换。
+传到 [Layer.applyPolarCoordinates](/ps_reference/classes/layer/#applypolarcoordinates)().
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
-| POLARTORECTANGULAR | The distortion applied will take the input pixel grid as polar coordinates and convert them to rectangular coordinates. |
-| RECTANGULARTOPOLAR | The distortion applied will take the input pixel grid as rectangular coordinates and convert them to polar coordinates. |
+| POLARTORECTANGULAR | 应用的失真将把输入的像素网格作为极坐标，并将其转换为矩形坐标。 |
+| RECTANGULARTOPOLAR | 应用的失真将把输入的像素网格作为矩形坐标，并将其转换为极坐标。 |
 
 ___
 
 ### PreserveShape
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.5</span>
 
-Favor the promotion of either corners or curves.
-Pass to [Layer.applyMaximum](/ps_reference/classes/layer/#applymaximum)() and [Layer.applyMinimum](/ps_reference/classes/layer/#applyminimum)().
+有利于促进转角或曲线的发展。
+传给 [Layer.applyMaximum](/ps_reference/classes/layer/#applymaximum)() 和[Layer.applyMinimum](/ps_reference/classes/layer/#applyminimum)().
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
 | ROUNDNESS | - |
 | SQUARENESS | - |
@@ -1102,9 +1107,9 @@ ___
 ### RasterizeType
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
 
-The type of layer to get rasterized.
+要被栅格化的层的类型。
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
 | ENTIRELAYER | - |
 | FILLCONTENT | - |
@@ -1122,31 +1127,31 @@ ___
 ### ResampleMethod
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
 
-The method to use for document interpolation
+用于文件插值的方法
 
-Pass to [Document.resizeImage](/ps_reference/classes/document/#resizeimage)()
+传递给 [Document.resizeImage](/ps_reference/classes/document/#resizeimage)()
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
-| AUTOMATIC | Choose best bicubic option automatically |
-| BICUBIC | Bicubic interpolation |
-| BICUBICSHARPER | Apply a sharpening mask |
-| BICUBICSMOOTHER | Apply a smoothing mask |
-| BILINEAR | Bilinear interpolate |
-| DEEPUPSCALE | Using deep learning, predict what the picture will look like larger. |
-| NEARESTNEIGHBOR | Determine value based on nearest neighbor |
-| NONE | Changes image resolution value without affecting document dimension  **Currently unsupported** |
-| PRESERVEDETAILS | Attempt to preserve details by using machine learning |
+| AUTOMATIC | 自动选择最佳的二分法选项 |
+| BICUBIC | 二次元插值 |
+| BICUBICSHARPER | 应用锐化面具 |
+| BICUBICSMOOTHER | 敷上平滑面膜 |
+| BILINEAR | 双线性插值 |
+| DEEPUPSCALE | 使用深度学习，预测图片变大后的样子。 |
+| NEARESTNEIGHBOR | 根据最近的邻居确定价值 |
+| NONE | 改变图像分辨率值而不影响文件尺寸 **目前不支持**。|
+| PRESERVEDETAILS | 试图通过使用机器学习来保留细节 |
 
 ___
 
 ### RippleSize
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.5</span>
 
-The size of undulations.
-Pass to [Layer.applyRipple](/ps_reference/classes/layer/#applyripple)().
+起伏的大小。
+传到 [Layer.applyRipple](/ps_reference/classes/layer/#applyripple)().
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
 | LARGE | - |
 | MEDIUM | - |
@@ -1157,10 +1162,10 @@ ___
 ### RulerUnits
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.0</span>
 
-The measurement unit for ruler increments.
-Pass to [PreferencesUnitsAndRulers.rulerUnits](/ps_reference/classes/preferences/preferencesunitsandrulers/#rulerunits)
+尺子增量的测量单位。
+传到 [PreferencesUnitsAndRulers.rulerUnits](/ps_reference/classes/preferences/preferencesunitsandrulers/#rulerunits)
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
 | CENTIMETERS | - |
 | INCHES | - |
@@ -1175,9 +1180,9 @@ ___
 ### SampleSize
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.0</span>
 
-Sample size for the EyeDropper tool and ColorSampler instances.
+EyeDropper工具和ColorSampler实例的样本大小。
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
 | POINTSAMPLE | - |
 | SAMPLE101X101 | - |
@@ -1192,80 +1197,80 @@ ___
 ### SaveLogItemsType
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.0</span>
 
-Options for logging the history items.
-Pass to [PreferencesHistory.saveLogItems](/ps_reference/classes/preferences/preferenceshistory/#savelogitems)
+记录历史项目的选项。
+传递给 [PreferencesHistory.saveLogItems](/ps_reference/classes/preferences/preferenceshistory/#savelogitems)
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
-| LOGFILE | Save history log in a text file. |
-| LOGFILEANDMETADATA | Save history log in file metadata and a text file. |
-| METADATA | Save history log in file metadata. |
+| LOGFILE | 将历史记录保存在一个文本文件中。 |
+| LOGFILEANDMETADATA | 在文件元数据和文本文件中保存历史日志。 |
+| METADATA | 在文件元数据中保存历史日志。 |
 
 ___
 
 ### SaveMethod
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
 
-The type of save operation.
+保存操作的类型。
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
-| SAVE | Saves the current document at the current format. |
-| SAVEAS | Changes the format of document, changing the file. |
-| SAVEASCOPY | Creates a copy of the document in the new format. |
+| SAVE | 以当前格式保存当前文件。       |
+| SAVEAS | 改变文件的格式，改变文件。 |
+| SAVEASCOPY | 以新的格式创建一个文件的副本。 |
 
 ___
 
 ### SaveOptions
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
 
-The policy for handling new changes upon closing a document.
+关闭文件时处理新变化的政策。
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
-| DONOTSAVECHANGES | Will close document without saving, discarding changes |
-| PROMPTTOSAVECHANGES | Will ask the user if they&#x27;d like to save changes, blocking the script |
-| SAVECHANGES | Will save all existing changes before closing, prompting if document is not saved yet |
+| DONOTSAVECHANGES | 将关闭文件而不保存，丢弃更改                               |
+| PROMPTTOSAVECHANGES | 将询问用户是否愿意保存更改，并阻止脚本。 |
+| SAVECHANGES | 在关闭前会保存所有现有的修改，如果文件还没有保存，则会提示 |
 
 ___
 
 ### SavePreview
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.0</span>
 
-The application's behavior regarding image previews.
-Pass to [PreferencesFileHandling.imagePreviews](/ps_reference/classes/preferences/preferencesfilehandling/#imagepreviews)
+应用程序关于图像预览的行为。
+传递给 [PreferencesFileHandling.imagePreviews](/ps_reference/classes/preferences/preferencesfilehandling/#imagepreviews)
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
-| ALWAYSSAVE | Always save the item with the file. |
-| ASKWHENSAVING | Prompt the user whether to save the item with the file. |
-| NEVERSAVE | Never save the item with the file. |
+| ALWAYSSAVE | 始终将该项目与文件一起保存。 |
+| ASKWHENSAVING | 提示用户是否将该项目与文件一起保存。 |
+| NEVERSAVE | 切勿将该项目与文件一起保存。 |
 
 ___
 
 ### SelectionType
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.3</span>
 
-The selection behavior when a selection already exists.
-Used in [PathItem.makeSelection](/ps_reference/classes/pathitem/#makeselection)()
+当一个选择已经存在时的选择行为。
+使用于 [PathItem.makeSelection](/ps_reference/classes/pathitem/#makeselection)()
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
-| DIMINISH | Remove the selection from the already selected area |
-| EXTEND | Add the selection to an already selected area |
-| INTERSECT | Make the selection only the area where the new selection intersectes the already selected area |
-| REPLACE | Replace the selected area |
+| DIMINISH | 从已经选定的区域中删除选择 |
+| EXTEND | 将选区添加到一个已经选定的区域 |
+| INTERSECT | 只选择新的选择与已经选择的区域相交的区域 |
+| REPLACE | 替换所选区域 |
 
 ___
 
 ### ShapeOperation
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.3</span>
 
-How to combine the shapes if the destination path already has a selection.
+如果目标路径已经有了选区，如何组合形状。
 
-Set for [SubPathInfo.operation](/ps_reference/classes/subpathinfo/#operation), stored in the resulting [SubPathItem](/ps_reference/classes/subpathitem/)
+设置为 [SubPathInfo.operation](/ps_reference/classes/subpathinfo/#operation), 存储在所产生的 [SubPathItem](/ps_reference/classes/subpathitem/)
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
 | SHAPEADD | - |
 | SHAPEINTERSECT | - |
@@ -1277,10 +1282,10 @@ ___
 ### SmartBlurMode
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.5</span>
 
-The method to use for smart blurring.
-Pass to [Layer.applySmartBlur](/ps_reference/classes/layer/#applysmartblur)().
+用于智能模糊的方法。
+传递给 [Layer.applySmartBlur](/ps_reference/classes/layer/#applysmartblur)().
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
 | EDGEONLY | - |
 | NORMAL | - |
@@ -1291,10 +1296,10 @@ ___
 ### SmartBlurQuality
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.5</span>
 
-The smart blur quality.
-Pass to [Layer.applySmartBlur](/ps_reference/classes/layer/#applysmartblur)().
+智能模糊的质量。
+传到 [Layer.applySmartBlur](/ps_reference/classes/layer/#applysmartblur)().
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
 | HIGH | - |
 | LOW | - |
@@ -1305,10 +1310,10 @@ ___
 ### SpherizeMode
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.5</span>
 
-The curve (or stretch shape) to use for the distortion.
-Pass to [Layer.applySpherize](/ps_reference/classes/layer/#applyspherize)().
+用于变形的曲线（或拉伸形状）。
+传递给 [Layer.applySpherize](/ps_reference/classes/layer/#applyspherize)().
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
 | HORIZONTAL | - |
 | NORMAL | - |
@@ -1319,9 +1324,9 @@ ___
 ### StrikeThrough
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.1</span>
 
-The text strikethrough style to use in text. Used in [CharacterStyle.strikeThrough](/ps_reference/classes/characterstyle/#strikethrough)
+文本中使用的删除线样式。使用于 [CharacterStyle.strikeThrough](/ps_reference/classes/characterstyle/#strikethrough)
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
 | STRIKEBOX | - |
 | STRIKEHEIGHT | - |
@@ -1332,9 +1337,9 @@ ___
 ### TextCase
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.1</span>
 
-The capitalization style to use in text. Used in [CharacterStyle.capitalization](/ps_reference/classes/characterstyle/#capitalization)
+文本中使用的大写风格。使用于 [CharacterStyle.capitalization](/ps_reference/classes/characterstyle/#capitalization)
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
 | ALLCAPS | - |
 | NORMAL | - |
@@ -1345,10 +1350,10 @@ ___
 ### TextureType
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.5</span>
 
-The type of texture or glass surface image to load for a texturizer
-or glass filter. Pass to [Layer.applyGlassEffect](/ps_reference/classes/layer/#applyglasseffect)().
+纹理或玻璃表面图像的类型，以加载纹理器
+或玻璃过滤器。传递给 [Layer.applyGlassEffect](/ps_reference/classes/layer/#applyglasseffect)().
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
 | BLOCKS | - |
 | CANVAS | - |
@@ -1360,9 +1365,9 @@ ___
 ### ToolType
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.3</span>
 
-The tool to use with [PathItem.strokePath](/ps_reference/classes/pathitem/#strokepath)()
+使用的工具是 [PathItem.strokePath](/ps_reference/classes/pathitem/#strokepath)()
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
 | ARTHISTORYBRUSH | - |
 | BACKGROUNDERASER | - |
@@ -1386,24 +1391,24 @@ ___
 ### TrimType
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
-Type of pixels to trim around an image, passed to [Document.trim](/ps_reference/classes/document/#trim).
+要在图像周围修剪的像素类型，传递给 [Document.trim](/ps_reference/classes/document/#trim).
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
-| BOTTOMRIGHT | Bottom right pixel color. |
-| TOPLEFT | Top left pixel color. |
-| TRANSPARENT | Transparent pixels. |
+| BOTTOMRIGHT | 右下角的像素颜色。 |
+| TOPLEFT | 左上角的像素颜色。 |
+| TRANSPARENT | 透明的像素。 |
 
 ___
 
 ### TypeInterfaceFeatures
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.0</span>
 
-Options for changing user interface of Character and Paragraph panels.
-This option is not in Preferences dialog but instead it is located in: Main menu > Type > Language Options
-Pass to [PreferencesType.showTextFeatures](/ps_reference/classes/preferences/preferencestype/#showtextfeatures)
+改变字符和段落面板的用户界面的选项。
+这个选项不在首选项对话框中，而是位于。主菜单 > 类型 > 语言选项
+传递到 [PreferencesType.showTextFeatures](/ps_reference/classes/preferences/preferencestype/#showtextfeatures)
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
 | DEFAULT | - |
 | EASTASIAN | - |
@@ -1414,10 +1419,10 @@ ___
 ### TypeUnits
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.0</span>
 
-The measurement unit for type.
-Pass to [PreferencesUnitsAndRulers.typeUnits](/ps_reference/classes/preferences/preferencesunitsandrulers/#typeunits)
+类型的测量单位。
+传递给 [PreferencesUnitsAndRulers.typeUnits](/ps_reference/classes/preferences/preferencesunitsandrulers/#typeunits)
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
 | MILLIMETERS | - |
 | PIXELS | - |
@@ -1428,11 +1433,11 @@ ___
 ### UndefinedAreas
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.5</span>
 
-How to treat undistorted areas or areas left blank in an image
-to which a filter in the Distort category has been applied. Pass
-to [Layer.applyDisplace](/ps_reference/classes/layer/#applydisplace)(), [Layer.applyShear](/ps_reference/classes/layer/#applyshear)(), [Layer.applyWave](/ps_reference/classes/layer/#applywave)()
+如何处理图像中未扭曲的区域或留有空白的区域
+如何处理图像中未扭曲的区域或留有空白的区域，这些区域已被应用于扭曲类别的过滤器。通过
+到 [Layer.applyDisplace](/ps_reference/classes/layer/#applydisplace)(), [Layer.applyShear](/ps_reference/classes/layer/#applyshear)(), [Layer.applyWave](/ps_reference/classes/layer/#applywave)()
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
 | REPEATEDGEPIXELS | - |
 | WRAPAROUND | - |
@@ -1442,9 +1447,9 @@ ___
 ### Underline
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.1</span>
 
-The underline style to use in text. Used in [CharacterStyle.underline](/ps_reference/classes/characterstyle/#underline)
+文本中使用的下划线样式。使用于 [CharacterStyle.underline](/ps_reference/classes/characterstyle/#underline)
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
 | LEFTINVERTICAL | - |
 | NONE | - |
@@ -1455,9 +1460,9 @@ ___
 ### Units
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.4</span>
 
-Valid Units for convertUnits method, used in [Photoshop.convertUnits](/ps_reference/classes/photoshop/#convertunits)
+转换单位方法的有效单位，用于 [Photoshop.convertUnits](/ps_reference/classes/photoshop/#convertunits)
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
 | CM | - |
 | INCHES | - |
@@ -1471,9 +1476,9 @@ ___
 ### WarpStyle
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.1</span>
 
-The warp style to use with Text. Used in a [WarpStyle.style](/ps_reference/classes/warpstyle/#style)
+与文本一起使用的经线样式。在一个 [WarpStyle.style](/ps_reference/classes/warpstyle/#style)
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
 | ARC | - |
 | ARCH | - |
@@ -1497,10 +1502,10 @@ ___
 ### WaveType
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.5</span>
 
-The type of wave.
-Pass to [Layer.applyWave](/ps_reference/classes/layer/#applywave)().
+波浪的类型。
+传到 [Layer.applyWave](/ps_reference/classes/layer/#applywave)().
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
 | SINE | - |
 | SQUARE | - |
@@ -1511,10 +1516,10 @@ ___
 ### ZigZagType
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.5</span>
 
-The method of zigzagging.
-Pass to [Layer.applyZigZag](/ps_reference/classes/layer/#applyzigzag)().
+Zigzagging的方法。
+传到 [Layer.applyZigZag](/ps_reference/classes/layer/#applyzigzag)().
 
-| Name | Description |
+| 名称 | 描述|
 | :------ | :------ |
 | AROUNDCENTER | - |
 | OUTFROMCENTER | - |
