@@ -5,45 +5,44 @@ contributors:
   - https://github.com/amandahuarng
 ---
 
-# How UXP Scripting Works
-Each Photoshop script file is a plain text file with a `.psjs` file extension. We plan on expanding UXP scripting to other applications and supporting opening scripts via double-click in the future. When this happens, the file extension will help identify which application the script should be launched in. 
+# UXP脚本如何工作
+每个 Photoshop 脚本文件都是一个纯文本文件，文件扩展名为 .psjs。我们计划在未来将 UXP 脚本扩展到其他应用程序，并支持通过双击打开脚本。当这种情况发生时，文件扩展名将有助于识别该脚本应在哪个应用程序中启动。
 
-## Execution Context
-Photoshop sets an execution context while invoking a script.
+## 执行环境
+Photoshop在调用脚本时设置了一个执行环境。
 
-Within an execution context, only one script can be executed at a time. You cannot invoke another script from the running script. Using the UXP script module, you can access `ExecutionContext`.
+在一个执行环境中，一次只能执行一个脚本。你不能从正在运行的脚本中调用另一个脚本。使用 UXP 脚本模块，您可以访问  `ExecutionContext`.
 
 ```js
 const script = await require("uxp").script;
 const executionContext = script.executionContext;
 ```
-It provides details about the current script execution, methods to send data to Photoshop, and events to manage script lifecycles. You can also use methods belonging to `executionControl.hostControl` to suspend/resume history states and auto close documents. Read more in the scripting [reference](../reference/).
+它提供了关于当前脚本执行的细节，向Photoshop发送数据的方法，以及管理脚本生命周期的事件。你也可以使用属于 `executionControl.hostControl` 来暂停/恢复历史状态和自动关闭文件。在脚本中阅读更多内容 [reference](../reference/).
 
-## Events
-Script execution can be cancelled when: 
-* a user clicks on "Cancel" in the progress bar
-* Photoshop encounters some exception in running a script file 
+## 事件 
+脚本的执行可以在以下情况下被取消。
+* 用户点击进度条上的 "取消"。
+* Photoshop在运行一个脚本文件时遇到了一些异常 
 
-Script developers can add event handlers to get notified when the command has been cancelled. The callback will receive "reason" as a parameter. 
+脚本开发人员可以添加事件处理程序，以便在命令被取消时获得通知。回调将收到 "原因 "作为参数。
 
 ```js
 executionContext.onCancel.addListener((reason) => {
-    // reason would be a json object set by PS while cancelling
+    // 原因将是PS在取消时设置的一个json对象
     reject("Message");
 });
-``` 
+```
 
-## User Interface
-Scripts can only show a dialog UI. Any UI created by a script is modal in naturel By *not* using `await` for `showModal()` (not letting it return a Promise), execution can continue to completion at which point any UI is destroyed. If you don't see your modal UI appear, check that there is an `await` in front of it.
+## 用户界面
+脚本只能显示一个对话框的用户界面。任何由脚本创建的用户界面在本质上都是模态的。 通过*不*对`showModal()`使用`await`（不让它返回一个Promise），执行可以继续到完成，这时任何用户界面都会被破坏。如果你没有看到你的模态UI出现，请检查它前面是否有一个`await'。
 
-Photoshop automatically shows a **progress bar** if the script takes more than 2-3 seconds to finish.
+如果脚本完成的时间超过2-3秒，Photoshop会自动显示一个进度条。
 
 
 ### Global Await
-`await` expressions cause `async` function execution to pause until a Promise is either fulfilled or rejected, and to resume execution
-of the `async` function after fulfillment. When resumed, the value of the `await` expression is that of the fulfilled Promise.
+`await` 表达方式的原因 `async` 暂停函数的执行，直到Promise得到满足或被拒绝，并恢复执行  `async` 函数履行后。当恢复时，其值为 `await` 表达式是已完成的Promise的表达式。
 
-Global await means awaiting for a global scope async function to finish. 
+全局等待是指等待一个全局范围的异步函数完成。
 
 ```js
 function anyAsyncFunction() {
@@ -69,34 +68,34 @@ try {
 console.log("Script completed");
 ```
 
-## Permitted UXP Modules
-With plugin development, developers define which UXP modules they want to access in the `manifest.json` file. Script permissions are managed by Photoshop internally and no manifest configuration is required. 
+## 允许的 UXP 模块
+通过插件开发，开发人员在 "manifest.json "文件中定义他们想要访问的 UXP 模块。脚本权限由 Photoshop 内部管理，不需要清单配置。
 
-**At this time, not all UXP modules are accessible by scripts but we plan on enabling more modules in future UXP versions.**  All modules that are currently supported are enabled by default:
+**目前，并非所有的 UXP 模块都能被脚本访问，但我们计划在未来的 UXP 版本中启用更多的模块**目前支持的所有模块都是默认启用的。
 
 
-| UXP Module | Supported | Current Access Level | Sample
-| --- | --- | --- | --- | 
-| Fonts | Yes | Installed fonts can be read | [View sample.](../samples/index.md#access-installed-fonts) |
-| Clipboard | Yes | Read/write access | [View sample.](../samples/index.md#readwrite-to-clipboard)| 
-| LocalFileSystem | Yes | File pickers can be used to open/save files. You can also call the ```getTemporaryFolder API``` to access a temporary data folder. | [View sample.](../samples/index.md#access-the-local-filesystem) |
-| Network | No |  |
-| LaunchProcess | No |  |
-| WebView | No |  |
-| IPC  | No |  |
+| UXP模块 | 支持 | 当前的访问级别 | 样品 |
+| --- | --- | --- | --- |
+| Fonts | Yes | 安装的字体可以被读取 | [View sample.](../samples/index.md#access-installed-fonts) |
+| Clipboard | Yes | Read/write  访问 | [View sample.](../samples/index.md#readwrite-to-clipboard)|
+| LocalFileSystem | Yes | 文件选取器可以用来打开/保存文件。你也可以调用 ```getTemporaryFolder API``` 来访问一个临时数据文件夹。 | [View sample.](../samples/index.md#access-the-local-filesystem) |
+| Network | No |  ||
+| LaunchProcess | No |  ||
+| WebView | No |  ||
+| IPC  | No |  ||
 
-If you need to use the UXP modules that are not yet enabled for scripts, you should opt to create a UXP plugin instead. 
+如果您需要使用尚未启用脚本的 UXP 模块，您应该选择创建一个 UXP 插件来代替。
 
-## FAQ
-* What are the required minimum versions for UDT (for debugging) and Photoshop?
-  * UXP Scripting is available in Photoshop v23.5 and UDT v1.6.
-* Can you invoke a script from within another script? 
-  * No, inter-script communication is not possible. 
-* Can you pass arguments to scripts? 
-  * For this first release, passing arguments is not supported but **will be possible in a future release.**
-* Can scripts be executed from plugins? 
-  * No; however, any UXP script code should be able to run from within a UXP plugin.
-* Can I enable permissions for a module?
-  * Developers cannot enable or seek the permission for a module. By default, all permitted modules are enabled by Photoshop.
-* Why only a limited number of modules are permitted in PS? Do we expect other modules to be enabled in the future?
-  * This is the first release of the UXP script module, and we’re working on enabling permissions to access more modules in upcoming releases.
+## 常见问题
+* UDT（用于调试）和 Photoshop 的最低版本要求是什么？
+  * UXP 脚本在 Photoshop v23.5 和 UDT v1.6 中可用。
+* 你能从另一个脚本中调用一个脚本吗？
+  * 不能，脚本间的通信是不可能的。
+* 你能向脚本传递参数吗？
+  * 对于第一个版本，不支持传递参数，但**在未来的版本中可以实现。
+* 脚本可以从插件中执行吗？
+  * 不能；但是，任何 UXP 脚本代码都应该能够从 UXP 插件中运行。
+* 我可以为一个模块启用权限吗？
+  * 开发人员不能启用或寻求某个模块的权限。默认情况下，所有允许的模块都由 Photoshop 启用。
+* 为什么PS中只允许有限的模块？我们期待其他模块在未来被启用吗？
+  * 这是UXP脚本模块的第一个版本，我们正在努力在即将发布的版本中启用访问更多模块的权限。

@@ -18,7 +18,7 @@ keywords:
 
 # Create Options
 
-Objects for specifying creation options for 
+用于指定创建选项的对象 
 - [Photoshop.createDocument](/ps_reference/classes/photoshop/#createdocument) 
 - [Document.createLayer](/ps_reference/classes/document/#createlayer)
 - [Document.createLayerGroup](/ps_reference/classes/document/#createlayergroup)

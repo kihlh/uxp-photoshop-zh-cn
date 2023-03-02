@@ -16,16 +16,16 @@ keywords:
   - Scripting
 ---
 
-# Photoshop Save Options
+# Photoshop保存选项
 
 ## Properties
 
-| Name | Type | Access | Min Version | Description |
+| 名称                  | 类型      | 访问 | 默认 | 最低版本                                              |
 | :------ | :------ | :------ | :------ | :------ |
-| alphaChannels | *boolean* | R W | 22.5 | True to save the alpha channels. |
-| annotations | *boolean* | R W | 22.5 | True to save the annotations. |
-| embedColorProfile | *boolean* | R W | 22.5 | True to embed the color profiles in the document. |
-| layers | *boolean* | R W | 22.5 | True to preserve the layers. |
-| maximizeCompatibility | *boolean* | R W | 22.5 | Maximize Compatibility with older versions |
-| spotColor | *boolean* | R W | 22.5 | True to save the spot colors. |
-| typename | *string* | R | 22.5 | The class name of the referenced object: *&quot;PhotoshopSaveOptions&quot;*. |
+| alphaChannels | *boolean* | R W | 22.5 | True 以保存alpha通道。 |
+| annotations | *boolean* | R W | 22.5 | True 以保存注释。 |
+| embedColorProfile | *boolean* | R W | 22.5 | True 以将颜色配置文件嵌入到文档中。 |
+| layers | *boolean* | R W | 22.5 | True 以保护各层。 |
+| maximizeCompatibility | *boolean* | R W | 22.5 | Maximize 与旧版本的兼容性 |
+| spotColor | *boolean* | R W | 22.5 | True 以保存 spot colors. |
+| typename | *string* | R | 22.5 | 被引用对象的类名: *&quot;PhotoshopSaveOptions&quot;*. |

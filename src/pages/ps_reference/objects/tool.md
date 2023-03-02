@@ -18,11 +18,11 @@ keywords:
 
 # Tool
 
-WIP. For now, only contains an id field. In the future, this may become a class.
+WIP。目前，只包含一个id字段。在未来，这可能成为一个类。
 
 ## Properties
 
-| Name | Type | Access | Min Version | Description |
+| 名称     | 类型     | 访问 | 默认 | 最低版本                 |
 | :------ | :------ | :------ | :------ | :------ |
-| id | *string* | R W | 23.0 | Name of the tool. |
-| typename | *string* | R | 23.0 | The class name of the referenced object: *&quot;Tool&quot;*. |
+| id | *string* | R W | 23.0 | 工具的名称。 |
+| typename | *string* | R | 23.0 | 被引用对象的类名。工具。 |

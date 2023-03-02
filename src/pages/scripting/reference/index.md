@@ -5,12 +5,12 @@ contributors:
   - https://github.com/amandahuarng
 ---
 
-# Scripting Reference
+# 脚本参考
 
-## Script module
-Represents the UXP module that contains the properties and methods used for scripting.
+## 脚本模块
+代表UXP模块，包含用于脚本的属性和方法。
 
-### Usage
+### 使用方法
 ---
 ```js
 const script = await require("uxp").script;
@@ -20,16 +20,16 @@ const script = await require("uxp").script;
 
 ---
 
-| Name | Type | Access | Description |
+| 名称 | 类型 | 访问 | 描述 |
 | --- | --- | --- | --- |
-| executionContext | ExecutionContext | readOnly | ExecutionContext passed by the host when invoking Script |
+| executionContext | ExecutionContext | readOnly | 在调用脚本时主机传递的ExecutionContext。 |
 
 ## ExecutionContext
-Passed by the host when invoking scripts. Contains the following: 
+在调用脚本时由主机传递。包含以下内容。
 
-- Details about the current script execution
-- Methods that can send data to Photoshop
-- Events to manage the lifecycle of the script
+- 关于当前脚本执行的细节
+- 可以向Photoshop发送数据的方法
+- 管理脚本生命周期的事件
 
 ### Usage
 
@@ -45,107 +45,107 @@ console.log("isCancelled: ", executionContext.isCancelled);
 
 ---
 
-| Name | Type | Access | Description |
+| 名称        | 类型   | 访问     | 描述                                         |
 | --- | --- | --- | --- |
-| isCancelled | bool | readOnly | Used to check if the execution context has been cancelled by the client or host.  |
-| hostControl | Object | readOnly | Object with 4 properties, detailed [below](#hostcontrol). | 
+| isCancelled | bool | readOnly | 用于检查执行环境是否被客户或主机取消。 |
+| hostControl | Object | readOnly | 有4个属性的对象，详细 [below](#hostcontrol). |
 
 #### hostControl
-The hostControl property is used to suspend and resume history states. 
-* `suspendHistory(options)`: used to suspend history on a target document
-* `resumeHistory(suspensionID, commit)`: used to resume history on a target document
-* `registerAutoCloseDocument(docID)`: register a document to be closed when the modal scope exits
-* `unregisterAutoCloseDocument(docID)`: unregister a document from being closed when the modal scope exists 
+hostControl属性用于暂停和恢复历史状态。
+* `suspendHistory(options)`: 用来暂停目标文件的历史记录
+* `resumeHistory(suspensionID, commit)`: 用来恢复目标文件的历史记录
+* `registerAutoCloseDocument(docID)`: 注册一个文件，当模态范围退出时被关闭
+* `unregisterAutoCloseDocument(docID)`: 当模态范围存在时，取消对一个文档的关闭注册 
 
 
 ### Methods: hostControl
 ---
-#### History state suspension
+#### 历史状态暂停
 **`executionContext.hostControl.suspendHistory(options)`**
 
-- Returns a suspension identifier that should be used with `resumeHistory`
-- Suspends history state of document with ID `options.documentID`
-- Coalesces all document changes into a single history state defined as `options.name`
+- 返回一个悬挂标识符，该标识符应与 `resumeHistory`
+- 暂停有ID的文件的历史状态 `options.documentID`
+- 将所有的文件变化凝聚成一个单一的历史状态，定义为 `options.name`
 
 **Parameters**
 
-| Name | Type | Description |
+| 名称    | 类型   | 描述 |
 | --- | --- | --- |
-| options | Object | `documentID`: ID of the document whose history state should be suspended. |
-| | | `name`: name that is used for the history state - visible in the History panel|
+| options | Object | `documentID`: 其历史状态应被暂停的文件的ID。 |
+| | | `name`: 用于历史状态的名称 - 在历史面板中可见 |
 
 **`executionContext.hostControl.resumeHistory(suspensionID, commit)`**
 
-- Resumes the history state
-- Optionally creates a history state for the current document state
+- 恢复历史状态
+- 可选择为当前文档状态创建一个历史状态
 
 **Parameters**
 
-| Name | Type | Description |
+| 名称         | 类型   | 描述                                                         |
 | --- | --- | --- |
-| suspensionID | string | the suspension identifier that was returned from `suspendHistory` |
-| commit | bool | If true, then the current document state is committed and a history state is created. If false, the document is rolled back to the time when the state was suspended. (optional and defaults to true)|
+| suspensionID | string | 暂停的标识符，该标识符是由 `suspendHistory` |
+| commit | bool | I如果是true，那么当前的文档状态将被提交并创建一个历史状态。如果是false，那么文档会回滚到暂停状态的时间。(可选，默认为 true) |
 
-#### Example
-This example demonstrates suspending the history state on a target document, then resuming the state after modifying the document.
+#### 例子
+这个例子演示了暂停目标文档的历史状态，然后在修改文档后恢复该状态。
 ```js
 let hostControl = executionContext.hostControl;
 // Get an ID for a target document
 let documentID = await getTargetDocument();
 
-// Suspend history state on the target document
-// This will coalesce all changes into a single history state called
-// 'Custom Command'
+// 暂停目标文件的历史状态
+// 这将把所有的变化凝聚成一个单一的历史状态，称为
+// '自定义命令'
 let suspensionID = await hostControl.suspendHistory({
     "documentID": documentID,
     "name": "Custom Command"
 });
 
-// modify the document
+// 修改文件
 // . . .
 
-// resume the history state
+// 恢复历史状态
 await hostControl.resumeHistory(suspensionID);
 ```
 
-#### Automatic document closing
+#### 自动结束文件
 **`executionContext.hostControl.registerAutoCloseDocument(docID)`**
 
-- Register a document to be automatically closed without saving when the execution context ends
+- 注册一个文件，以便在执行环境结束时自动关闭而不保存
 
 **`executionContext.hostControl.unregisterAutoCloseDocument(docID)`**
 
-- Unregister a document to be automatically closed without saving when the execution context ends
+- 当执行环境结束时，取消对一个文件的注册，使其自动关闭而不保存。
 
 **Parameters**
 
-| Name | Type | Description |
+| 名称  | 类型   | 描述                                         |
 | --- | --- | --- |
-| docID | number | The ID of the document of this history state 
+| docID | number | The ID of the document of this history state |
 
-#### Example
-This example demonstrates creating and marking a document as "auto close" first. After adding some contents to the page, the document is unregistered from the set of auto close documents. If the user cancels while the script is running, the document is closed. 
+#### 举例
+这个例子首先演示了创建和标记一个文档为 "自动关闭"。在向页面添加一些内容后，该文档被从自动关闭文档的集合中取消注册。如果用户在脚本运行时取消，该文档就会被关闭。
 ```js
 let hostControl = executionContext.hostControl;
 let docID = await createDocument();
 await hostControl.registerAutoCloseDocument(docID);
 
-// Add contents to docID
+// 将内容添加到docID中
 ...
 
 await hostControl.unregisterAutoCloseDocument(docID);
 ```
 
 
-### Events
+### 事件
 
 **`onCancel`**
 
-* Script cancellation can occur either when the user clicks “Cancel” in the progress bar, or when the host app encounters some exception in running the script file. Developers can add **event handlers** to get notified when the command has been cancelled. The associated callback will receive a parameter `reason`. 
+* 脚本取消可以在用户点击进度条上的 "取消 " 时发生，也可以在主机应用在运行脚本文件时遇到一些异常时发生。开发人员可以添加事件处理程序，以便在命令被取消时获得通知。相关的回调将收到一个参数 `reason`. 
 
 ```jsx
 executionContext.onCancel.addListener((reason) => {
-		// reason would be a json object set by the host while cancelling
+		// 原因将是主机在取消时设置的一个json对象
 		reject("Script Cancelled");
 });
 ```

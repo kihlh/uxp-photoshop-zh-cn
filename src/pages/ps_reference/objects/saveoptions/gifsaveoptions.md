@@ -16,19 +16,19 @@ keywords:
   - Scripting
 ---
 
-# GIF Save Options
+# GIF保存选项
 
 ## Properties
 
-| Name | Type | Access | Min Version | Description |
+|名称|类型|访问|最低版本|描述|
 | :------ | :------ | :------ | :------ | :------ |
-| colors | *number* | R W | 22.5 | The number of palette colors. Valid only when palette is:  Palette.LOCALADAPTIVE, LOCALPERCEPTUAL, LOCALSELECTIVE, MACOSPALETTE, UNIFORM, WEBPALETTE; or WINDOWSPALETTE |
-| dither | [*Dither*](/ps_reference/modules/constants/#dither) | R W | 22.5 | The dither type. |
-| ditherAmount | *number* | R W | 22.5 | The amount of dither.  Valid only when dither &#x3D; Dither.DIFFUSION. |
-| forced | [*ForcedColors*](/ps_reference/modules/constants/#forcedcolors) | R W | 22.5 | The type of colors to force into the color palette. |
-| interlaced | *boolean* | R W | 22.5 | True if rows should be interlaced. |
-| matte | [*MatteColor*](/ps_reference/modules/constants/#mattecolor) | R W | 22.5 | The color to use to fill anti-aliased edges adjacent to transparent  areas of the image.  When transparency is turned off for an image, the matte color is applied to transparent areas. |
-| palette | [*Palette*](/ps_reference/modules/constants/#palette) | R W | 22.5 | The type of palette to use. |
-| preserveExactColors | *boolean* | R W | 22.5 | True to protect colors in the image that contain entries in the color table from being dithered.  Valid only when dither &#x3D; DITHER.DIFFUSION |
-| transparency | *boolean* | R W | 22.5 | True to preserve transparent areas of the image during conversion to GIF format. |
-| typename | *string* | R | 22.5 | The class name of the referenced object: *&quot;GIFSaveOptions&quot;*. |
+| colors | *number* | R W | 22.5 | 调色板颜色的数量。仅当调色板为:  Palette.LOCALADAPTIVE, LOCALPERCEPTUAL, LOCALSELECTIVE, MACOSPALETTE, UNIFORM, WEBPALETTE; or WINDOWSPALETTE |
+| dither | [*Dither*](/ps_reference/modules/constants/#dither) | R W | 22.5 | 抖动类型。 |
+| ditherAmount | *number* | R W | 22.5 | 抖动的数量。 只在以下情况下有效 dither &#x3D; Dither.DIFFUSION. |
+| forced | [*ForcedColors*](/ps_reference/modules/constants/#forcedcolors) | R W | 22.5 | 强制进入调色板的颜色类型。 |
+| interlaced | *boolean* | R W | 22.5 | True 如果行应该是交错的。 |
+| matte | [*MatteColor*](/ps_reference/modules/constants/#mattecolor) | R W | 22.5 | 用来填充与图像透明区域相邻的抗锯齿边缘的颜色。 当一个图像的透明度被关闭时， matte color  会被应用到透明区域。 |
+| palette | [*Palette*](/ps_reference/modules/constants/#palette) | R W | 22.5 | 要使用的调色板类型。 |
+| preserveExactColors | *boolean* | R W | 22.5 | True 以保护图像中包含色表项的颜色不被抖动。 仅在以下情况下有效 dither &#x3D; DITHER.DIFFUSION |
+| transparency | *boolean* | R W | 22.5 | True 以在转换为GIF格式时保留图像的透明区域。 |
+| typename | *string* | R | 22.5 | 被引用对象的类名: *&quot;GIFSaveOptions&quot;*. |

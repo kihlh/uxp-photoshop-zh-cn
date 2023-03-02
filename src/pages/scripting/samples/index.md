@@ -7,8 +7,8 @@ contributors:
 
 # Samples
 
-## Create a new layer 
-You can create a script that creates a new layer, with the help of the Photoshop DOM API: 
+## 创建一个新层 
+你可以创建一个脚本，在Photoshop DOM API的帮助下，创建一个新的图层。
 ```js
 const app = require('photoshop').app;
 await app.documents.add();
@@ -16,8 +16,8 @@ await app.activeDocument.createLayer();
 app.activeDocument.layers[0].name = 'New layer';
 ```
 
-## Access the local filesystem
-You can create a script that accesses your local filesystem, with the help of the UXP storage module: 
+## 访问本地文件系统
+你可以在UXP存储模块的帮助下，创建一个访问你的本地文件系统的脚本。
 ```js
 const uxpfs = require("uxp").storage;
 const ufs = uxpfs.localFileSystem;
@@ -31,12 +31,12 @@ try {
 }
 ```
 
-## Using a file picker
-You can create a script that instantiates a file picker for writing/saving to files.
+## 使用文件选取器
+你可以创建一个脚本，实例化一个文件选择器，用于写入/保存到文件。
 ```js
 const fs = require('uxp').storage.localFileSystem;
 try {
-    // save file to a location using file picker
+    // 使用文件选择器将文件保存到一个位置
     const file = await fs.getFileForSaving("demo.txt");
     await file.write("Hello World! This is demo.");
 } catch (e) {
@@ -45,9 +45,9 @@ try {
 ```
 
 ## Read/write to clipboard
-You can access the clipboard module (`navigator.clipboard`) to: 
-* write to a clipboard (`setContent()`)
-* read a clipboard's contents (`readText()`)
+你可以访问剪贴板模块 (`navigator.clipboard`) 至: 
+* 写到剪贴板上 (`setContent()`)
+* 读取剪贴板的内容 (`readText()`)
 ```js
 try {
     const clipboard = navigator.clipboard;
@@ -64,8 +64,8 @@ try {
 }
 ```
 
-## Create dialog UIs
-### Simple example
+## 创建对话式UI
+### 简单的例子
 ```js
 async function createDialog() {
     const dialog = document.createElement("dialog");
@@ -82,11 +82,11 @@ async function createDialog() {
     dialog.appendChild(div);
     await document.body.appendChild(dialog).showModal();
 }
-// Wait for the dialog to render
+// 等待对话框的渲染
 await createDialog();
 ```
 
-### Example with "Done" button
+### 有 "完成 "按钮的例子
 ```js
 async function showDialog() {
     let dialog = createDialog();
@@ -96,7 +96,7 @@ async function showDialog() {
     return new Promise((resolve, reject) => {
         try {
             // Resolve the promise and dismiss the dialog when when user clicks on 'Done' button
-            const doneBtn = document.getElementById("done");
+            const doneBtn = document.getElementById("完成");
             doneBtn.addEventListener("click", () => {
                 console.log("user is done");
                 dialog.close();
@@ -140,12 +140,12 @@ function createDialog() {
     return dialog;
 }
 
-// Wait for the dialog to render
+// 等待对话框的渲染
 await showDialog();
 ```
 
-## Access installed fonts
-Photoshop has set the permission for the Fonts module to `ReadInstalled`. This means that if no font is specified or if the font is not installed, then UXP will fallback to "system-ui" font (the default OS system UI font).
+## 访问已安装的字体
+Photoshop 已将字体模块的权限设置为 `ReadInstalled`.。这意味着，如果没有指定字体或没有安装字体，那么 UXP 将退回到 "system-ui "字体（默认的操作系统系统 UI 字体）。
 
 ```js
 async function createDialog() {
@@ -173,7 +173,7 @@ function createParagraph(fontFamily) {
     const p = document.createElement("p");
     p.style.color = "white";
     p.style.fontFamily = fontFamily;
-    p.textContent = `font-family:${fontFamily}: A fox jumps over the lazy dog`;
+    p.textContent = `font-family:${fontFamily}: 狐狸跳过懒惰的狗`;
     return p;
 }
 

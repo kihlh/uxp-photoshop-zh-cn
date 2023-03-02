@@ -16,6 +16,6 @@ keywords:
   - Scripting
 ---
 
-# Save Options
+# 保存选项
 
-Objects for specifying save options for various file formats using [Document.saveAs](/ps_reference/classes/document/#saveas)
+用于指定各种文件格式的保存选项的对象，使用 [Document.saveAs](/ps_reference/classes/document/#saveas)

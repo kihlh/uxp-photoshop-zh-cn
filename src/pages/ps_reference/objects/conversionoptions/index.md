@@ -16,6 +16,6 @@ keywords:
   - Scripting
 ---
 
-# Conversion Options
+# 转换选项
 
-Objects for specifying conversion options for [Document.changeMode](/ps_reference/classes/document/#changemode).
+用于指定转换选项的对象为 [Document.changeMode](/ps_reference/classes/document/#changemode).

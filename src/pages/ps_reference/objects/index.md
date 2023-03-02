@@ -18,6 +18,6 @@ keywords:
 
 # Objects
 
-The objects defined here are to be created as object literals for use with DOM methods. 
-As types, they may be used in TypeScript development.
+这里定义的对象将被创建为对象字面，以便与DOM方法一起使用。
+作为类型，它们可以在TypeScript开发中使用。
 

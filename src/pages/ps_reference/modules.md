@@ -18,7 +18,7 @@ keywords:
 
 # Photoshop JS API
 
-## Modules
+## 模块
 
 - [Actions](/ps_reference/modules/actions/)
 - [Channel](/ps_reference/modules/channel/)

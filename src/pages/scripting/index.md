@@ -7,23 +7,22 @@ contributors:
 
 # Overview
 
-UXP scripting allows developers to execute a single file to accomplish tasks in Photoshop. Unlike ExtendScript, these scripts can utilize the [UXP](../uxp/) and [Photoshop](../ps_reference/) APIs to communicate with Photoshop.
+UXP 脚本允许开发人员执行单个文件来完成 Photoshop 中的任务。与 ExtendScript 不同，这些脚本可以利用 [UXP](../uxp/) 和 [Photoshop](../ps_reference/) 的 API 与 Photoshop 进行通信。
 
-## When are scripts useful?
-Scripts are mainly used to perform one-off tasks that end-users would otherwise perform manually. It is especially useful when the task is repetitive in nature, such as adding a watermark to your documents. When a script is invoked by a user, it executes a task and is unloaded by Photoshop once it’s done. If required, a dialog can be used to prompt the user for inputs. Scripts can be executed in a headless manner or with minimal UI, without the need for any manifest setup.
+## 脚本何时有用？
+脚本主要用于执行一次性的任务，否则终端用户会手动执行。当任务是重复性的，比如给你的文档添加水印时，它就特别有用。当一个脚本被用户调用时，它执行一个任务，一旦完成就被Photoshop卸载。如果需要，可以用一个对话框来提示用户输入。脚本可以以无头方式或以最小的用户界面执行，不需要任何清单设置。
 
-The biggest advantage that scripting offers is its simplicity. You can accomplish tasks in Photoshop without requiring as elaborate of a setup as that of a UXP plugin.  Any script code can be reused in a UXP plugin as well.
+脚本提供的最大优势是其简单性。你可以在Photoshop中完成任务，而不需要像UXP插件那样复杂的设置。 任何脚本代码也可以在UXP插件中重复使用。
 
-## How is it different from UXP plugin development? 
-1. **[Lifetime](../scripting/how-it-works/index.md#execution-context):** A script’s lifetime ends when it finishes executing.
-2. **[Limited UI](../scripting/how-it-works/index.md#user-interface):** Unlike plugins, scripts cannot have a panel UI. They can only create dialog UIs.
-3. **No persistent data:** Scripts also don’t have access to persistent storage like the plugin data folder or `window.localStorage`. 
-4. **[Limited access to UXP modules](../scripting/how-it-works/index.md#permitted-uxp-modules):** Permissions to access UXP modules are managed by the host application and for now, only a limited number of modules are enabled. *We plan on enabling more modules with future versions.*
-5. **No identity:** UXP scripts are not supported in our distribution channels yet. Once shared, any user can use them. Plugins on the other hand are tied to a plugin ID, and procured via the CCD plugin marketplace. 
+## 它与UXP插件开发有什么不同？
+1. **[Lifetime](../scripting/how-it-works/index.md#execution-context):** 脚本的生命周期在其执行完毕后结束。
+2. **[Limited UI](../scripting/how-it-works/index.md#user-interface):** 与插件不同，脚本不能有一个面板UI。它们只能创建对话式UI。
+3. **没有持久的数据:** 脚本也不能访问持久性存储，如插件数据文件夹或 `window.localStorage`. 
+4. **[Limited access to UXP modules](../scripting/how-it-works/index.md#permitted-uxp-modules):** 访问 UXP 模块的权限由主机应用程序管理，目前只启用了有限数量的模块。*我们计划在未来的版本中启用更多模块。*
+5. **No identity:** UXP 脚本在我们的分发渠道中还不被支持。一旦共享，任何用户都可以使用它们。另一方面，插件则与一个插件ID绑定，并通过CCD插件市场采购。
 
-## How is this different from ExtendScript scripting?
+## 这与 ExtendScript 脚本有什么不同？
 
-Legacy extensibility platforms supported scripting in ExtendScript. ExtendScript uses a very old version of JavaScript (ES3), while UXP uses the V8 JavaScript engine which supports ES6.  Developers can write scripts while utilizing the flexibility offered by modern JavaScript. 
+传统的可扩展性平台支持 ExtendScript 的脚本。ExtendScript 使用非常旧的 JavaScript 版本（ES3），而 UXP 使用支持 ES6 的 V8 JavaScript 引擎。 开发人员可以编写脚本，同时利用现代 JavaScript 提供的灵活性。
 
-Compared to ExtendScript, UXP scripting makes it much easier for developers to access the Photoshop DOM (thanks to the Photoshop API!). Until all significant features are available via UXP, you can use a feature called [**batchPlay**](https://developer.adobe.com/photoshop/uxp/2022/ps_reference/media/batchplay/) to talk to Photoshop elements. 
-
+与 ExtendScript 相比，UXP 脚本使开发者更容易访问 Photoshop DOM（感谢 Photoshop API！）。在所有重要的功能通过 UXP 提供之前，你可以使用一个叫做 [**batchPlay**](https://developer.adobe.com/photoshop/uxp/2022/ps_reference/media/batchplay/) 的功能来与 Photoshop 元素对话。

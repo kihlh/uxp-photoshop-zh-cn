@@ -18,27 +18,27 @@ keywords:
 
 # TextLayerCreateOptions
 
-An object literal can be constructed with any of the following properties
-and passed to [Document.createLayer](/ps_reference/classes/document/#createlayer).
-As a type, `TextLayerCreateOptions` can be used in Typescript development.
+一个对象的字面意思可以用以下任何一个属性来构建
+并传递给 [Document.createLayer](/ps_reference/classes/document/#createlayer).
+作为一种类型, `TextLayerCreateOptions` 可以在Typescript开发中使用。
 
 ```javascript
 const options = { name: "myTextLayer", contents: "Hello, World!", fontSize: 24, position: {x: 200, y: 300} };
 await require('photoshop').app.activeDocument.createLayer(options);
 ```
 
-| Name | Type | Default | Min Version | Description |
+| 名称       | 类型                                                         | 默认                          | 最低版本 | 描述                                                         |
 | :------ | :------ | :------ | :------ | :------ |
-| blendMode | [*BlendMode*](/ps_reference/modules/constants/#blendmode) | Constants.BlendMode.NORMAL | 22.5 | Blend mode of the newly created layer or group. |
-| color | [*LabelColors*](/ps_reference/modules/constants/#labelcolors) | Constants.LabelColors.NONE | 22.5 | Label color of the newly created layer or group. |
-| contents | *string* | &quot;Lorem Ipsum&quot; | 24.2 | Text content of the newly created text layer. |
-| fontName | *string* | &quot;MyriadPro-Regular&quot; | 24.2 | Font PostScript name of the newly created text layer. |
-| fontSize | *number* | 12px | 24.2 | Font size of the newly created text layer in pixels. |
-| group | *boolean* | false | 22.5 | Whether to use previous layer to create clipping mask. |
-| mode | [*BlendMode*](/ps_reference/modules/constants/#blendmode) | Constants.BlendMode.NORMAL | 22.5 | Deprecated, please use &#x60;blendMode&#x60; above as it will override this value. |
-| name | *string* | - | 22.5 | Name of the newly created layer. If no value is provided, then a name will be generated following the template, &quot;Layer #&quot;. |
-| opacity | *number* | 100 | 22.5 | Opacity of the newly created layer or group. |
-| position | *object* | document center. | 24.2 | Insertion coordinates of the newly created text layer, in pixels |
+| blendMode | [*BlendMode*](/ps_reference/modules/constants/#blendmode) | Constants.BlendMode.NORMAL | 22.5 | 新建图层或组的混合模式。 |
+| color | [*LabelColors*](/ps_reference/modules/constants/#labelcolors) | Constants.LabelColors.NONE | 22.5 | 新建图层或组的标签颜色。 |
+| contents | *string* | &quot;Lorem Ipsum&quot; | 24.2 | 新创建的文本层的文本内容。 |
+| fontName | *string* | &quot;MyriadPro-Regular&quot; | 24.2 | 新创建的文本层的字体PostScript名称。 |
+| fontSize | *number* | 12px | 24.2 | 新建文本层的字体大小，单位是像素。 |
+| group | *boolean* | false | 22.5 | 是否使用前一个图层来创建剪切蒙版。 |
+| mode | [*BlendMode*](/ps_reference/modules/constants/#blendmode) | Constants.BlendMode.NORMAL | 22.5 | 已废弃，请使用上面的 `blendMode`，因为它将覆盖这个值。 |
+| name | *string* | - | 22.5 | 新建图层的名称。如果没有提供值，那么将按照模板生成一个名称。 &quot;Layer #&quot;. |
+| opacity | *number* | 100 | 22.5 | 新创建的层或组的不透明度。 |
+| position | *object* | document center. | 24.2 | 新建文本层的插入坐标，单位是像素 |
 | position.x | *number* | - | prop??? | - |
 | position.y | *number* | - | prop??? | - |
-| textColor | [*SolidColor*](/ps_reference/classes/solidcolor/) | black | 24.2 | Text color of the newly created text layer. |
+| textColor | [*SolidColor*](/ps_reference/classes/solidcolor/) | black | 24.2 | 新创建的文本层的文本颜色。 |

@@ -16,20 +16,20 @@ keywords:
   - Scripting
 ---
 
-# Indexed Conversion Options
+# 指数化的转换选项
 
-Options for converting an RGB image to an indexed color model using [Document.changeMode](/ps_reference/classes/document/#changemode)
+将RGB图像转换为索引颜色模型的选项，使用 [Document.changeMode](/ps_reference/classes/document/#changemode)
 
 ## Properties
 
-| Name | Type | Access | Default | Min Version | Description |
+| 名称 | 类型 | 访问 | 默认 | 最低版本 | 描述 |
 | :------ | :------ | :------ | :------ | :------ | :------ |
-| colors | *number* | R W | - | 23.0 | The number of palette colors.  Valid only with palette types: LOCALADAPTIVE, LOCALPERCEPTUAL, LOCALSELECTIVE, MACOSPALETTE, UNIFORM, WEBPALETTE, or WINDOWSPALETTE. |
-| dither | [*Dither*](/ps_reference/modules/constants/#dither) | R W | - | 23.0 | The type of dithering to be done. |
-| ditherAmount | *number* | R W | - | 23.0 | The amount of dithering to be done.  Valid only when dither typ is DIFFUSION. |
-| forced | [*ForcedColors*](/ps_reference/modules/constants/#forcedcolors) | R W | - | 23.0 | The set of colors to force into the color palette. |
-| matte | [*MatteColor*](/ps_reference/modules/constants/#mattecolor) | R W | WHITE | 23.0 | The color to use to fill anti-aliased edges adjacent to transparent areas of the image.  When transparency is false, the matte color is applied to transparent areas. |
-| palette | [*Palette*](/ps_reference/modules/constants/#palette) | R W | - | 23.0 | The palette type. |
-| preserveExactColors | *boolean* | R W | - | 23.0 | When true, the image colors matching entries in the color table will not be dithered. |
-| transparency | *boolean* | R W | - | 23.0 | When true, transparent areas of the image are preserved during conversion to GIF format. |
-| typename | *string* | R | - | 23.0 | The class name of the referenced object: *&quot;IndexedConversionOptions&quot;*. |
+| colors | *number* | R W | - | 23.0 | 调色板颜色的数量。 只对调色板类型有效: LOCALADAPTIVE, LOCALPERCEPTUAL, LOCALSELECTIVE, MACOSPALETTE, UNIFORM, WEBPALETTE, or WINDOWSPALETTE. |
+| dither | [*Dither*](/ps_reference/modules/constants/#dither) | R W | - | 23.0 | 要做的抖动的类型。 |
+| ditherAmount | *number* | R W | - | 23.0 | 要做的抖动量。 仅当抖动类型为DIFFUSION时有效。 |
+| forced | [*ForcedColors*](/ps_reference/modules/constants/#forcedcolors) | R W | - | 23.0 | 强制加入调色板的一组颜色。 |
+| matte | [*MatteColor*](/ps_reference/modules/constants/#mattecolor) | R W | WHITE | 23.0 | 用来填充与图像透明区域相邻的抗锯齿边缘的颜色。 当透明度为假时，亚光色将被应用于透明区域。 |
+| palette | [*Palette*](/ps_reference/modules/constants/#palette) | R W | - | 23.0 | 调色板类型。 |
+| preserveExactColors | *boolean* | R W | - | 23.0 | 当为`true`时，与颜色表中的条目相匹配的图像颜色将不会被抖动。 |
+| transparency | *boolean* | R W | - | 23.0 | 当为 true 时，图像的透明区域在转换为GIF格式时被保留下来。 |
+| typename | *string* | R | - | 23.0 | 被引用对象的类名: *&quot;IndexedConversionOptions&quot;*. |
