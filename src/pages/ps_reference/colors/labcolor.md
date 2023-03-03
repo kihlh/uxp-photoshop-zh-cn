@@ -22,7 +22,7 @@ Defines a L<sup>\*</sup>a<sup>\*</sup>b<sup>\*</sup> color, used in [SolidColor]
 
 ## Properties
 
-| Name | Type | Access | Default | Range | Min Version | Description |
+| 名称 | 类型 | 访问 | 默认 | 范围 | 最低版本 | 描述 |
 | :------ | :------ | :------ | :------ | :------ | :------ | :------ |
 | a | *number* | R W | 0 | -128..127 | 23.0 | The a-value. |
 | b | *number* | R W | 0 | -128..127 | 23.0 | The b-value. |

@@ -18,31 +18,30 @@ keywords:
 
 # PathItem
 
-A path or drawing object, such as the outline of a shape or a straight or curved line,
-which contains sub paths defining its geometry.
+一个路径或绘图对象，如一个形状的轮廓或一条直线或弧线。
+它包含定义其几何形状的子路径。
 
-Access through the collection in the [Document.pathItems](/ps_reference/classes/document/#pathitems) property. For example, this selects a named path item:
+通过集合中的 [Document.pathItems](/ps_reference/classes/document/#pathitems) 属性。例如，这就选择了一个命名的路径项目。
 
 ```javascript
 const currentPathItem = app.activeDocument.pathItems.getByName("myPath");
 currentPathItem.select()
 ```
 
-Create these objects by passing a set of SubPathInfo objects to the [PathItems.add](/ps_reference/classes/pathitems/#add)() method. This method creates
-a [SubPathItem](/ps_reference/classes/subpathitem/) object for each [SubPathInfo](/ps_reference/classes/subpathinfo/) object, and creates and returns a new [PathItem](/ps_reference/classes/pathitem/) object for the
-path represented by all of the subpaths.
+创建这些对象的方法是：通过传递一组 SubPathInfo 对象调用 [PathItems.add](/ps_reference/classes/pathitems/#add)() 方法。这个方法创建了 [SubPathItem](/ps_reference/classes/subpathitem/) 对象，为每个 [SubPathInfo](/ps_reference/classes/subpathinfo/) 对象，并创建和返回一个新的 [PathItem](/ps_reference/classes/pathitem/) 对象为
+所有子路径所代表的路径。
 
 ## Properties
 
-| Name | Type | Access | Min Version | Description |
+| 名称 | 类型 | 访问 | 最低版本 | 描述 |
 | :------ | :------ | :------ | :------ | :------ |
-| docId | *number* | R | 23.3 | The ID of the document of this pathItem. |
-| id | *number* | R | 23.3 | For use with batchPlay operations. This pathItem ID, along with its document ID can be used to represent this pathItem for the lifetime of this document. |
-| kind | [*PathKind*](/ps_reference/modules/constants/#pathkind) | R W | 23.3 | The specific kind of path. |
-| name | *string* | R W | 23.3 | Name of this path |
-| parent | [*Document*](/ps_reference/classes/document/) | R | 23.3 | The document in which the path resides. |
-| subPathItems | [*SubPathItems*](/ps_reference/classes/subpathitems/) | R | 23.3 | The contained [SubPathItem](/ps_reference/classes/subpathitem/)s in this path. |
-| typename | *string* | R | 23.3 | The class name of the referenced object: *&quot;PathItem&quot;*. |
+| docId | *number* | R | 23.3 | 这个 pathItem 的文档ID |
+| id | *number* | R | 23.3 | 用于批处理播放操作。这个pathItem ID和它的文档ID可以在这个文档的生命周期内用来代表这个pathItem |
+| kind | [*PathKind*](/ps_reference/modules/constants/#pathkind) | R W | 23.3 | 具体的路径种类。 |
+| name | *string* | R W | 23.3 | 该路径的名称 |
+| parent | [*Document*](/ps_reference/classes/document/) | R | 23.3 | 该路径所在的文件。 |
+| subPathItems | [*SubPathItems*](/ps_reference/classes/subpathitems/) | R | 23.3 | 包含的内容 [SubPathItem](/ps_reference/classes/subpathitem/)s 在这一路径中。 |
+| typename | *string* | R | 23.3 | 被引用对象的类名: *&quot;PathItem&quot;*. |
 
 ## Methods
 
@@ -51,7 +50,7 @@ path represented by all of the subpaths.
 
 *Promise*<void\>
 
-Deselects this `pathItem` object.
+取消选择这个  `pathItem` 对象.
 
 ___
 
@@ -60,11 +59,11 @@ ___
 
 *Promise*<[*PathItem*](/ps_reference/classes/pathitem/)\>
 
-Duplicates the `pathItem` object with the new name, returning the duplicate.
+复制了 `pathItem` 对象的新名称，并返回其副本
 
 #### Parameters
 
-| Name | Type |
+| 名称 | 类型 |
 | :------ | :------ |
 | `name?` | *string* |
 
@@ -75,17 +74,17 @@ ___
 
 *Promise*<void\>
 
-Fills the area enclosed by this path.
+填充此路径所包围的区域.
 
-`opacity` is a percentage, in the `[0.0 ... 100.0]` range.
+`opacity` 是一个百分比，在 `[0.0 ... 100.0]` 范围.
 
-`feather` is in pixels, in the `[0.0 ... 250.0]` range.
+`feather` 是以像素为单位，在 `[0.0 ... 250.0]` 范围.
 
-If `wholePath` is true, all subpaths are used when doing the fill.
+如果 `wholePath` 为true，在进行填充时将使用所有子路径。
 
 #### Parameters
 
-| Name | Type | Default value |
+| 名称 | 类型 | 默认值 |
 | :------ | :------ | :------ |
 | `fillColor?` | [*SolidColor*](/ps_reference/classes/solidcolor/) | - |
 | `mode?` | [*ColorBlendMode*](/ps_reference/modules/constants/#colorblendmode) | - |
@@ -102,13 +101,13 @@ ___
 
 *Promise*<void\>
 
-Makes this the clipping path for this document.
+使之成为该文件的剪切路径。
 
-`flatness` tells the PostScript printer how to approximate curves in the path.
+`flatness` 告诉PostScript打印机如何接近路径中的曲线。
 
 #### Parameters
 
-| Name | Type |
+| 名称 | 类型 |
 | :------ | :------ |
 | `flatness?` | *number* |
 
@@ -119,15 +118,15 @@ ___
 
 *Promise*<void\>
 
-Makes a selection object whose border is this path.
+制作一个选择对象，其边界为该路径。
 
-`feather` is in pixels, in the range [0.0...250.0]
+`feather` 是以像素为单位，范围为 [0.0...250.0]
 
-`operation`, by default, is `SelectionType.REPLACE`
+`operation`, 默认情况下，是 `SelectionType.REPLACE`
 
 #### Parameters
 
-| Name | Type |
+| 名称 | 类型 |
 | :------ | :------ |
 | `feather?` | *number* |
 | `antiAlias?` | *boolean* |
@@ -140,7 +139,7 @@ ___
 
 *Promise*<void\>
 
-Deletes this object.
+删除这个对象。
 
 ___
 
@@ -149,7 +148,7 @@ ___
 
 *Promise*<void\>
 
-Makes this the active or selected `PathItem` object.
+使其成为活动或选定的 `PathItem` 对象.
 
 ___
 
@@ -158,19 +157,19 @@ ___
 
 *Promise*<void\>
 
-Strokes the path with the specified tool
+用指定的工具描边路径
 
-`tool` is optional, and by default will use `ToolType.PENCIL`
+`tool`是可选的，默认情况下将使用 `ToolType.PENCIL`
 
-`simulatePressure` is false by default.
+`simulatePressure`默认为false。
 
-If the tool is `ToolType.CLONESTAMP` or `ToolType.HEALINGBRUSH`, `sourceOrigin` must be provided as a
-an object with x and y properties (in pixels) to indicate the location of the stroke source. `sourceLayer`
-is optional, and by default will use the active layer in the document.
+如果工具 `ToolType.CLONESTAMP` 或`ToolType.HEALINGBRUSH`, `sourceOrigin` 必须作为
+具有x和y属性（以像素为单位）的对象，用于指示笔画源的位置。`source ceLayer`
+是可选的，默认情况下将使用文档中的活动层。
 
 #### Parameters
 
-| Name | Type | Default value |
+| 名称 | 类型 | 默认值 |
 | :------ | :------ | :------ |
 | `tool` | [*ToolType*](/ps_reference/modules/constants/#tooltype) | - |
 | `simulatePressure` | *boolean* | false |

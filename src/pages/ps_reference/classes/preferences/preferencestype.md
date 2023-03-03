@@ -22,7 +22,7 @@ Preferences related to the text and mostly text layers
 
 ## Properties
 
-| Name | Type | Access | Min Version | Description |
+| 名称 | 类型 | 访问 | 最低版本 | 描述 |
 | :------ | :------ | :------ | :------ | :------ |
 | showEnglishFontNames | *boolean* | R W | 24.0 | If true, all font names are listed in English |
 | showTextFeatures | [*TypeInterfaceFeatures*](/ps_reference/modules/constants/#typeinterfacefeatures) | R W | 24.0 | Change user interface of Character and Paragraph panels and shows additional text options |

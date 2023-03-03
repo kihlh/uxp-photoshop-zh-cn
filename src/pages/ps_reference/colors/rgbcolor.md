@@ -22,7 +22,7 @@ Defines an RGB color, used in [SolidColor](/ps_reference/classes/solidcolor/) ob
 
 ## Properties
 
-| Name | Type | Access | Default | Range | Min Version | Description |
+| 名称 | 类型 | 访问 | 默认 | 范围 | 最低版本 | 描述 |
 | :------ | :------ | :------ | :------ | :------ | :------ | :------ |
 | blue | *number* | R W | 255 | 0..255 | 23.0 | The blue color value. |
 | green | *number* | R W | 255 | 0..255 | 23.0 | The green color value. |

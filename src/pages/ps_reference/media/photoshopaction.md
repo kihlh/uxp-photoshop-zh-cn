@@ -41,7 +41,7 @@ await PhotoshopAction.addNotificationListener(['open'], onOpenNewDocument)
 
 #### Parameters
 
-| Name | Type |
+| 名称 | 类型 |
 | :------ | :------ |
 | `events` | *string*[] |
 | `notifier` | NotificationListener |
@@ -63,7 +63,7 @@ await PhotoshopAction.batchPlay(commands)
 
 #### Parameters
 
-| Name | Type |
+| 名称 | 类型 |
 | :------ | :------ |
 | `commands` | [*ActionDescriptor*](/ps_reference/interfaces/actiondescriptor/)[] |
 | `options?` | [*BatchPlayCommandOptions*](/ps_reference/interfaces/batchplaycommandoptions/) |
@@ -85,7 +85,7 @@ await PhotoshopAction.batchPlay(commands)
 
 #### Parameters
 
-| Name | Type |
+| 名称 | 类型 |
 | :------ | :------ |
 | `commands` | [*ActionDescriptor*](/ps_reference/interfaces/actiondescriptor/)[] |
 | `options?` | [*BatchPlayCommandOptions*](/ps_reference/interfaces/batchplaycommandoptions/) |
@@ -102,7 +102,7 @@ If the string is not already registered, a new ID will be created and returned.
 
 #### Parameters
 
-| Name | Type |
+| 名称 | 类型 |
 | :------ | :------ |
 | `value` | *string* |
 
@@ -121,7 +121,7 @@ await PhotoshopAction.removeNotificationListener(['open'], onOpenNewDocument)
 
 #### Parameters
 
-| Name | Type |
+| 名称 | 类型 |
 | :------ | :------ |
 | `events` | *string*[] |
 | `notifier` | NotificationListener |
@@ -155,6 +155,6 @@ Supported reference classes:
 
 #### Parameters
 
-| Name | Type |
+| 名称 | 类型 |
 | :------ | :------ |
 | `ref` | ActionReference \| ActionReference[] |

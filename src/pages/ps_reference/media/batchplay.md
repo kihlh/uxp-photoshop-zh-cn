@@ -183,7 +183,7 @@ Each item in the list can use one of the following forms:
 | --------------| --------|-|-|
 | ID | `{_ref:className, _id:number}` | `{_ref:"document", _id: 123}` |
 | Index | `{_ref:className, _index:number}` | `{_ref:"document", _index: 1}` | Indices are 1 based |
-| Name | `{_ref:className, _name:string}` | `{_ref:"document", _name: "Untitled-1"}` |
+| 名称 | `{_ref:className, _name:string}` | `{_ref:"document", _name: "Untitled-1"}` |
 | Enumeration | `{_ref:className, _enum: "ordinal", _value: enumerationSpecifier*}` | `{_ref:"document", _enum: "ordinal", _value:"targetEnum"}` |
 | Property | `{_property:propertyName}` | `{_property:"title"}` |
 

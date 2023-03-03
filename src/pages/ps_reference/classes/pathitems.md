@@ -34,7 +34,7 @@ see [PathPointInfo](/ps_reference/classes/pathpointinfo/) and [SubPathInfo](/ps_
 
 ## Properties
 
-| Name | Type | Access | Min Version | Description |
+| 名称 | 类型 | 访问 | 最低版本 | 描述 |
 | :------ | :------ | :------ | :------ | :------ |
 | length | *number* | R | 23.3 | Number of [PathItem](/ps_reference/classes/pathitem/) objects in this collection. |
 | parent | Document | R | 23.3 | The owner document of this PathItem collection. |
@@ -54,7 +54,7 @@ and those [SubPathItem](/ps_reference/classes/subpathitem/) objects are added to
 
 #### Parameters
 
-| Name | Type |
+| 名称 | 类型 |
 | :------ | :------ |
 | `name` | *string* |
 | `entirePath` | [*SubPathInfo*](/ps_reference/classes/subpathinfo/)[] |
@@ -70,7 +70,7 @@ Retrieve the first PathItem matching the given name.
 
 #### Parameters
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | :------ | :------ | :------ |
 | `name` | *string* | Name to find |
 

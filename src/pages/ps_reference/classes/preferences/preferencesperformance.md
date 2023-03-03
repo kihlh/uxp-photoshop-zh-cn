@@ -22,7 +22,7 @@ Performance preferences. Options that could possibly affect speed of Photoshop.
 
 ## Properties
 
-| Name | Type | Access | Min Version | Description |
+| 名称 | 类型 | 访问 | 最低版本 | 描述 |
 | :------ | :------ | :------ | :------ | :------ |
 | imageCacheLevels | *number* | R W | 24.0 | Number of cached levels of image data. Used to improve screen redraw and histogram speed. Choose more Cache Levels for bigger documents with few layers; choose fewer Cache Levels for smaller documents with many layers [1,8].  *Requires Photoshop restart for changed value to take an effect.* |
 | maxRAMuse | *number* | R W | 24.0 | Maximum percentage of available RAM used by Photoshop as a whole number [2,99].  *Requires Photoshop restart for changed value to take an effect.* |

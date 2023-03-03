@@ -25,7 +25,7 @@ Actions panel will have a hierarchy of Action Sets that contain a list of Action
 
 ## Properties
 
-| Name | Type | Access | Min Version | Description |
+| 名称 | 类型 | 访问 | 最低版本 | 描述 |
 | :------ | :------ | :------ | :------ | :------ |
 | actions | [*Action*](/ps_reference/classes/action/)[] | R | 22.1 | List of Actions in this Action Set |
 | id | *number* | R | 22.1 | The internal ID of this Action Set Can be used for batchPlay calls, used internally |

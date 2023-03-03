@@ -42,7 +42,7 @@ app.activeDocument.guides.add(Constants.Direction.HORIZONTAL, 20);
 
 ## Properties
 
-| Name | Type | Access | Min Version | Description |
+| 名称 | 类型 | 访问 | 最低版本 | 描述 |
 | :------ | :------ | :------ | :------ | :------ |
 | length | *number* | R | 23.0 | Number of [Guide](/ps_reference/classes/guide/) elements in this collection. |
 | parent | [*Document*](/ps_reference/classes/document/) | R | 23.0 | The owner document of this Guide collection. |
@@ -62,7 +62,7 @@ Adds a guide for the collection at the given coordinate and direction
 
 #### Parameters
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | :------ | :------ | :------ |
 | `direction` | [*Direction*](/ps_reference/modules/constants/#direction) | Indicates whether the guide is vertical or horizontal |
 | `coordinate` | *number* | Position of the guide measured from the ruler origin in pixels. The value can be a decimal number.  Note: the user can move the ruler origin which will affect the position value of the guides. |

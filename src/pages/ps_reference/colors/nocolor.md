@@ -22,6 +22,6 @@ Represents a missing color, used in [SolidColor](/ps_reference/classes/solidcolo
 
 ## Properties
 
-| Name | Type | Access | Min Version | Description |
+| 名称 | 类型 | 访问 | 最低版本 | 描述 |
 | :------ | :------ | :------ | :------ | :------ |
 | typename | *string* | R | 23.0 | The class name of the referenced object: *&quot;NoColor&quot;*. |

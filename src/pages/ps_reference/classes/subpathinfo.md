@@ -31,7 +31,7 @@ all of the subpaths.
 
 ## Properties
 
-| Name | Type | Access | Min Version | Description |
+| 名称 | 类型 | 访问 | 最低版本 | 描述 |
 | :------ | :------ | :------ | :------ | :------ |
 | closed | *boolean* | R W | 23.3 | True if the path describes an enclosed area. |
 | entireSubPath | [*PathPointInfo*](/ps_reference/classes/pathpointinfo/)[] | R W | 23.3 | An array composed of the sub-path&#x27;s [PathPoint](/ps_reference/classes/pathpoint/) objects. |

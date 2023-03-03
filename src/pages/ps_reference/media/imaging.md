@@ -45,7 +45,7 @@ JavaScript APIs use the chunky format by default.
 Image data is represented by a `PhotoshopImageData` instance. This instance has the following methods and properties:
 
 #### *PhotoshopImageData*
-| Name          | Type        | Description |
+| Name          | Type        | 描述 |
 | ------------- | ----------- | ----------- |
 | width         | Number      | The width of the image data in pixels. |
 | height        | Number      | The height of the image data in pixels. |

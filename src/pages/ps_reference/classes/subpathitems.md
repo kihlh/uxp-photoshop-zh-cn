@@ -35,7 +35,7 @@ Used to access the guides in the collection.
 
 ## Properties
 
-| Name | Type | Access | Min Version | Description |
+| 名称 | 类型 | 访问 | 最低版本 | 描述 |
 | :------ | :------ | :------ | :------ | :------ |
 | length | *number* | R | 23.3 | Number of elements in this collection. |
 | parent | [*PathItem*](/ps_reference/classes/pathitem/) | R | 23.3 | The PathItem that contains this SubPathItem. |

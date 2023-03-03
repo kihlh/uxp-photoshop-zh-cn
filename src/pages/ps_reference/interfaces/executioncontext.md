@@ -30,7 +30,7 @@ keywords:
 
 #### 类型声明
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | :------ | :------ | :------ |
 | `resumeHistory` | (`suspensionID`: *number*) => *void* | 调用恢复目标文件的历史记录。 |
 | `suspendHistory` | (`info`: { `historyStateInfo`: [*HistoryStateInfo*](/ps_reference/interfaces/historystateinfo/)  }) => *Promise*<number\> | 调用目标文件暂停历史，返回暂停ID，可用于恢复历史。 |

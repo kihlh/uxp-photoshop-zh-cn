@@ -52,7 +52,7 @@ app.activeDocument.colorSamplers.length; // returns 0
 
 ## Properties
 
-| Name | Type | Access | Min Version | Description |
+| 名称 | 类型 | 访问 | 最低版本 | 描述 |
 | :------ | :------ | :------ | :------ | :------ |
 | length | *number* | R | 24.0 | Number of [ColorSampler](/ps_reference/classes/colorsampler/) elements in this collection. &#x60;&#x60;&#x60;javascript // A new document starts with no colorSamplers app.activeDocument.colorSamplers.length; // returns 0 &#x60;&#x60;&#x60; |
 | parent | Document | R | 24.0 | The owner [Document](/ps_reference/classes/document/) of this ColorSamplers collection. |
@@ -73,7 +73,7 @@ app.activeDocument.colorSamplers.length; // returns 1
 
 #### Parameters
 
-| Name | Type |
+| 名称 | 类型 |
 | :------ | :------ |
 | `position` | *object* |
 | `position.x` | *number* |

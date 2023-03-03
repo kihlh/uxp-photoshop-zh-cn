@@ -84,7 +84,7 @@ Upgrade your plugin to use the latest manifest feature set by changing the `mani
 ## Changes to top-level metadata
 Starting from changes to top-level metadata, here are some keys that changed with the v5 upgrade. Read [manifest v4](../manifest-v4/) to learn more about each key/value field.
 
-Key path | Type | Description | Change 
+Key path | 类型 | 描述 | Change 
 ---------|------|-------------|-------
 `version` | string| Version number of your plugin in `x.y.z` format. | Plugins can specify semver format with no warnings. <br/>Specify at least one number and the minor and/or patch will be autofilled with zeroes.
 `requiredPermissions` | object | Declare [plugin permissions](#plugin-permissions). | New in v5.

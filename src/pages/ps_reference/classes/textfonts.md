@@ -29,7 +29,7 @@ Used to access the text fonts in the collection.
 
 ## Properties
 
-| Name | Type | Access | Min Version | Description |
+| 名称 | 类型 | 访问 | 最低版本 | 描述 |
 | :------ | :------ | :------ | :------ | :------ |
 | length | *number* | R | 23.0 | Number of [TextFont](/ps_reference/classes/textfont/) elements in this collection. |
 | parent | [*Photoshop*](/ps_reference/classes/photoshop/) | R | 23.0 | The owner application of this TextFonts collection. |
@@ -46,6 +46,6 @@ Find the first font with the given PostScript name.
 
 #### Parameters
 
-| Name | Type |
+| 名称 | 类型 |
 | :------ | :------ |
 | `name` | *string* |

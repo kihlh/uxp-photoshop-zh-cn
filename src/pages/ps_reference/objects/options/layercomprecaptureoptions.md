@@ -25,7 +25,7 @@ const options = { visibility: true, position: true };
 await require('photoshop').app.activeDocument.layerComps.add(options);
 ```
 
-| Name | Type | Default | Min Version | Description |
+| 名称 | 类型 | 默认 | 最低版本 | 描述 |
 | :------ | :------ | :------ | :------ | :------ |
 | appearance | *boolean* | false | 24.0 | 更新各层效果的记录状态。 |
 | childComp | *boolean* | false | 24.0 | 更新记录层智能对象中包含的任何图层组合的记录状态。 |

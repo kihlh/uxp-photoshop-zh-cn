@@ -26,7 +26,7 @@ const arialMTFont = require('photoshop').app.fonts.getByName("ArialMT");
 
 ## Properties
 
-| Name | Type | Access | Min Version | Description |
+| 名称 | 类型 | 访问 | 最低版本 | 描述 |
 | :------ | :------ | :------ | :------ | :------ |
 | family | *string* | R | 23.0 | The font family. |
 | name | *string* | R | 23.0 | The name of the font. |

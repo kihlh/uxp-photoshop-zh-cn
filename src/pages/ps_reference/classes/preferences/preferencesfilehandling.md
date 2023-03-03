@@ -22,7 +22,7 @@ File handling preferences. Mostly about file saving options, file compatibility 
 
 ## Properties
 
-| Name | Type | Access | Min Version | Description |
+| 名称 | 类型 | 访问 | 最低版本 | 描述 |
 | :------ | :------ | :------ | :------ | :------ |
 | askBeforeSavingLayeredTIFF | *boolean* | R W | 24.0 | If true, asks the user to verify layer preservation options when saving a file in TIFF format. |
 | imagePreviews | [*SavePreview*](/ps_reference/modules/constants/#savepreview) | R W | 24.0 | The behavior mode to use when saving files |

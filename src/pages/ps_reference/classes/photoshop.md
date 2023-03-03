@@ -28,7 +28,7 @@ From here you can access open documents, tools, UI elements and run commands or 
 
 ## Properties
 
-| Name | Type | Access | Min Version | Description |
+| 名称 | 类型 | 访问 | 最低版本 | 描述 |
 | :------ | :------ | :------ | :------ | :------ |
 | actionTree | [*ActionSet*](/ps_reference/classes/actionset/)[] | R | 23.0 | Returns the action tree shown in Actions panel, as an array of ActionSets, each containing Actions. |
 | activeDocument | [*Document*](/ps_reference/classes/document/) | R W | 23.0 | The current document that has the application&#x27;s focus. |
@@ -54,7 +54,7 @@ without updating the UI. This API is subject to change and may be accessible in 
 
 #### Parameters
 
-| Name | Type |
+| 名称 | 类型 |
 | :------ | :------ |
 | `commands` | *any* |
 | `options` | *any* |
@@ -92,7 +92,7 @@ let widthInInches = psApp.convertUnits(exportDoc.width,
 
 #### Parameters
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | :------ | :------ | :------ |
 | `fromValue` | *number* | The value that is to be converted. |
 | `fromUnits` | [*Units*](/ps_reference/modules/constants/#units) | The unit that the fromValue is in. Use [Constants.Units](/ps_reference/modules/constants/#units) for valid values. |
@@ -106,21 +106,21 @@ ___
 
 **async** : *Promise*<[*Document*](/ps_reference/classes/document/)\>
 
-Create a new document.
+创建一个新的文件。
 
-No options will create a document of 7 x 5 inches at 300 pixels per inch.
-This is the same as the "Default Photoshop Size" preset.
+没有选项将创建一个每英寸300像素的7×5英寸的文档。
+这与 "Photoshop默认尺寸 "的预设相同。
 
-An object with a 'preset' string parameter can be used to specify any of
-the other presets that come installed with Photoshop or created by users.
+一个带有 "预设 "字符串参数的对象可以用来指定任何
+其他预设，这些预设随Photoshop安装或由用户创建。
 
-An object with one or more parameters can also be supplied. Any parameter
-missing will be set to the default of: width 2100 pixels, height 1500 pixels,
-resolution 300 pixels per inch, mode: @RGBColorMode and a fill of white with
-no transparency.
+一个带有一个或多个参数的对象也可以被提供。任何参数
+缺少将被设置为默认的：宽度2100像素，高度1500像素。
+分辨率300像素/英寸，模式。模式：@RGBColorMode和白色填充，无透明度。
+无透明度。
 
 ```javascript
-// "Default Photoshop Size" 7x5 inches at 300ppi
+// "默认的Photoshop大小 "7x5英寸，300ppi
 let newDoc1 = await app.documents.add();
 let newDoc2 = await app.documents.add({
    width: 800, 
@@ -134,7 +134,7 @@ let newDoc3 = await app.documents.add({preset: "My Default Size 1"});
 
 #### Parameters
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | :------ | :------ | :------ |
 | `options?` | [*DocumentCreateOptions*](/ps_reference/objects/createoptions/documentcreateoptions/) | @DocumentCreateOptions |
 
@@ -145,11 +145,11 @@ ___
 
 *string*[]
 
-List of installed color profiles, for RGB and Gray modes.
+已安装的颜色配置文件列表，适用于RGB和灰度模式。
 
 #### Parameters
 
-| Name | Type | Default value | Description |
+| 名称 | 类型 | 默认值 | 描述 |
 | :------ | :------ | :------ | :------ |
 | `colorMode` | *string* | 'RGB' | Specify which color mode's profiles to list. (default: "RGB", options: "Gray") |
 
@@ -162,22 +162,21 @@ ___
 
 Opens the specified document and returns the model
 
-> *Note that this API requires a
-[UXPFileEntry](../../../uxp/reference-js/Modules/uxp/Persistent%20File%20Storage/File/)
-object as its argument.
+> *注意，这个API需要一个[UXPFileEntry](../../../uxp/reference-js/Modules/uxp/Persistent%20File%20Storage/File/)
+作为其参数的对象。
 
 ```javascript
-// Open a file given entry
+// 打开一个已选定的文件
 let entry = await require('uxp').storage.localFileSystem.getFileForOpening()
 const document = await app.open(entry);
 
-// Show open file dialog
+// 显示打开文件的对话框
 const document = await app.open();
 ```
 
 #### Parameters
 
-| Name | Type |
+| 名称 | 类型 |
 | :------ | :------ |
 | `entry?` | File |
 
@@ -188,10 +187,10 @@ ___
 
 *Promise*<void\>
 
-Shows an alert in Photoshop with the given message.
+在Photoshop中显示一个带有确定信息的警告。
 
 #### Parameters
 
-| Name | Type |
+| 名称 | 类型 |
 | :------ | :------ |
 | `message` | *string* |

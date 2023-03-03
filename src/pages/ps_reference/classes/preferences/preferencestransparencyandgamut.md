@@ -22,7 +22,7 @@ Preferences how transparency will be shown and what color to use for out of gamu
 
 ## Properties
 
-| Name | Type | Access | Min Version | Description |
+| 名称 | 类型 | 访问 | 最低版本 | 描述 |
 | :------ | :------ | :------ | :------ | :------ |
 | gamutWarningOpacity | *number* | R W | 24.0 | The opacity as a float number representing the percentage of the warning color for out-of-gamut colors [1,100]. |
 | gridSize | [*GridSize*](/ps_reference/modules/constants/#gridsize) | R W | 24.0 | The size of grid squares used to construct the transparency pattern |

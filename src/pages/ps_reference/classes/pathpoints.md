@@ -28,7 +28,7 @@ Used to access the guides in the collection.
 
 ## Properties
 
-| Name | Type | Access | Min Version | Description |
+| 名称 | 类型 | 访问 | 最低版本 | 描述 |
 | :------ | :------ | :------ | :------ | :------ |
 | length | *number* | R | 23.3 | Number of elements in this collection. |
 | parent | [*SubPathItem*](/ps_reference/classes/subpathitem/) | R | 23.3 | The SubPathItem that contains this PathPoints collection. |

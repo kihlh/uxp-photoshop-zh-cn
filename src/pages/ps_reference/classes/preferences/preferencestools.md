@@ -22,7 +22,7 @@ Tools preferences
 
 ## Properties
 
-| Name | Type | Access | Min Version | Description |
+| 名称 | 类型 | 访问 | 最低版本 | 描述 |
 | :------ | :------ | :------ | :------ | :------ |
 | keyboardZoomResizesWindows | *boolean* | R W | 24.0 | If true, automatically resizes the window when zooming in or out using keyboard shortcuts. |
 | showToolTips | *boolean* | R W | 24.0 | If true, pop-up definitions or descriptions are displayed on mouseover. |

@@ -30,7 +30,7 @@ var PhotoshopCore = require('photoshop').core;
 
  
 
-| Name | Type | Min Version | Description |
+| 名称 | 类型 | 最低版本 | 描述 |
 | :------ | :------ | :------ | :------ |
 | apiVersion | *number* | 22.5 | API Version declared by the plugin&#x27;s manifest.json under &#x60;host.data.apiVersion&#x60; field. |
 
@@ -56,7 +56,7 @@ await PhotoshopCore.addNotificationListener('UI', ['userIdle'], onUserIdle)
 
 #### Parameters
 
-| Name | Type |
+| 名称 | 类型 |
 | :------ | :------ |
 | `group` | *string* |
 | `events` | *string*[] |
@@ -77,7 +77,7 @@ var idealSize = { width: 200, height: 500 }
 
 #### Parameters
 
-| Name | Type |
+| 名称 | 类型 |
 | :------ | :------ |
 | `preferredSize` | *object* |
 | `preferredSize.height` | *number* |
@@ -107,7 +107,7 @@ based on embedded color profiles.
 
 #### Parameters
 
-| Name | Type |
+| 名称 | 类型 |
 | :------ | :------ |
 | `sourceColor` | ColorDescriptor |
 | `targetModel` | ColorConversionModel |
@@ -127,7 +127,7 @@ await PhotoshopCore.endModalToolState(false)
 
 #### Parameters
 
-| Name | Type |
+| 名称 | 类型 |
 | :------ | :------ |
 | `commit` | *boolean* |
 
@@ -148,7 +148,7 @@ See [Modal Execution](../executeasmodal) for details
 
 #### Parameters
 
-| Name | Type |
+| 名称 | 类型 |
 | :------ | :------ |
 | `targetFunction` | (`executionContext`: [*ExecutionContext*](/ps_reference/interfaces/executioncontext/)) => *Promise*<any\> |
 | `options` | [*ExecuteAsModalOptions*](/ps_reference/interfaces/executeasmodaloptions/) |
@@ -210,7 +210,7 @@ var canFill = await PhotoshopCore.getMenuCommandState({ commandID: 1042 })
 
 #### Parameters
 
-| Name | Type |
+| 名称 | 类型 |
 | :------ | :------ |
 | `options` | *object* |
 | `options.commandID` | *number* |
@@ -230,7 +230,7 @@ var renameLayerStr = await PhotoshopCore.getMenuCommandTitle({ commandID: 2983 }
 
 #### Parameters
 
-| Name | Type |
+| 名称 | 类型 |
 | :------ | :------ |
 | `options` | *object* |
 | `options.commandID?` | *number* |
@@ -290,7 +290,7 @@ await PhotoshopCore.performMenuCommand({ commandID: 1017 })
 
 #### Parameters
 
-| Name | Type |
+| 名称 | 类型 |
 | :------ | :------ |
 | `options` | *object* |
 | `options.commandID` | *number* |
@@ -322,7 +322,7 @@ await PhotoshopCore.redrawDocument({ documentID: 123})
 
 #### Parameters
 
-| Name | Type |
+| 名称 | 类型 |
 | :------ | :------ |
 | `options` | *object* |
 | `options.documentID` | *number* |
@@ -351,7 +351,7 @@ await PhotoshopCore.setExecutionMode({ logRejections: true })
 
 #### Parameters
 
-| Name | Type |
+| 名称 | 类型 |
 | :------ | :------ |
 | `options` | *object* |
 | `options.enableErrorStacktraces?` | *boolean* |
@@ -374,7 +374,7 @@ await PhotoshopCore.setUserIdleTime(3)
 
 #### Parameters
 
-| Name | Type |
+| 名称 | 类型 |
 | :------ | :------ |
 | `idleTime` | *number* |
 
@@ -393,7 +393,7 @@ await PhotoshopCore.showAlert({ message: 'Operation successful'})
 
 #### Parameters
 
-| Name | Type |
+| 名称 | 类型 |
 | :------ | :------ |
 | `options` | *object* |
 | `options.message` | *string* |
@@ -410,6 +410,6 @@ will return the translated string for the current UI language
 
 #### Parameters
 
-| Name | Type |
+| 名称 | 类型 |
 | :------ | :------ |
 | `zstring` | *string* |

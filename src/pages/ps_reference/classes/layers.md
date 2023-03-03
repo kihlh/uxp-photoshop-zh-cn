@@ -18,12 +18,11 @@ keywords:
 
 # Layers
 
-A collections class allowing for array access into the applications
-list of layers on a document,
-while also providing familiar methods from ExtendScript, like `getByName`
+一个集合数组访问在一个文档上的图层列表。
+同时也提供ExtendScript中熟悉的方法，如 `getByName`
 
 ```javascript
-// Iterate through all the top layers of frontmost document
+// 遍历最前面的文件的所有顶层
 app.activeDocument.layers.forEach(h => console.log(h.name));
 ```
 
@@ -31,16 +30,16 @@ app.activeDocument.layers.forEach(h => console.log(h.name));
 
 ▪ [index: *number*]: [*Layer*](/ps_reference/classes/layer/)
 
-Used to access the layers in the collection.
+用来访问集合中的图层。
 
 ```javascript
-// Iterate through all the top layers of frontmost document
+// 遍历最前面的文件的所有顶层
 app.activeDocument.layers.forEach(h => console.log(h.name));
 ```
 
 ## Properties
 
-| Name | Type | Access | Min Version | Description |
+| 名称 | 类型 | 访问 | 最低版本 | 描述 |
 | :------ | :------ | :------ | :------ | :------ |
 | length | *number* | R | 22.5 | Number of [Layer](/ps_reference/classes/layer/) elements in this collection. |
 | typename | *string* | R | 22.5 | The name for this object collection: Layers. |
@@ -52,7 +51,7 @@ app.activeDocument.layers.forEach(h => console.log(h.name));
 
 **async** : *Promise*<[*Layer*](/ps_reference/classes/layer/)\>
 
-Create a new layer.
+创建一个新层
 
 ```javascript
 let newDoc1 = await app.activeDocument.layers.add();
@@ -65,10 +64,10 @@ ___
 
 [*Layer*](/ps_reference/classes/layer/)
 
-Find the first layer with the matching name.
+找到第一个具有匹配名称的层
 
 #### Parameters
 
-| Name | Type |
+| 名称 | 类型 |
 | :------ | :------ |
 | `name` | *string* |

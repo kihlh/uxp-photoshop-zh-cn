@@ -22,7 +22,7 @@ The hyphenation features as they're displayed in the dialog
 found in the Paragraph's flyout menu "Hyphenation...".
 All numbers are pixels.
 
-| Name | Type | Default | Range | Min Version | Description |
+| 名称 | 类型 | 默认 | 范围 | 最低版本 | 描述 |
 | :------ | :------ | :------ | :------ | :------ | :------ |
 | afterFirst | *number* | 2 | 1..15 | 24.1 | The minimum number of letters after which hyphenation in word wrap is allowed. |
 | beforeLast | *number* | 2 | 1..15 | 24.1 | The minimum number of letters before which hyphenation in word wrap is allowed. |

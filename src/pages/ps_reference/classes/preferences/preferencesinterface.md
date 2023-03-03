@@ -22,7 +22,7 @@ User interface preferences
 
 ## Properties
 
-| Name | Type | Access | Min Version | Description |
+| 名称 | 类型 | 访问 | 最低版本 | 描述 |
 | :------ | :------ | :------ | :------ | :------ |
 | colorChannelsInColor | *boolean* | R W | 24.0 | If true, the Channels palette will display the component channels in their respective colors. |
 | dynamicColorSliders | *boolean* | R W | 24.0 | If true, dynamic color sliders appear in the Color palette. |

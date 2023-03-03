@@ -75,7 +75,7 @@ Here are the definitions of the keywords in the "Required" column:
 * Develop - required field for the plugin to be loaded.
 * Publish - required field for plugins to be submitted in the Adobe Developer Console and published in the Plugin Manager.
 
-Key path | Type | Description | Required
+Key path | 类型 | 描述 | Required
 ---------|------|-------------|---------
 `manifestVersion` | `number` | The version of the manifest. For Photoshop, this should be `4` or higher. | Develop / Publish
 `id`     | `string` | Unique identifier for your plugin. You can get your unique ID on the [Developer Distribution portal](https://developer.adobe.com/developer-distribution/creative-cloud/docs/guides/plugin_id/).%7C Develop / Publish
@@ -93,7 +93,7 @@ The `icons` field is an array of a `IconDefinition`s.
 
 ### IconDefinition
 
-Key | Type | Description
+Key | 类型 | Description
 ----|------|----------------
 `width` | `number` | Width in logical pixels
 `height` | `number` | Height in logical pixels
@@ -108,7 +108,7 @@ The `host` field is an _object_ matching the `HostDefinition` format specified b
 
 ### HostDefinition
 
-Key | Type | Description | Required
+Key | 类型 | 描述 | Required
 ----|------|-------------| --------
 `app` | `string` | Indicates the supported application for this plugin (currently, the only valid values here are `"XD"` and `"PS"`). | Develop / Publish
 `minVersion` | `string` | Minimum required version of the host app (in `x.y` format) that can run this plugin. The lowest valid version for manifest V4 plugins is version `22.0`. <br/> **Note:** The version number must be at least two segments. Typically, you'll leave the minor segment set to `0`, e.g. `22.0`. | Develop / Publish
@@ -122,7 +122,7 @@ Each entry point specifies a `type`, to create either a direct-action command or
 
 ### EntryPointDefinition
 
-Key | Type | Description
+Key | 类型 | Description
 ----|------|------------
 `type` | `string` | Entry point type: either `"command"` or `"panel"`.
 `id`   | `string` | Unique identifier for the entry point. This `id` will also be mapped to entrypoints defined in your plugin code.

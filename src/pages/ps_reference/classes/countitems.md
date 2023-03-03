@@ -22,7 +22,7 @@ A collections class allowing access to the document's CountItem.
 
 ## Properties
 
-| Name | Type | Access | Min Version | Description |
+| 名称 | 类型 | 访问 | 最低版本 | 描述 |
 | :------ | :------ | :------ | :------ | :------ |
 | length | *number* | R | 24.1 | Number of [CountItem](/ps_reference/classes/countitem/) elements in this collection. |
 | parent | [*Document*](/ps_reference/classes/document/) | R | 24.1 | The owner [Document](/ps_reference/classes/document/) of this CountItems collection. |
@@ -39,7 +39,7 @@ Activates a Count Item group by its index.
 
 #### Parameters
 
-| Name | Type |
+| 名称 | 类型 |
 | :------ | :------ |
 | `index` | *number* |
 
@@ -58,7 +58,7 @@ app.activeDocument.countItems.add({x: 20, y: 20});
 
 #### Parameters
 
-| Name | Type |
+| 名称 | 类型 |
 | :------ | :------ |
 | `position` | *object* |
 | `position.x` | *number* |
@@ -75,7 +75,7 @@ Creates a new Count Item group.
 
 #### Parameters
 
-| Name | Type |
+| 名称 | 类型 |
 | :------ | :------ |
 | `groupName` | *string* |
 
@@ -116,7 +116,7 @@ Removes a Count Item group by its index.
 
 #### Parameters
 
-| Name | Type |
+| 名称 | 类型 |
 | :------ | :------ |
 | `index` | *number* |
 
@@ -131,7 +131,7 @@ Renames the currently active Count Item group.
 
 #### Parameters
 
-| Name | Type |
+| 名称 | 类型 |
 | :------ | :------ |
 | `groupName` | *string* |
 
@@ -146,7 +146,7 @@ Sets the Color of the Count Item marker and label.
 
 #### Parameters
 
-| Name | Type |
+| 名称 | 类型 |
 | :------ | :------ |
 | `color` | [*SolidColor*](/ps_reference/classes/solidcolor/) |
 
@@ -161,7 +161,7 @@ Sets the Count Item label (the number) size.
 
 #### Parameters
 
-| Name | Type |
+| 名称 | 类型 |
 | :------ | :------ |
 | `size` | *number* |
 
@@ -176,7 +176,7 @@ Sets the Count Item marker (the dot) size.
 
 #### Parameters
 
-| Name | Type |
+| 名称 | 类型 |
 | :------ | :------ |
 | `size` | *number* |
 
@@ -191,6 +191,6 @@ Toggles the visibility of the currently selected Count Item group.
 
 #### Parameters
 
-| Name | Type |
+| 名称 | 类型 |
 | :------ | :------ |
 | `isVisible` | *boolean* |

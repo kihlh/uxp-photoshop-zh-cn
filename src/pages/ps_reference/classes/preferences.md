@@ -22,7 +22,7 @@ Contains Photoshop preferences grouped into several categories similar to prefer
 
 ## Properties
 
-| Name | Type | Access | Min Version | Description |
+| 名称 | 类型 | 访问 | 最低版本 | 描述 |
 | :------ | :------ | :------ | :------ | :------ |
 | cursors | [*PreferencesCursors*](/ps_reference/classes/preferences/preferencescursors/) | R | 24.0 | Options for size and style of tool cursors. |
 | fileHandling | [*PreferencesFileHandling*](/ps_reference/classes/preferences/preferencesfilehandling/) | R | 24.0 | File handling preferences. Mostly about file saving options, file compatibility and recent files. |

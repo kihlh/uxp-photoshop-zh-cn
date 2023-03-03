@@ -22,7 +22,7 @@ Options for size and style of tool cursors.
 
 ## Properties
 
-| Name | Type | Access | Min Version | Description |
+| 名称 | 类型 | 访问 | 最低版本 | 描述 |
 | :------ | :------ | :------ | :------ | :------ |
 | otherCursors | [*OtherCursors*](/ps_reference/modules/constants/#othercursors) | R W | 24.0 | The type of pointer to use |
 | paintingCursors | [*PaintingCursors*](/ps_reference/modules/constants/#paintingcursors) | R W | 24.0 | The style of cursor in use for painting tools. |

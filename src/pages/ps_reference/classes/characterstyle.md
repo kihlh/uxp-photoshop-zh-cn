@@ -22,7 +22,7 @@ The Class that stores properties related to the Character panel in the Photoshop
 
 ## Properties
 
-| Name | Type | Access | Default | Range | Min Version | Description |
+| 名称 | 类型 | 访问 | 默认 | 范围 | 最低版本 | 描述 |
 | :------ | :------ | :------ | :------ | :------ | :------ | :------ |
 | alternateLigatures | *boolean* | R W | false | - | 24.1 | Discretionary ligatures. |
 | antiAliasMethod | [*AntiAlias*](/ps_reference/modules/constants/#antialias) | R W | AntiAlias.SHARP | - | 24.1 | The text anti-aliasing |

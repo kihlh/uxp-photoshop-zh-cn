@@ -40,7 +40,7 @@ app.documents.forEach(h => console.log(h.title));
 
 ## Properties
 
-| Name | Type | Access | Min Version | Description |
+| 名称 | 类型 | 访问 | 最低版本 | 描述 |
 | :------ | :------ | :------ | :------ | :------ |
 | length | *number* | R | 22.5 | Number of [Document](/ps_reference/classes/document/) elements in this collection. |
 | parent | [*Photoshop*](/ps_reference/classes/photoshop/) | R | 22.5 | The owner application of this Documents collection. |
@@ -81,7 +81,7 @@ let newDoc3 = await app.documents.add({preset: "My Default Size 1"});
 
 #### Parameters
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | :------ | :------ | :------ |
 | `options?` | [*DocumentCreateOptions*](/ps_reference/objects/createoptions/documentcreateoptions/) | @DocumentCreateOptions |
 
@@ -96,6 +96,6 @@ Find the first document with the matching name.
 
 #### Parameters
 
-| Name | Type |
+| 名称 | 类型 |
 | :------ | :------ |
 | `name` | *string* |

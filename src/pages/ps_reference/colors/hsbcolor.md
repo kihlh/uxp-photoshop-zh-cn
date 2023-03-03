@@ -22,7 +22,7 @@ Defines an HSB color, used in [SolidColor](/ps_reference/classes/solidcolor/) ob
 
 ## Properties
 
-| Name | Type | Access | Default | Range | Min Version | Description |
+| 名称 | 类型 | 访问 | 默认 | 范围 | 最低版本 | 描述 |
 | :------ | :------ | :------ | :------ | :------ | :------ | :------ |
 | brightness | *number* | R W | 100 | 0..100 | 23.0 | The brightness value. |
 | hue | *number* | R W | 360 | 0..360 | 23.0 | The hue value. |

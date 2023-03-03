@@ -18,17 +18,17 @@ keywords:
 
 # WarpStyle
 
-The Class that stores properties related to the Warp Text dialog.
+存储与经编文本对话框有关的属性的类。
 
 ## Properties
 
-| Name | Type | Access | Default | Range | Min Version | Description |
+| 名称 | 类型 | 访问 | 默认 | 范围 | 最低版本 | 描述 |
 | :------ | :------ | :------ | :------ | :------ | :------ | :------ |
-| bend | *number* | R W | - | -100..100 | 24.1 | The warp bend as a percentage. |
-| direction | [*Direction*](/ps_reference/modules/constants/#direction) | R W | Direction.HORIZONTAL | - | 24.1 | The warp direction |
-| horizontalDistortion | *number* | R W | - | -100..100 | 24.1 | The horizontal distortion of the warp as a percentage. |
-| style | [*WarpStyle*](/ps_reference/modules/constants/#warpstyle) | R W | WarpStyle.NONE | - | 24.1 | he style of warp to apply to the text. |
-| verticalDistortion | *number* | R W | - | -100..100 | 24.1 | The vertical distortion of the warp as a percentage. |
+| bend | *number* | R W | - | -100..100 | 24.1 | 经线弯曲的百分比。 |
+| direction | [*Direction*](/ps_reference/modules/constants/#direction) | R W | Direction.HORIZONTAL | - | 24.1 | 经线方向 |
+| horizontalDistortion | *number* | R W | - | -100..100 | 24.1 | 经纱的水平变形率，以百分比表示。 |
+| style | [*WarpStyle*](/ps_reference/modules/constants/#warpstyle) | R W | WarpStyle.NONE | - | 24.1 | 应用于文本的经线样式。 |
+| verticalDistortion | *number* | R W | - | -100..100 | 24.1 | 经纱的垂直变形率，以百分比表示。 |
 
 ## Methods
 
@@ -37,4 +37,4 @@ The Class that stores properties related to the Warp Text dialog.
 
 **async** : *Promise*<void\>
 
-Reset the WarpStyle to its default values.
+将WarpStyle重置为其默认值。

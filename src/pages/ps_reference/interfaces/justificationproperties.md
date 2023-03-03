@@ -42,7 +42,7 @@ Minimum <= Maximum <= 200
 AutoLeading:
 0 <= AutoLeading <= 500
 
-| Name | Type | Default | Min Version | Description |
+| 名称 | 类型 | 默认 | 最低版本 | 描述 |
 | :------ | :------ | :------ | :------ | :------ |
 | autoLeadingAmount | *number* | 120 | 24.1 | Auto leading amount |
 | glyphScalingDesired | *number* | 100 | 24.1 | Desired glyph scaling |

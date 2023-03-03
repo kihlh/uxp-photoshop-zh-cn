@@ -23,7 +23,7 @@ Actions are series of commands that can be recorded by user, and can be replayed
 
 ## Properties
 
-| Name | Type | Access | Min Version | Description |
+| 名称 | 类型 | 访问 | 最低版本 | 描述 |
 | :------ | :------ | :------ | :------ | :------ |
 | id | *number* | R | 22.1 | The internal ID of this Action Can be used for batchPlay calls, used internally |
 | index | *number* | R | 22.1 | Zero-based index of this Action in it&#x27;s parent Action Set |

@@ -57,7 +57,7 @@ document.saveAs.psb(entryPsb, { embedColorProfile: true });
 
 #### Type declaration
 
-| Name | Type |
+| 名称 | 类型 |
 | :------ | :------ |
 | `bmp` | (`entry`: File, `saveOptions?`: [*BMPSaveOptions*](/ps_reference/objects/saveoptions/bmpsaveoptions/), `asCopy`: *boolean*) => *Promise*<void\> |
 | `gif` | (`entry`: File, `saveOptions?`: [*GIFSaveOptions*](/ps_reference/objects/saveoptions/gifsaveoptions/), `asCopy`: *boolean*) => *Promise*<void\> |
@@ -68,7 +68,7 @@ document.saveAs.psb(entryPsb, { embedColorProfile: true });
 
 ## Properties
 
-| Name | Type | Access | Min Version | Description |
+| 名称 | 类型 | 访问 | 最低版本 | 描述 |
 | :------ | :------ | :------ | :------ | :------ |
 | activeChannels | [*Channel*](/ps_reference/classes/channel/)[] | R W | 23.0 | Currently active channels of the document. |
 | activeHistoryBrushSource | [*HistoryState*](/ps_reference/classes/historystate/) | R W | 22.5 | The history state that history brush tool will use as its source. |
@@ -115,7 +115,7 @@ Changes the color mode of the document.
 
 #### Parameters
 
-| Name | Type |
+| 名称 | 类型 |
 | :------ | :------ |
 | `mode` | [*ChangeMode*](/ps_reference/modules/constants/#changemode) |
 | `options?` | [*BitmapConversionOptions*](/ps_reference/objects/conversionoptions/bitmapconversionoptions/) \| [*IndexedConversionOptions*](/ps_reference/objects/conversionoptions/indexedconversionoptions/) |
@@ -132,7 +132,7 @@ unsaved changes if specified.
 
 #### Parameters
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | :------ | :------ | :------ |
 | `saveDialogOptions` | [*SaveOptions*](/ps_reference/modules/constants/#saveoptions) | By default, prompts a save dialog                    if there are unsaved changes. |
 
@@ -161,7 +161,7 @@ or one of these below, meaning of the working color spaces or Lab color.
 
 #### Parameters
 
-| Name | Type |
+| 名称 | 类型 |
 | :------ | :------ |
 | `destinationProfile` | *string* |
 | `intent` | [*Intent*](/ps_reference/modules/constants/#intent) |
@@ -193,7 +193,7 @@ await doc.createLayer(
 
 #### Parameters
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | :------ | :------ | :------ |
 | `kind` | [*NORMAL*](/ps_reference/modules/constants/#normal) | The kind of layer to create [Constants.LayerKind](/ps_reference/modules/constants/#layerkind). |
 | `options?` | [*PixelLayerCreateOptions*](/ps_reference/objects/createoptions/pixellayercreateoptions/) | The options for creation, including general layer options and those specific to the layer kind. |
@@ -208,7 +208,7 @@ await doc.createLayer( Constants.LayerKind.GROUP, { name: "myLayer", opacity: 80
 
 #### Parameters
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | :------ | :------ | :------ |
 | `kind` | [*GROUP*](/ps_reference/modules/constants/#group) | The kind of layer to create [Constants.LayerKind](/ps_reference/modules/constants/#layerkind). |
 | `options?` | [*GroupLayerCreateOptions*](/ps_reference/objects/createoptions/grouplayercreateoptions/) | The options for creation, including general layer options and those specific to the layer kind. |
@@ -231,7 +231,7 @@ const selectedGroup = await doc.createLayerGroup({ name: "group", fromLayers: do
 
 #### Parameters
 
-| Name | Type |
+| 名称 | 类型 |
 | :------ | :------ |
 | `options?` | [*GroupLayerCreateOptions*](/ps_reference/objects/createoptions/grouplayercreateoptions/) |
 
@@ -251,7 +251,7 @@ await doc.createPixelLayer({ name: "myLayer", opacity: 80, fillNeutral: true })
 
 #### Parameters
 
-| Name | Type |
+| 名称 | 类型 |
 | :------ | :------ |
 | `options?` | [*PixelLayerCreateOptions*](/ps_reference/objects/createoptions/pixellayercreateoptions/) |
 
@@ -271,7 +271,7 @@ await doc.createTextLayer({ name: "myTextLayer", contents: "Hello, World!", font
 
 #### Parameters
 
-| Name | Type |
+| 名称 | 类型 |
 | :------ | :------ |
 | `options?` | [*TextLayerCreateOptions*](/ps_reference/objects/createoptions/textlayercreateoptions/) |
 
@@ -286,7 +286,7 @@ Crops the document to given bounds
 
 #### Parameters
 
-| Name | Type | Default value |
+| 名称 | 类型 | 默认值 |
 | :------ | :------ | :------ |
 | `bounds` | [*Bounds*](/ps_reference/objects/bounds/) | - |
 | `angle` | *number* | 0 |
@@ -308,7 +308,7 @@ The optional parameter `mergeLayersOnly` indicates whether to only duplicate mer
 
 #### Parameters
 
-| Name | Type |
+| 名称 | 类型 |
 | :------ | :------ |
 | `name?` | *string* |
 | `mergeLayersOnly?` | *boolean* |
@@ -335,7 +335,7 @@ await finalDoc.close(SaveOptions.SAVECHANGES)
 
 #### Parameters
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | :------ | :------ | :------ |
 | `layers` | [*Layer*](/ps_reference/classes/layer/)[] |  |
 | `targetDocument?` | [*Document*](/ps_reference/classes/document/) | if specified, duplicate to a different document target. |
@@ -365,7 +365,7 @@ const group = await doc.groupLayers([layers[1], layers[2], layers[4]])
 
 #### Parameters
 
-| Name | Type |
+| 名称 | 类型 |
 | :------ | :------ |
 | `layers` | [*Layer*](/ps_reference/classes/layer/)[] |
 
@@ -380,7 +380,7 @@ Links layers together if possible, and returns a list of linked layers.
 
 #### Parameters
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | :------ | :------ | :------ |
 | `layers` | [*Layer*](/ps_reference/classes/layer/)[] | array of layers to link together |
 
@@ -405,7 +405,7 @@ set to true and a selection is active, the contents are pasted into the selectio
 
 #### Parameters
 
-| Name | Type |
+| 名称 | 类型 |
 | :------ | :------ |
 | `intoSelection?` | *boolean* |
 
@@ -437,7 +437,7 @@ await document.resizeCanvas(width + 400, height + 400)
 
 #### Parameters
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | :------ | :------ | :------ |
 | `width` | *number* | Numeric value of new width in pixels |
 | `height` | *number* | Numeric value of new height in pixels |
@@ -458,7 +458,7 @@ await document.resizeImage(800, 600)
 
 #### Parameters
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | :------ | :------ | :------ |
 | `width?` | *number* | Numeric value of new width in pixels |
 | `height?` | *number* | Numeric value of new height in pixels |
@@ -486,7 +486,7 @@ Rotates the image clockwise in given angle, expanding canvas if necessary. (Prev
 
 #### Parameters
 
-| Name | Type |
+| 名称 | 类型 |
 | :------ | :------ |
 | `angles` | *number* |
 
@@ -512,7 +512,7 @@ console.log(col.rgb);
 
 #### Parameters
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | :------ | :------ | :------ |
 | `position` | *object* | The point to sample `{x: number, y: number}`. |
 | `position.x` | *number* | The horizontal coordinate in pixels. |
@@ -575,7 +575,7 @@ API, for which this API is a simple wrapper for.
 
 #### Parameters
 
-| Name | Type |
+| 名称 | 类型 |
 | :------ | :------ |
 | `callback` | (`e`: SuspendHistoryContext) => *void* |
 | `historyStateName` | *string* |
@@ -593,7 +593,7 @@ Valid only when [Document.mode](/ps_reference/classes/document/#mode) is `Consta
 
 #### Parameters
 
-| Name | Type |
+| 名称 | 类型 |
 | :------ | :------ |
 | `width` | *number* |
 
@@ -609,7 +609,7 @@ base on trimType
 
 #### Parameters
 
-| Name | Type | Default value |
+| 名称 | 类型 | 默认值 |
 | :------ | :------ | :------ |
 | `trimType` | [*TrimType*](/ps_reference/modules/constants/#trimtype) | - |
 | `top` | *boolean* | true |

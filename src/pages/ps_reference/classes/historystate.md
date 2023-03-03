@@ -22,7 +22,7 @@ Represents a single history state in the History panel.
 
 ## Properties
 
-| Name | Type | Access | Min Version | Description |
+| 名称 | 类型 | 访问 | 最低版本 | 描述 |
 | :------ | :------ | :------ | :------ | :------ |
 | docId | *number* | R | 22.5 | The ID of the document of this history state. |
 | id | *number* | R | 22.5 | For use with batchPlay operations. This history ID, along with its document ID can be used to represent this history state for the lifetime of this document. |

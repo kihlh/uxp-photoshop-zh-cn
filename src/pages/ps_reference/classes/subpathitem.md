@@ -31,7 +31,7 @@ path represented by all of the subpaths. Access these objects in the [PathItem.s
 
 ## Properties
 
-| Name | Type | Access | Min Version | Description |
+| 名称 | 类型 | 访问 | 最低版本 | 描述 |
 | :------ | :------ | :------ | :------ | :------ |
 | closed | *boolean* | R | 23.3 | True if the path is closed. |
 | operation | [*ShapeOperation*](/ps_reference/modules/constants/#shapeoperation) | R | 23.3 | How this &#x60;SubPathItem&#x60; behaves when it intersects another. Specifies how to combine the shapes if the destination path already has a selection. |

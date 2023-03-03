@@ -39,7 +39,7 @@ app.activeDocument.channels.forEach(h => console.log(h.name));
 
 ## Properties
 
-| Name | Type | Access | Min Version | Description |
+| 名称 | 类型 | 访问 | 最低版本 | 描述 |
 | :------ | :------ | :------ | :------ | :------ |
 | length | *number* | R | 23.0 | Number of Channel elements in this collection. |
 | parent | Document | R | 23.0 | The owner document of this Channel collection. |
@@ -65,7 +65,7 @@ Find the first channel with the matching name.
 
 #### Parameters
 
-| Name | Type |
+| 名称 | 类型 |
 | :------ | :------ |
 | `name` | *string* |
 

@@ -22,7 +22,7 @@ Preferences how guides, grids and slices will be shown
 
 ## Properties
 
-| Name | Type | Access | Min Version | Description |
+| 名称 | 类型 | 访问 | 最低版本 | 描述 |
 | :------ | :------ | :------ | :------ | :------ |
 | gridStyle | [*GridLineStyle*](/ps_reference/modules/constants/#gridlinestyle) | R W | 24.0 | The formatting style for non-printing grid lines |
 | gridSubDivisions | *number* | R W | 24.0 | The whole number by which to subdivide the grid [1,100]. |

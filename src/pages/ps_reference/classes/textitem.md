@@ -100,7 +100,7 @@ The object that stores properties related to the Warp Text dialog.
 
 ## Properties
 
-| Name | Type | Access | Default | Min Version | Description |
+| 名称 | 类型 | 访问 | 默认 | 最低版本 | 描述 |
 | :------ | :------ | :------ | :------ | :------ | :------ |
 | contents | *string* | R W | - | 24.1 | The actual text of the Layer. |
 | isParagraphText | *boolean* | R | - | 24.1 | True if the Text Layer is a &quot;Paragraph Text&quot;: text that uses boundaries to control the flow of characters, either horizontally or vertically. |

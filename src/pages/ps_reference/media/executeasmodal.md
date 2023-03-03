@@ -1,40 +1,41 @@
 ---
 id: "executeasmodal"
-title: "ExecuteAsModal Details"
+title: "ExecuteAsModal 详细说明"
 sidebar_label: "Modal Execution"
 ---
 
 # ExecuteAsModal
 
-ExecuteAsModal is needed when a plugin wants to make modifications to the Photoshop state. This includes scenarios where the plugin creates or modify documents, or the plugin wishes to update UI or preference state.
+当插件想要修改 Photoshop 状态时，需要ExecuteAsModal 。这包括插件创建或修改文档，或者插件希望更新用户界面或首选项状态的场景。
 
-ExecuteAsModal is only available to a plugin that is using apiVersion 2 or higher.
+ExecuteAsModal 仅适用于使用 apiVersion 2或更高版本的插件。
 
-Only one plugin at a time can use `executeAsModal`, and this means that executeAsModal guarantees that the plugin gets exclusive access to Photoshop.
+一次只有一个插件可以使用 `executeAsModal`，这意味着 Modal 保证插件可以独占访问 Photoshop。
 
-When executeAsModal is active, then Photoshop enters a modal user interaction state. This means that some menu items are disabled.
-If the modal state lasts a significant amount of time (currently more than two seconds), then a progress bar is shown. The progress bar will identify the plugin that is associated with the modal state, and it will include the ability for the user to cancel the interaction. The following illustrates the progress bar that would be created for a plugin called "Sample Plugin". The progress bar is indefinite until the plugin informs Photoshop about its progress.
+当 Modal 处于活动状态时， Photoshop 进入Modal 用户交互状态。这意味着某些菜单项被禁用。
+如果模态状态持续很长时间（目前超过两秒），则会显示一个进度条。进度条将标识与模态状态关联的插件，并将包括用户取消交互的能力。下面说明了将为名为" Sample Plugin"  的插件创建的进度条。在插件通知 Photoshop 其进度之前，进度条是不确定的。
 
 ![progress bar](./assets/progress-bar.png)
 
-When a plugin is inside a modal scope, then it controls Photoshop. This means that you no longer need to use options such as `modalBehavior` with `batchPlay`.
+当插件在 ExecuteAsModal 范围内时，它会控制 Photoshop。这意味着您不再需要使用 `modalBehavior`  `batchPlay` 等选项。
 
 <br />
 
 ## API
 
-ExecuteAsModal is exposed on the Photoshop core module.
+ExecuteAsModal  暴露在 Photoshop 核心模块上。
 
 ```javascript
 require('photoshop').core.executeAsModal(targetFunction, options);
 ```
-targetFunction is a JavaScript function that will be executed after Photoshop enters a modal state. When the targetFunction completes, then Photoshop will exit the modal state. The targetFunction can be asynchronous.
 
-Only one plugin can be modal at any given time. If another plugin is modal when you call executeAsModal, then executeAsModal will raise an error. It is therefore important to handle errors when calling this method.
+`targetFunction` 是一个JavaScript函数， Photoshop 进入模态状态后会执行，当`targetFunction` 完成后， Photoshop 会退出状态，`targetFunction`可以是异步的。
 
-It is also recommended that JavaScript awaits on the result from executeAsModal. Without an await, JavaScript will proceed to the subsequent lines of code while Photoshop enters a modal state.
+在任何给定时间只有一个插件可以是Modal。如果调用 executeAsModal时另一个插件是模态的，那么 executeAsModal 将引发错误。因此，调用此方法时处理错误非常重要。
 
-A typical use case is:
+还建议JavaScript等待 executeAsModal 的结果。如果没有等待，JavaScript将继续执行后续代码行，同时 Photoshop 进入Modal状态。
+
+一个典型的例子是：
 ```javascript
 try {
     await require('photoshop').core.executeAsModal(targetFunction, {"commandName": "My Script Command"});
@@ -44,7 +45,7 @@ try {
           showAlert("executeAsModal was rejected (some other plugin is currently inside a modal scope)");
       }
       else {
-        // This case is hit if the targetFunction throws an exception
+        //  如果targetFunction抛出异常，则会遇到这种情况
       }
     }
 ```
@@ -135,48 +136,53 @@ await require("photoshop").core.executeAsModal(targetFunction, {"commandName": "
 <br />
 
 ### Progress bar
-By default, Photoshop shows an indeterminate progress bar while a modal scope is active. The progress bar is shown a few seconds after the modal scope is initiated.
-JavaScript can use `reportProgress` to customize this behavior. To obtain a determinate progress bar, JavaScript can specify a value between 0 and 1 when calling reportProgress. Example:
+默认情况下，Photoshop 会在Modal范围处于活动状态时显示不确定的进度条。
+JavaScript可以使用 `reportProgress` 来自定义此行为。要获得确定的进度条，JavaScript可以在调用 reportProgress 时指定一个介于0和1之间的值。
+
+例子：
+
 ```javascript
 async function targetFunction(executionContext) {
   executionContext.reportProgress({"value": 0.3});
 }
 ```
-Setting a value will switch the progress bar to be a determinate progress bar & show the progress bar if it is not yet visible.
+设置一个值会将进度条切换为确定的进度条，如果进度条尚不可见，则显示进度条。
 
-JavaScript can change the commandName that is shown in the progress UI by using the "commandName" property. This can be used to inform the user about the current stage of the operation. Example:
+JavaScript可以使用 "commandName"  属性更改进度UI中显示的 commandName 。这可用于通知用户操作的当前阶段。例子：
+
 ```javascript
 executionContext.reportProgress({"value": 0.9, "commandName": "Finishing Up"});
 ```
 ![progress bar](./assets/progress-bar-2.png)
 
-The progress bar is hidden while modal UI is shown.
+进度条在显示模态UI时隐藏。
 
 <br />
 
-### Interactive Mode
+### 交互模式
 *Added in Photoshop 23.3*
 
-If a plugin requires the accepting of user input or interaction while in a executeAsModal scope, "Interactive Mode" may be required.
+如果插件在执行 executeAsModal 范围内需要接受用户输入或交互，则可能需要 "Interactive Mode"(交互模式)  
 
-This mode refrains from displaying a blocking progress dialog to the user, and reduces the number of restrictions that hinder accepting of user input. Use-cases for interactive mode may include:
-- allowing users to input data into an invoked modal filter dialog
-- awaiting user input on a Photoshop workspace, such as Select and Mask
+此模式可以避免向用户显示阻塞进度对话框，并减少阻碍接受用户输入的限制数量。交互模式的用法可能包括：
+- 允许用户将数据输入到调用的模态过滤器对话框中
+- 在 Photoshop 工作区等待用户输入，例如选择和蒙版
+- 
 
 ```javascript
 await require("photoshop").core.executeAsModal(targetFunction, {"commandName": "Apply two filters", "interactive": true});
 ```
 
-In lieu of the progress bar dialog, users can find the `Cancel Plugin Command` menu item under the Photoshop `Plugins` menu. This will interrupt the plugin's executeAsModal scope as described in [User Cancellation](#user-cancellation).
+代替进度条对话框，用户可以在 Photoshop 插件菜单下找到 `取消插件命令` 菜单项。这将中断插件的执行AsModal作用域，如  [用户取消](#user-cancellation).中所述。
 
 ![cancel via plugin menu](./assets/eam-pluginmenu-cancel.png)
 
 <br />
 
-### History state suspension
-The hostControl property on the executionContext can be used to suspend and resume history states. While a history state is suspended, Photoshop will coalesce all document changes into a single history state with a custom name.
+### 历史状态暂停
+执行上下文上的 hostControl 属性可用于挂起和恢复历史状态。当历史状态被挂起时， Photoshop 将所有文档更改合并为具有自定义名称的单个历史状态
 
-Example:
+例子:
 ```javascript
 async function historyStateSample(executionContext) {
     let hostControl = executionContext.hostControl;
@@ -184,31 +190,31 @@ async function historyStateSample(executionContext) {
     // Get an ID for a target document
     let documentID = await getTargetDocument();
 
-    // Suspend history state on the target document
-    // This will coalesce all changes into a single history state called
+    // 挂起目标文档的历史状态
+    // 这会将所有更改合并到一个名为
     // 'Custom Command'
     let suspensionID = await hostControl.suspendHistory({
         "documentID": documentID,
         "name": "Custom Command"
     });
 
-    // modify the document
+    // 修改文档
     // . . .
 
-    // resume the history state
+    // 恢复历史状态
     await hostControl.resumeHistory(suspensionID);
 }
 ```
-The signature for suspendHistory is:
+暂停历史的签名是：
 ```javascript
 executionContext.hostControl.suspendHistory(options)
 ```
-The options argument is an object with the following properties:
-* documentID: The ID of the document whose history state should be suspended.
-* name: The name that is used for the history state. This is visible in the History panel.
-suspendHistory returns a suspension identifier. This identifier should be used with resumeHistory.
+选项参数是具有以下属性的对象：
+*docentID：应暂停其历史状态的文档的ID
+*name：用于历史状态的名称。这在历史面板中可见。
+suspendHistory 带返回一个暂停标识符。此标识符应与resume录像带一起使用。
 
-The signature for resumeHistory is:
+简历的签名历史是:
 ```javascript
 executionContext.hostControl.resumeHistory(suspensionID, commit)
 ```
@@ -230,8 +236,8 @@ Plugins can register for notifications related to starting and ending a modal Ja
 
 <br />
 
-### Automatic document closing
-When the user cancels a modal scope, then JavaScript cannot make any further document changes until it returns from the modal scope. In order to ensure proper clean up of temporary documents, JavaScript can register one or more documents to be automatically closed without saving when the modal scope ends. The following is an example of JavaScript that registers a document to be closed when the modal scope ends:
+### 自动关闭文档
+当用户取消一个Modal作用域时，那么 JavaScript在从Modal作用域返回之前无法进行任何进一步的文档更改。为了确保正确清理临时文档，JavaScript可以注册一个或多个要自动关闭的文档，而不会在Modal作用域结束时进行保存。以下是JavaScript的示例，它注册了一个要在Modal作用域结束时关闭的文档：
 ```javascript
 async function modalFunction(executionContext) {
     let hostControl = executionContext.hostControl;
@@ -242,7 +248,7 @@ async function modalFunction(executionContext) {
     ...
 }
 ```
-JavaScript can unregister a document from being automatically closed by using unregisterAutoCloseDocument. The following illustrates JavaScript that creates and marks a document as "auto close" while the method is running. If the method succeeds then the document is unregistered from the set of auto close documents. This allows JavaScript to create a complete document, or close the document is the user cancels while the script is running.
+JavaScript可以使用`unregisterAutoCloseDocument`取消注册自动关闭的文档。以下说明了JavaScript在方法运行时创建文档并将其标记为 "auto close" 。如果方法成功，则该文档将从自动关闭文档集中取消注册。这允许JavaScript创建一个完整的文档，或者在脚本运行时用户取消时关闭文档。
 ```javascript
 async function modalFunction(executionContext) {
     let hostControl = executionContext.hostControl;
@@ -261,5 +267,6 @@ async function modalFunction(executionContext) {
 <br />
 
 ### Notes
-You can have nested modal scopes. A target function can use executeAsModal to execute another target function.
-All modal scopes share the same global modal state. This mean that any nested scope can modify the state on the (single) progress bar. Similarly, you can suspend the history state of a document in one scope, and resume the state in another.
+
+您可以有嵌套的Modal范围。一个目标函数可以使用 `executeAsModal` 来执行另一个目标函数。
+所有ExecuteAsModal范围共享相同的全局Modal状态。这意味着任何嵌套范围都可以修改（单个）进度条上的状态。类似地，您可以在一个范围内挂起文档的历史状态，并在另一个范围内恢复状态。

@@ -38,7 +38,7 @@ ___
 
 #### Type declaration
 
-| Name | Type |
+| 名称 | 类型 |
 | :------ | :------ |
 | `name` | *string* |
 | `target` | *object* |

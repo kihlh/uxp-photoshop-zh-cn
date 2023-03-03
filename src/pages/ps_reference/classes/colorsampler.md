@@ -52,7 +52,7 @@ console.log(app.activeDocument.colorSamplers.length); // 0
 
 ## Properties
 
-| Name | Type | Access | Min Version | Description |
+| 名称 | 类型 | 访问 | 最低版本 | 描述 |
 | :------ | :------ | :------ | :------ | :------ |
 | color | [*SolidColor*](/ps_reference/classes/solidcolor/) \| [*NoColor*](/ps_reference/colors/nocolor/) | R | 24.0 | The color reading of this ColorSampler in its current position. |
 | docId | *number* | R | 24.0 | The ID of the Document of this ColorSampler. |
@@ -71,7 +71,7 @@ Moves the ColorSampler object to the given position
 
 #### Parameters
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | :------ | :------ | :------ |
 | `position` | *object* | Object literal with target coordinates in pixels `{x: number, y: number}`. |
 | `position.x` | *number* | - |

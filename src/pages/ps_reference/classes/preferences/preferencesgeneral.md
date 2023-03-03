@@ -22,7 +22,7 @@ General preferences
 
 ## Properties
 
-| Name | Type | Access | Min Version | Description |
+| 名称 | 类型 | 访问 | 最低版本 | 描述 |
 | :------ | :------ | :------ | :------ | :------ |
 | autoUpdateOpenDocuments | *boolean* | R W | 24.0 | Determines whether to automatically re-read open file-based documents updated outside Photoshop. Cloud documents are not affected by this setting.&#x27; |
 | beepWhenDone | *boolean* | R W | 24.0 | If true, alerts the user when a command completes |

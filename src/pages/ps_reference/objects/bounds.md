@@ -22,7 +22,7 @@ keywords:
 
 ## Properties
 
-| Name | Type | Access | Min Version | Description |
+| 名称 | 类型 | 访问 | 最低版本 | 描述 |
 | :------ | :------ | :------ | :------ | :------ |
 | bottom | *number* | R W | 22.5 | 底部边缘的坐标。 |
 | height | *number* | R | 22.5 | 计算出的高度。 |

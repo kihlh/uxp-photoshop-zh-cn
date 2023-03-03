@@ -45,7 +45,7 @@ var snapshots = app.activeDocument.historyStates.filter(h => h.snapshot)
 
 ## Properties
 
-| Name | Type | Access | Min Version | Description |
+| 名称 | 类型 | 访问 | 最低版本 | 描述 |
 | :------ | :------ | :------ | :------ | :------ |
 | length | *number* | R | 22.5 | Number of [HistoryState](/ps_reference/classes/historystate/) elements in this collection. |
 | parent | Document | R | 22.5 | The owner document of this HistoryState collection. |
@@ -61,6 +61,6 @@ Find the first history state with the matching name.
 
 #### Parameters
 
-| Name | Type |
+| 名称 | 类型 |
 | :------ | :------ |
 | `name` | *string* |

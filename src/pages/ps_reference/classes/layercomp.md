@@ -18,23 +18,23 @@ keywords:
 
 # LayerComp
 
-Represents a single layer comp in the document.
+代表文件中的一个 图层编组
 
 ## Properties
 
-| Name | Type | Access | Min Version | Description |
+| 名称 | 类型 | 访问 | 最低版本 | 描述 |
 | :------ | :------ | :------ | :------ | :------ |
-| appearance | *boolean* | R W | 24.0 | If true, the layer comp will remember the layers&#x27; appearance (layer style) settings. |
-| childComp | *boolean* | R W | 24.0 | If true, the layer comp will remember which of the Smart Object&#x27;s layer comps are set in the Properties panel. |
-| comment | *string* | R W | 24.0 | The description of the layer comp. |
-| docId | *number* | R | 24.0 | The ID of the document of this layer comp. |
-| id | *number* | R | 24.0 | For use with batchPlay operations. This layer comp ID, along with its document ID can be used to represent this layer comp for the lifetime of this document or the layer comp. |
-| name | *string* | R W | 24.0 | The name of the layer comp. |
-| parent | [*Document*](/ps_reference/classes/document/) | R | 24.0 | Owner document of this layer comp |
-| position | *boolean* | R W | 24.0 | If true, the layer comp will remember layers&#x27; positions. |
-| selected | *boolean* | R | 24.0 | If true, the layer comp is currently selected in the Layer Comps panel.  Note: selected does not mean that this layer comp is applied to document. |
-| typename | *string* | R | 24.0 | The class name of the referenced LayerComp object |
-| visibility | *boolean* | R W | 24.0 | If true, the layer comp will remember layers&#x27; visibilities. |
+| appearance | *boolean* | R W | 24.0 | 如果为true，图层编组将记住层的外观（层样式）设置。 |
+| childComp | *boolean* | R W | 24.0 | 如果为true，图层组合将记住在属性面板中设置的哪个智能对象图层组合。 |
+| comment | *string* | R W | 24.0 | 图层编组的描述。 |
+| docId | *number* | R | 24.0 | 该图层编组的文件的ID。 |
+| id | *number* | R | 24.0 | 适用于 batchPlay 操作。这个图层编组的ID和它的文件ID可以在这个文件或图层编组的生命周期内用来代表这个图层编组。 |
+| name | *string* | R W | 24.0 | 图层编组的名称。 |
+| parent | [*Document*](/ps_reference/classes/document/) | R | 24.0 | 该层的所有者的 文档Comp |
+| position | *boolean* | R W | 24.0 | 如果为true此图层编组将记住层的位置。 |
+| selected | *boolean* | R | 24.0 | 如果为true，则该图层合成器目前在图层合成器面板中被选中。 注意：选中并不意味着这个图层组合被应用到文档中。 |
+| typename | *string* | R | 24.0 | 被引用的图层编组对象的类别名称 |
+| visibility | *boolean* | R W | 24.0 | 如果为true此图层是可见的(小眼睛) |
 
 ## Methods
 
@@ -43,7 +43,7 @@ Represents a single layer comp in the document.
 
 **async** : *Promise*<void\>
 
-Applies the layer comp to the document.
+将图层编译应用到文档中。
 
 ___
 
@@ -52,7 +52,7 @@ ___
 
 **async** : *Promise*<[*LayerComp*](/ps_reference/classes/layercomp/)\>
 
-Duplicates this layer comp
+复制此图层comp
 
 ___
 
@@ -61,17 +61,17 @@ ___
 
 **async** : *Promise*<void\>
 
-Updates the recorded states of the layers for this layer comp.
+更新此图层组件的图层记录状态。
 
-Applies to all layers and all properties supported by this layer comp.
+适用于所有层和该层组件支持的所有属性。
 
 **async** : *Promise*<void\>
 
-Updates the recorded states of the layers for this layer comp.
+更新该图层的记录状态。
 
 #### Parameters
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | :------ | :------ | :------ |
 | `arg` | [*LayerCompRecaptureOptions*](/ps_reference/objects/options/layercomprecaptureoptions/) | - |
 | `layers?` | [*Layer*](/ps_reference/classes/layer/)[] | if this argument is passed then only specified layers will be recaptured. |
@@ -83,7 +83,7 @@ ___
 
 **async** : *Promise*<void\>
 
-Deletes this object from document.
+从文档中删除此对象。
 
 ___
 
@@ -92,4 +92,4 @@ ___
 
 **async** : *Promise*<void\>
 
-Resets the layer comp state to the document state.
+将图层压缩状态重置为文档状态。

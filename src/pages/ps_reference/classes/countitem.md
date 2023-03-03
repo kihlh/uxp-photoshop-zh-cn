@@ -36,7 +36,7 @@ The itemIndex of the CountItem as received from the descriptor.
 
 ## Properties
 
-| Name | Type | Access | Min Version | Description |
+| 名称 | 类型 | 访问 | 最低版本 | 描述 |
 | :------ | :------ | :------ | :------ | :------ |
 | parent | [*CountItems*](/ps_reference/classes/countitems/) | R | 24.1 | The document collection in which we will find this and all other CountItems collected. |
 | position | *object* | R | 24.1 | The position of the CountItem as an object with x and y properties in pixels. |
@@ -53,7 +53,7 @@ Moves the CountItem to a new position.
 
 #### Parameters
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | :------ | :------ | :------ |
 | `position` | *object* | : Object with x and y properties in pixels; |
 | `position.x` | *number* | - |

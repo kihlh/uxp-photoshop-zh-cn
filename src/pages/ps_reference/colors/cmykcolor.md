@@ -22,7 +22,7 @@ Defines a CMYK color, used in [SolidColor](/ps_reference/classes/solidcolor/) ob
 
 ## Properties
 
-| Name | Type | Access | Default | Range | Min Version | Description |
+| 名称 | 类型 | 访问 | 默认 | 范围 | 最低版本 | 描述 |
 | :------ | :------ | :------ | :------ | :------ | :------ | :------ |
 | black | *number* | R W | 0 | 0.0..100.0 | 23.0 | The black color value, as percentage. |
 | cyan | *number* | R W | 0 | 0.0..100.0 | 23.0 | The cyan color value, as percentage. |

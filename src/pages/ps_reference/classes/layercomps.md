@@ -18,10 +18,9 @@ keywords:
 
 # LayerComps
 
-A collections class allowing for array access into a document's Layer Comps
+一个合集数组，允许对文档的图层进行访问。
 
-Access this collection through [Document.layerComps](/ps_reference/classes/document/#layercomps) property. For example,
-following adds a new Layer Comp to the collection:
+通过 [Document.layerComps](/ps_reference/classes/document/#layercomps) 属性访问这个集合。例如，下面将一个新的图层组合添加到这个集合中。
 
 ```javascript
 const comp = await app.activeDocument.layerComps.add();
@@ -31,10 +30,10 @@ const comp = await app.activeDocument.layerComps.add();
 
 ▪ [index: *number*]: [*LayerComp*](/ps_reference/classes/layercomp/)
 
-Used to access the Layer Comp in the collection
+用来访问集合中的 Layer Comp
 
-Access this collection through [Document.layerComps](/ps_reference/classes/document/#layercomps) property. For example,
-following adds a new Layer Comp to the collection:
+通过 [Document.layerComps](/ps_reference/classes/document/#layercomps) 属性访问这个集合。比如说。
+下面将一个新的Layer Comp添加到这个集合中。
 
 ```javascript
 const comp = await app.activeDocument.layerComps.add();
@@ -42,11 +41,11 @@ const comp = await app.activeDocument.layerComps.add();
 
 ## Properties
 
-| Name | Type | Access | Min Version | Description |
+| 名称 | 类型 | 访问 | 最低版本 | 描述 |
 | :------ | :------ | :------ | :------ | :------ |
-| length | *number* | R | 24.0 | Number of [LayerComp](/ps_reference/classes/layercomp/) elements in this collection |
-| parent | [*Document*](/ps_reference/classes/document/) | R | 24.0 | The owner document of this Layer comp collection |
-| typename | *string* | R | 24.0 | The name for this object collection: LayerComps |
+| length | *number* | R | 24.0 | 这个集合中的 [LayerComp](/ps_reference/classes/layercomp/) 元素的数量 |
+| parent | [*Document*](/ps_reference/classes/document/) | R | 24.0 | 此 [LayerComp](/ps_reference/classes/layercomp/)  集合的所有者文档 |
+| typename | *string* | R | 24.0 | 这个对象集合的名称: LayerComps |
 
 ## Methods
 
@@ -55,15 +54,15 @@ const comp = await app.activeDocument.layerComps.add();
 
 *Promise*<[*LayerComp*](/ps_reference/classes/layercomp/)\>
 
-Adds a Layer Comp to the document's collection. If no options are given, only visibility will be recorded.
+在文档的集合中添加一个  Layer Comp  如果没有选项，只记录可见性。
 
-Note: This command will fail if the document is flat, that is, only a Background and no other layers.
+注意：如果文档为 未变更，即只有一个背景而没有其他图层，这个命令会失败。
 
 #### Parameters
 
-| Name | Type | Default value | Description |
+| 名称 | 类型 | 默认值 | 描述 |
 | :------ | :------ | :------ | :------ |
-| `options` | [*LayerCompCreateOptions*](/ps_reference/objects/createoptions/layercompcreateoptions/) | {} | An optional object literal containing key/value pairs as described by [LayerCompCreateOptions](/ps_reference/objects/createoptions/layercompcreateoptions/) ```javascript const options = {    name: "mockup",   comment: "First attempt",   visibility: true,   position: true  }; await require('photoshop').app.activeDocument.layerComps.add(options); ``` |
+| `options` | [*LayerCompCreateOptions*](/ps_reference/objects/createoptions/layercompcreateoptions/) | {} | 一个可选的对象字面，包含键/值对，如图所示 [LayerCompCreateOptions](/ps_reference/objects/createoptions/layercompcreateoptions/) ```javascript const options = {    name: "mockup",   comment: "First attempt",   visibility: true,   position: true  }; await require('photoshop').app.activeDocument.layerComps.add(options); ``` |
 
 ___
 
@@ -72,11 +71,11 @@ ___
 
 [*LayerComp*](/ps_reference/classes/layercomp/)[]
 
-Get all Layer Comps by name
+按名称获取所有图层组合
 
 #### Parameters
 
-| Name | Type |
+| 名称 | 类型 |
 | :------ | :------ |
 | `name` | *string* |
 
@@ -87,4 +86,4 @@ ___
 
 *Promise*<void\>
 
-Clears all Layer Comps from this collection
+删除这个集合中的所有图层组合

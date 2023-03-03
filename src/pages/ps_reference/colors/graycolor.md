@@ -22,7 +22,7 @@ Defines a grayscale color, used in [SolidColor](/ps_reference/classes/solidcolor
 
 ## Properties
 
-| Name | Type | Access | Default | Range | Min Version | Description |
+| 名称 | 类型 | 访问 | 默认 | 范围 | 最低版本 | 描述 |
 | :------ | :------ | :------ | :------ | :------ | :------ | :------ |
 | gray | *number* | R W | 0 | 0..100 | 23.0 | The gray value. |
 | typename | *string* | R | - | - | 23.0 | The class name of the referenced object: *&quot;GrayColor&quot;*. |

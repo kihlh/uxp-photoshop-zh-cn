@@ -31,7 +31,7 @@ group.layers.forEach((layer) => {
 
 ## Properties
 
-| Name | Type | Access | Min Version | Description |
+| 名称 | 类型 | 访问 | 最低版本 | 描述 |
 | :------ | :------ | :------ | :------ | :------ |
 | allLocked | *boolean* | R W | 22.5 | When set to true, prevents edits to pixels and properties of this layer. |
 | blendMode | [*BlendMode*](/ps_reference/modules/constants/#blendmode) | R W | 22.5 | The blend mode of the layer.  ***Fixes in Photoshop 24.2:*** - *Now it will throw error when passing non-existent blend mode* - *Also will throw error if combination of document color mode, bit depth and blend mode is not possible instead of failing silently* - *Prior this version it was possible to set blend mode for background layer which turned it into regular layer as a side effect and also changed its ID. Not it will throw error instead since these side effects are not expected to happen* |
@@ -75,7 +75,7 @@ Unsupported color modes: Indexed Color, Bitmap
 
 #### Parameters
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | :------ | :------ | :------ |
 | `amount` | *number* | Percentage of noise applied [0.1,400]. |
 | `distribution` | [*NoiseDistribution*](/ps_reference/modules/constants/#noisedistribution) | Distribution method to use. |
@@ -138,7 +138,7 @@ Unsupported color modes: Indexed Color, Bitmap
 
 #### Parameters
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | :------ | :------ | :------ |
 | `characteristics` | *number*[] | Square matrix (5 x 5) used to perform filter operation. |
 | `scale` | *number* | The value by which to divide the sum of the pixel values included in the calculation |
@@ -157,7 +157,7 @@ Unsupported color modes: Indexed Color, Bitmap, CMYK 8 bits, CMYK 16 bits, Duoto
 
 #### Parameters
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | :------ | :------ | :------ |
 | `eliminateFields` | [*EliminateFields*](/ps_reference/modules/constants/#eliminatefields) | Eliminate EVENFIELDS or ODDFIELDS field order. |
 | `createFields` | [*CreateFields*](/ps_reference/modules/constants/#createfields) | Create fields by either DUPLICATION or INTERPOLATION. |
@@ -197,7 +197,7 @@ Supported color modes: RGB 8 bits, Duotone 8 bits, Grayscale 8 bits, Multichanne
 
 #### Parameters
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | :------ | :------ | :------ |
 | `graininess` | *number* | The amount of grain [0,10]. |
 | `glowAmount` | *number* | The glow amount [0,20]. |
@@ -218,7 +218,7 @@ Unsupported color modes: Indexed Color, Bitmap
 
 #### Parameters
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | :------ | :------ | :------ |
 | `horizontalScale` | *number* | How much to scale in the direction of width [-999,999]. |
 | `verticalScale` | *number* | How much to scale in the direction of height [-999,999]. |
@@ -239,7 +239,7 @@ Unsupported color modes: Indexed Color, Bitmap, RGB 32 bits, Grayscale 32 bits
 
 #### Parameters
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | :------ | :------ | :------ |
 | `radius` | *number* | The radius of the filter in pixels [1,100]. |
 | `threshold` | *number* | The lower the amount, the stronger the effect [0,255]. |
@@ -257,7 +257,7 @@ Unsupported color modes: Indexed Color, Bitmap
 
 #### Parameters
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | :------ | :------ | :------ |
 | `radius` | *number* | The radius of the filter in pixels [0.1,250]. |
 
@@ -274,7 +274,7 @@ Supported color modes: RGB 8 bits, Duotone 8 bits, Grayscale 8 bits, Multichanne
 
 #### Parameters
 
-| Name | Type | Default value | Description |
+| 名称 | 类型 | 默认值 | 描述 |
 | :------ | :------ | :------ | :------ |
 | `distortion` | *number* | - | Change the amount the glass distorts the image [0,20]. |
 | `smoothness` | *number* | - | Change the smoothness of the glass [1,15]. |
@@ -296,7 +296,7 @@ Unsupported color modes: Indexed Color, Bitmap
 
 #### Parameters
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | :------ | :------ | :------ |
 | `radius` | *number* | The width of high pass filter (pixels) [0.1,1000]. |
 
@@ -313,7 +313,7 @@ Unsupported color modes: Indexed Color, Bitmap, RGB 32 bits, Grayscale 32 bits
 
 #### Parameters
 
-| Name | Type | Default value | Description |
+| 名称 | 类型 | 默认值 | 描述 |
 | :------ | :------ | :------ | :------ |
 | `source` | [*DepthMapSource*](/ps_reference/modules/constants/#depthmapsource) | - | The source for the depth map (default: `DepthMapSource.NONE`) |
 | `focalDistance` | *number* | 0 | The blur focal distance for the depth map [0,255] (default: `0`). |
@@ -341,7 +341,7 @@ Supported color modes: RGB 8 bits, RGB 16 bits, RGB 32 bits
 
 #### Parameters
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | :------ | :------ | :------ |
 | `brightness` | *number* | Percentage of brightness applied [10,300]. |
 | `flareCenter` | *object* | The flare center `{x: number, y: number}`. |
@@ -362,7 +362,7 @@ Unsupported color modes: Indexed Color, Bitmap
 
 #### Parameters
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | :------ | :------ | :------ |
 | `radius` | *number* | The radius of the filter in pixels.<br/>               Integer in the range [1,500] when using `SQUARENESS`.<br/>               Float in the range [0.2,500] when using `ROUNDNESS`.<br/> |
 | `preserveShape` | [*PreserveShape*](/ps_reference/modules/constants/#preserveshape) | Favor hard corners or smooth curves around the edges<br/>                      (default: `PreserveShape.SQUARENESS`) |
@@ -380,7 +380,7 @@ Unsupported color modes: Indexed Color, Bitmap, RGB 32 bits, Grayscale 32 bits
 
 #### Parameters
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | :------ | :------ | :------ |
 | `radius` | *number* | The radius of the filter in pixels [1,500] |
 
@@ -397,7 +397,7 @@ Unsupported color modes: Indexed Color, Bitmap
 
 #### Parameters
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | :------ | :------ | :------ |
 | `radius` | *number* | The radius of the filter in pixels.<br/>               Integer in the range [1,500] when using `SQUARENESS`.<br/>               Float in the range [0.2,500] when using `ROUNDNESS`.<br/> |
 | `preserveShape` | [*PreserveShape*](/ps_reference/modules/constants/#preserveshape) | Favor hard corners or smooth curves around the edges<br/>                      (default: `PreserveShape.SQUARENESS`) |
@@ -415,7 +415,7 @@ Unsupported color modes: Indexed Color, Bitmap
 
 #### Parameters
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | :------ | :------ | :------ |
 | `angle` | *number* | The angle the blur effect will be applied at (degrees) [-360,360] |
 | `distance` | *number* | The amount of blur [1,2000] |
@@ -444,7 +444,7 @@ Supported color modes: RGB 8 bits, Duotone 8 bits, Grayscale 8 bits, Multichanne
 
 #### Parameters
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | :------ | :------ | :------ |
 | `size` | *number* | The Ripple size [1,15] |
 | `magnitude` | *number* | The Ripple magnitude [1,20] |
@@ -462,7 +462,7 @@ Unsupported color modes: Indexed Color, Bitmap
 
 #### Parameters
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | :------ | :------ | :------ |
 | `horizontal` | *number* | The horizontal offset [-2 \* doc.width, 2 \* doc.width] |
 | `vertical` | *number* | The vertical offset [-2 \* doc.height, 2 \* doc.height] |
@@ -481,7 +481,7 @@ Unsupported color modes: Indexed Color, Bitmap
 
 #### Parameters
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | :------ | :------ | :------ |
 | `amount` | *number* | The pinch amount. Negative value creates effect of expansion and positive creates effect of contraction. [-100,100] |
 
@@ -498,7 +498,7 @@ Unsupported color modes: Indexed Color, Bitmap
 
 #### Parameters
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | :------ | :------ | :------ |
 | `conversion` | [*PolarConversionType*](/ps_reference/modules/constants/#polarconversiontype) | The conversion type. |
 
@@ -515,7 +515,7 @@ Unsupported color modes: Indexed Color, Bitmap
 
 #### Parameters
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | :------ | :------ | :------ |
 | `amount` | *number* | The ripple amount. [-999,999] |
 | `size` | [*RippleSize*](/ps_reference/modules/constants/#ripplesize) | The ripple size. |
@@ -566,7 +566,7 @@ Unsupported color modes: Indexed Color, Bitmap
 
 #### Parameters
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | :------ | :------ | :------ |
 | `curve` | { `x`: *number* ; `y`: *number*  }[] | Specification of the shear curve in points as coordinates object with x, y properties e.g.in the format [{x:-20, y:1}, {x:30, y:128}]. Any number higher than 2 of coordinate objects can be specified. For "x" coordinate it is recommended to use range [-63,64] and for "y" coordinate use range [1,128]. For bests results please make sure that first point has 0 at "y" axis and last point has 128 at "y" axis. Also sort points by "y" value in ascending order. Follow these rules to ensure that curve will be shown correctly in dialog UI. |
 | `undefinedArea` | [*UndefinedAreas*](/ps_reference/modules/constants/#undefinedareas) | The treatment of areas left blank by the distortion. |
@@ -586,7 +586,7 @@ Grayscale 8 bits, Lab 8 bits, Multichannel 8 bits
 
 #### Parameters
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | :------ | :------ | :------ |
 | `radius` | *number* | The blur radius [0.1,100]. |
 | `threshold` | *number* | The blur threshold [0.1,100]. |
@@ -606,7 +606,7 @@ Unsupported color modes: Indexed Color, Bitmap
 
 #### Parameters
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | :------ | :------ | :------ |
 | `amount` | *number* | The amount of distortion [-100,100]. |
 | `mode` | [*SpherizeMode*](/ps_reference/modules/constants/#spherizemode) | The distortion mode. |
@@ -624,7 +624,7 @@ Unsupported color modes: Indexed Color, Bitmap
 
 #### Parameters
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | :------ | :------ | :------ |
 | `angle` | *number* | The amount of twirl to apply (degrees) [-999,999] |
 
@@ -641,7 +641,7 @@ Unsupported color modes: Indexed Color, Bitmap
 
 #### Parameters
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | :------ | :------ | :------ |
 | `amount` | *number* | The amount of sharpening (as a whole number percentage) [1,500]. |
 | `radius` | *number* | The radius in pixels [0.1,1000]. |
@@ -660,7 +660,7 @@ Unsupported color modes: Indexed Color, Bitmap
 
 #### Parameters
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | :------ | :------ | :------ |
 | `generatorNumber` | *number* | The whole number of generators [1,999]. |
 | `minimumWavelength` | *number* | The minimum wave length [1,(maximum wave length - 1)] (whole number). |
@@ -686,7 +686,7 @@ Unsupported color modes: Indexed Color, Bitmap
 
 #### Parameters
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | :------ | :------ | :------ |
 | `amount` | *number* | The amount of zigzag [-100,100]. |
 | `ridges` | *number* | The number of ridges [0,20]. |
@@ -728,7 +728,7 @@ await layer.copy()
 
 #### Parameters
 
-| Name | Type |
+| 名称 | 类型 |
 | :------ | :------ |
 | `merge?` | *boolean* |
 
@@ -775,7 +775,7 @@ const exportedLayer = await layer.duplicate(exportDoc)
 
 #### Parameters
 
-| Name | Type |
+| 名称 | 类型 |
 | :------ | :------ |
 | `relativeObject?` | [*Document*](/ps_reference/classes/document/) \| [*Layer*](/ps_reference/classes/layer/) |
 | `insertionLocation?` | [*ElementPlacement*](/ps_reference/modules/constants/#elementplacement) |
@@ -797,7 +797,7 @@ await layer.flip.horizontal()
 
 #### Parameters
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | :------ | :------ | :------ |
 | `axis` | ``"horizontal"`` \| ``"vertical"`` \| ``"both"`` | Which axis (or both) to flip the layer on.             - "horizontal": flip layer on horizontal axis             - "vertical": flip layer on vertical axis             - "both": flip layer on both axes |
 
@@ -821,7 +821,7 @@ linkedLayers.forEach((layer) => console.log(layer.name))
 
 #### Parameters
 
-| Name | Type |
+| 名称 | 类型 |
 | :------ | :------ |
 | `targetLayer` | [*Layer*](/ps_reference/classes/layer/) |
 
@@ -852,7 +852,7 @@ Moves the layer relative to the layer specified in parameters.
 
 #### Parameters
 
-| Name | Type |
+| 名称 | 类型 |
 | :------ | :------ |
 | `relativeObject` | [*Layer*](/ps_reference/classes/layer/) |
 | `insertLocation` | [*ElementPlacement*](/ps_reference/modules/constants/#elementplacement) |
@@ -868,7 +868,7 @@ Converts the targeted contents in the layer into a flat, raster image.
 
 #### Parameters
 
-| Name | Type |
+| 名称 | 类型 |
 | :------ | :------ |
 | `target` | [*RasterizeType*](/ps_reference/modules/constants/#rasterizetype) |
 
@@ -892,7 +892,7 @@ await layer.rotate(90, anchorPos.TOPLEFT)
 
 #### Parameters
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | :------ | :------ | :------ |
 | `angle` | *number* \| AngleValue | Angle to rotate the layer by in degrees |
 | `anchor?` | [*AnchorPosition*](/ps_reference/modules/constants/#anchorposition) | Anchor position to rotate around |
@@ -920,7 +920,7 @@ await layer.scale(50, 50, anchorPos.BOTTOMLEFT)
 
 #### Parameters
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | :------ | :------ | :------ |
 | `width` | *number* \| PercentValue | Numeric percentage to scale layer horizontally |
 | `height` | *number* \| PercentValue | Numeric percentage to scale layer vertically |
@@ -955,7 +955,7 @@ await layer.skew(-15, 0)
 
 #### Parameters
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | :------ | :------ | :------ |
 | `angleH` | *number* \| AngleValue | Horizontal angle to skew by |
 | `angleV` | *number* \| AngleValue | Vertical angle to skew by |
@@ -983,7 +983,7 @@ await layer.translate(xOffsetPct, yOffsetPct);
 
 #### Parameters
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | :------ | :------ | :------ |
 | `horizontal` | *number* \| PercentValue \| PixelValue | Numeric value to offset layer by in pixels or percent |
 | `vertical` | *number* \| PercentValue \| PixelValue | Numeric value to offset layer by in pixels or percent |

@@ -22,7 +22,7 @@ All preferences related to history logging
 
 ## Properties
 
-| Name | Type | Access | Min Version | Description |
+| 名称 | 类型 | 访问 | 最低版本 | 描述 |
 | :------ | :------ | :------ | :------ | :------ |
 | createFirstSnapshot | *boolean* | R W | 24.0 | If true, automatically makes the first snapshot when a new document is created |
 | editLogItems | [*EditLogItemsType*](/ps_reference/modules/constants/#editlogitemstype) | R W | 24.0 | Options for edit log items.  Sets &#x60;history.useHistoryLog &#x3D; true&#x60; as side effect. |

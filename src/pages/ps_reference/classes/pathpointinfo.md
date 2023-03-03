@@ -64,7 +64,7 @@ make it convex; or use the right direction point to bend the curve "inward" or m
 
 ## Properties
 
-| Name | Type | Access | Min Version | Description |
+| 名称 | 类型 | 访问 | 最低版本 | 描述 |
 | :------ | :------ | :------ | :------ | :------ |
 | anchor | *number*[] | R W | 23.3 | The X and Y coordinates of the anchor point of the curve. |
 | kind | [*PointKind*](/ps_reference/modules/constants/#pointkind) | R W | 23.3 | The role (corner or smooth) this point plays in the containing path segment. |

@@ -50,7 +50,7 @@ c.rgb.green = 128; // Model will change back to ColorModel.RGB
 
 ## Properties
 
-| Name | Type | Access | Min Version | Description |
+| 名称 | 类型 | 访问 | 最低版本 | 描述 |
 | :------ | :------ | :------ | :------ | :------ |
 | cmyk | [*CMYKColor*](/ps_reference/colors/cmykcolor/) | R W | 23.0 | The color&#x27;s representation in CMYK color space. |
 | gray | [*GrayColor*](/ps_reference/colors/graycolor/) | R W | 23.0 | The color&#x27;s representation in grayscale. |
@@ -78,6 +78,6 @@ a color that is converted from RGB to CMYK and back may not be visually equal.
 
 #### Parameters
 
-| Name | Type |
+| 名称 | 类型 |
 | :------ | :------ |
 | `color` | [*SolidColor*](/ps_reference/classes/solidcolor/) |

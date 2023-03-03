@@ -34,7 +34,7 @@ const redChannel = app.activeDocument.channels[0]
 
 ## Properties
 
-| Name | Type | Access | Min Version | Description |
+| 名称 | 类型 | 访问 | 最低版本 | 描述 |
 | :------ | :------ | :------ | :------ | :------ |
 | color | [*SolidColor*](/ps_reference/classes/solidcolor/) | R W | 23.0 | The color of the channel. |
 | histogram | *number*[] | R | 23.0 | A histogram containing the number of pixels at each color intensity level for this channel. The array contains 256 members. The target channel must be visible. |
@@ -65,7 +65,7 @@ await channel.duplicate(newDoc)
 
 #### Parameters
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | :------ | :------ | :------ |
 | `targetDocument?` | [*Document*](/ps_reference/classes/document/) | if specified, duplicate to a different document target. |
 
